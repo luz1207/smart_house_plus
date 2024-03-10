@@ -94,8 +94,3 @@ eventSource.onmessage = function(event) {
 
 };
 
-// eventSource1.onmessage = function(event) {
-//     const title = event.data;
-//     guesture_title_div.innerText = 'Title: ' + title;
-//
-// };

@@ -74,20 +74,24 @@ input.cmn-toggle-round:checked + label:after {
 .gesture_library{
     display: flex;
     flex-direction: row;
-    height: 140px;
+    height: 180px;
     margin-top: 14px;
+    width: 885px;
     /*background-color: #0a58ca;*/
+    border-radius: 5px;
+    background-color: rgba(185, 250, 252, 0.6);
 }
 
 .guesture_lib_img{
-    width: 110px;
+    width: 120px;
     height: 80%;
     margin-left: 5px;
     /*background-color: #0dcaf0;*/
+    margin-top: 10px;
 }
 
 .guesture_lib_child{
-    width: 110px;
+    width: 120px;
     height: 100%;
     margin-left: 5px;
     text-align: center;

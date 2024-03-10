@@ -135,7 +135,7 @@ strong {
 -----------------------------------------*/
 .main-wrapper {
   background: var(--section-bg-color);
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 45px);
 }
 
 .section-padding {

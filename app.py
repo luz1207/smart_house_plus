@@ -63,13 +63,7 @@ def guesture_index():
             # yield 'data: {}\n\n'.format(status)  # 发送状态数据
     return Response(generate(), mimetype='text/event-stream')
 
-# @app.route('/guesture_title')
-# def guesture_title():
-#     def generate1():
-#         # status = 2
-#         while True:
-#             yield 'data: {}\n\n'.format(x.title)  # 发送状态数据
-#     return Response(generate1(), mimetype='text/event-stream')
+
 
 @app.route('/download')
 def download_file():
