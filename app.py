@@ -8,6 +8,7 @@ from flask import Flask, render_template, Response,send_file
 from flask import Flask, request, jsonify
 from application.guesture_model import gesTure
 from mediapipe.tasks import python
+from application.face_model import  Face_recognize
 from mediapipe.tasks.python import vision
 # from tencentcloud.common import credential
 # from tencentcloud.common.profile.http_profile import HttpProfile
@@ -32,6 +33,10 @@ def guesture_recognition(recognizer):
     res = x.Control()
 
     return res
+
+def face_recognition():
+    x = Face_recognize()
+    return x.show()
 
 
 @app.route('/')
@@ -63,7 +68,9 @@ def guesture_index():
             # yield 'data: {}\n\n'.format(status)  # 发送状态数据
     return Response(generate(), mimetype='text/event-stream')
 
-
+@app.route('/face_video_feed')
+def face_video_feed():
+    return Response(face_recognition(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/download')
 def download_file():

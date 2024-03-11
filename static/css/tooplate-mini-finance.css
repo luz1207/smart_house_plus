@@ -823,6 +823,7 @@ strong {
 .account-table>:not(caption)>*>* {
   border-bottom: 0;
   padding: 15px 10px;
+  margin: 20px;
 }
 
 .account-table thead {
@@ -832,11 +833,11 @@ strong {
 .account-table th,
 .account-table tr {
   font-size: var(--btn-font-size);
-  padding: 15px 10px;
+  padding: 12px 10px;
 }
 
 .account-table th {
-  padding: 12px 15px;
+  padding: 10px 10px;
 }
 
 .account-table tr {
@@ -853,7 +854,7 @@ strong {
   line-height: normal;
   padding-right: 10px;
   padding-left: 10px;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 

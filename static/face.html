@@ -270,25 +270,128 @@ Bootstrap 5 Dashboard Admin Template
                 <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start" >
 
                     <div>
-                        <div class="face_container"></div>
+                        <div class="face_container">
+                            <div class="face_box">
+                                <div class="face_video">
+                                    <img src="http://127.0.0.1:8080/face_video_feed" style="width: 80%;height: 100%">
+                                </div>
+                                <table class="account-table table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">序号</th>
 
-                        <div class="col-lg-5 col-12">
-                            <div class="custom-block custom-block-contact">
-                                <h6 class="mb-4">Still can’t find what you looking for?</h6>
+                                        <th scope="col">画面标识</th>
 
-                                <p>
-                                    <strong>Call us:</strong>
-                                    <a href="tel: 305-240-9671" class="ms-2">
-                                        (60)
-                                        305-240-9671
-                                    </a>
-                                </p>
+                                        <th scope="col">姓名</th>
 
-                                <a href="#" class="btn custom-btn custom-btn-bg-white mt-3">
-                                    Chat with us
-                                </a>
+                                        <th scope="col">时间</th>
+
+                                        <th scope="col">距离</th>
+
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td scope="row">1</td>
+
+                                        <td scope="row">10:00 PM</td>
+
+                                        <td scope="row">Shopping</td>
+
+                                        <td scope="row">C2C Transfer</td>
+
+                                        <td class="text-danger" scope="row">
+                                            <span class="me-1">-</span>
+                                            $100.00
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td scope="row">2</td>
+
+                                        <td scope="row">10:42 AM</td>
+
+                                        <td scope="row">Food Delivery</td>
+
+                                        <td scope="row">Mobile Reload</td>
+
+                                        <td class="text-success" scope="row">
+                                            <span class="me-1">+</span>
+                                            $250
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td scope="row">3</td>
+
+                                        <td scope="row">8:20 PM</td>
+
+                                        <td scope="row">Billing</td>
+
+                                        <td scope="row">Goverment</td>
+
+                                        <td class="text-success" scope="row">
+                                            <span class="me-2">+</span>$50</td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td scope="row">4</td>
+
+                                        <td scope="row">10:48 PM</td>
+
+                                        <td scope="row">Shopee</td>
+
+                                        <td scope="row">QR Code</td>
+
+                                        <td class="text-danger" scope="row">
+                                            <span class="me-2">-</span>$380</td>
+
+
+                                    </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
+
+                            <div class="face_result">
+                                <div class="light_div">
+                                    <div class="circle_light1 red" ></div>
+                                    <div class="circle_light1 green" ></div>
+                                    <div class="circle_light1 yellow" ></div>
+                                </div>
+                                <h6 style="text-align: center">人脸识别结果</h6>
+                                <div class="face_info">
+                                    <p style="margin-top: 30px;margin-left: 30px">帧率：</p>
+                                </div>
+                                <div class="face_info">
+                                    <p style="margin-top: 6px;margin-left: 30px">人脸：</p>
+                                </div>
+                                <div class="recognize_res">
+                                    <img src="./images/face/error.png" style="width: 90%;height: 90%">
+                                    <p style="margin-top: 15px">认证失败</p>
+                                </div>
+                                <div style="margin-top: 30px;margin-left: 30%">
+                                    <h8>人脸库比对结果</h8>
+                                </div>
+                                <div class="face_info">
+                                    <p style="margin-top: 30px;margin-left: 30px">个数：</p>
+                                </div>
+                                <div class="face_info">
+                                    <p style="margin-top: 6px;margin-left: 30px">距离：</p>
+                                </div>
+
+
+
+                            </div>
+
                         </div>
+
                     </div>
 
                     <footer class="site-footer">
