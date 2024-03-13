@@ -1,5 +1,5 @@
 .face_container{
-    background-color: #0dcaf0;
+    /*background-color: #0dcaf0;*/
     height: 90vh;
     width: 70vw;
     border-radius: 10px;
@@ -8,7 +8,7 @@
 }
 
 .face_video{
-    background-color: #86d986;
+    /*background-color: #86d986;*/
     height: 40vh;
     width: 90%;
     /*margin-top: 5px;*/
@@ -19,13 +19,13 @@
 .face_box{
     height: 84vh;
     width: 50vw;
-    background-color: #86b7fe;
+    /*background-color: #86b7fe;*/
     text-align: center;
     align-content: center;
 }
 
 .face_result{
-    background-color: #c6e5e7;
+    /*background-color: #c6e5e7;*/
     height: 90%;
     width: 20vw;
     /*align-items: center;*/
@@ -71,5 +71,5 @@
     width:120px;
     height: 120px;
     text-align: center;
-    background-color: darkcyan;
+    /*background-color: darkcyan;*/
 }

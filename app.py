@@ -27,6 +27,7 @@ app = Flask(__name__)
 camera1 = cv2.VideoCapture(0)
 # camera1 = cv2.VideoCapture(0)
 x = gesTure(recognizer)
+face_model = Face_recognize()
 
 def guesture_recognition(recognizer):
 
@@ -34,9 +35,10 @@ def guesture_recognition(recognizer):
 
     return res
 
+
 def face_recognition():
-    x = Face_recognize()
-    return x.show()
+
+    return face_model.show()
 
 
 @app.route('/')
@@ -71,6 +73,15 @@ def guesture_index():
 @app.route('/face_video_feed')
 def face_video_feed():
     return Response(face_recognition(),mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/get_face_info')
+def get_face_info():
+    def generate_face_info():
+        while True:
+            with app.app_context():
+                data = face_model.face_info
+                yield 'data: {}\n\n'.format(json.dumps(data))
+    return Response(generate_face_info(),mimetype='text/event-stream')
 
 @app.route('/download')
 def download_file():

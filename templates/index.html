@@ -269,327 +269,555 @@ Bootstrap 5 Dashboard Admin Template
                 </nav>
 
                 <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
-                    <div class="title-group mb-3">
-                        <h1 class="h2 mb-0">Overview</h1>
 
-                        <small class="text-muted">Hello Thomas, welcome back!</small>
-                    </div>
-
-                    <div class="row my-4">
-                        <div class="col-lg-7 col-12">
-                            <div class="custom-block custom-block-balance">
-                                <small>Your Balance</small>
-
-                                <h2 class="mt-2 mb-3">$254,800</h2>
-
-                                <div class="custom-block-numbers d-flex align-items-center">
-                                    <span>****</span>
-                                    <span>****</span>
-                                    <span>****</span>
-                                    <p>2560</p>
-                                </div>
-
-                                <div class="d-flex">
-                                    <div>
-                                        <small>Valid Date</small>
-                                        <p>12/2028</p>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>Card Holder</small>
-                                        <p>Thomas</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="custom-block bg-white">
-                                <h5 class="mb-4">History</h5>
-
-                                <div id="pie-chart"></div>
-                            </div>
-
-                            <div class="custom-block bg-white">
-                                <div id="chart"></div>
-                            </div>
-
-                            <div class="custom-block custom-block-exchange">
-                                <h5 class="mb-4">Exchange Rate</h5>
-
-                                <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/flag/united-states.png" class="exchange-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>USD</p>
-                                            <h6>1 US Dollar</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto me-4">
-                                        <small>Sell</small>
-                                        <h6>1.0931</h6>
-                                    </div>
-
-                                    <div>
-                                        <small>Buy</small>
-                                        <h6>1.0821</h6>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/flag/singapore.png" class="exchange-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>SGD</p>
-                                            <h6>1 Singapore Dollar</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto me-4">
-                                        <small>Sell</small>
-                                        <h6>0.6901</h6>
-                                    </div>
-
-                                    <div>
-                                        <small>Buy</small>
-                                        <h6>0.6201</h6>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/flag/united-kingdom.png" class="exchange-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>GPD</p>
-                                            <h6>1 British Pound</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto me-4">
-                                        <small>Sell</small>
-                                        <h6>1.1520</h6>
-                                    </div>
-
-                                    <div>
-                                        <small>Buy</small>
-                                        <h6>1.1412</h6>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/flag/australia.png" class="exchange-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>AUD</p>
-                                            <h6>1 Australian Dollar</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto me-4">
-                                        <small>Sell</small>
-                                        <h6>0.6110</h6>
-                                    </div>
-
-                                    <div>
-                                        <small>Buy</small>
-                                        <h6>0.5110</h6>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/flag/european-union.png" class="exchange-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>EUR</p>
-                                            <h6>1 Euro</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto me-4">
-                                        <small>Sell</small>
-                                        <h6>1.1020</h6>
-                                    </div>
-
-                                    <div>
-                                        <small>Buy</small>
-                                        <h6>1.1010</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12">
-                            <div class="custom-block custom-block-profile-front custom-block-profile text-center bg-white">
-                                <div class="custom-block-profile-image-wrap mb-4">
-                                    <img src="../static/images/medium-shot-happy-man-smiling.jpg" class="custom-block-profile-image img-fluid" alt="">
-
-                                    <a href="../static/face.html" class="bi-pencil-square custom-block-edit-icon"></a>
-                                </div>
-
-                                <p class="d-flex flex-wrap mb-2">
-                                    <strong>Name:</strong>
-
-                                    <span>Thomas Edison</span>
-                                </p>
-
-                                <p class="d-flex flex-wrap mb-2">
-                                    <strong>Email:</strong>
-                                    
-                                    <a href="#">
-                                        thomas@site.com
-                                    </a>
-                                </p>
-
-                                <p class="d-flex flex-wrap mb-0">
-                                    <strong>Phone:</strong>
-
-                                    <a href="#">
-                                        (60) 12 345 6789
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="custom-block custom-block-bottom d-flex flex-wrap">
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-wallet"></i>
-
-                                        <small>Top up</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-upc-scan"></i>
-
-                                        <small>Scan & Pay</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-send"></i>
-
-                                        <small>Send</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-arrow-down"></i>
-
-                                        <small>Request</small>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="custom-block custom-block-transations">
-                                <h5 class="mb-4">Recent Transations</h5>
-
-                                <div class="d-flex flex-wrap align-items-center mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/profile/senior-man-white-sweater-eyeglasses.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>
-                                                <a href="../static/transation-detail.html">Daniel Jones</a>
-                                            </p>
-
-                                            <small class="text-muted">C2C Transfer</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>05/12/2023</small>
-                                        <strong class="d-block text-danger"><span class="me-1">-</span> $250</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap align-items-center mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/profile/young-beautiful-woman-pink-warm-sweater.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>
-                                                <a href="../static/transation-detail.html">Public Bank</a>
-                                            </p>
-
-                                            <small class="text-muted">Mobile Reload</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>22/8/2023</small>
-                                        <strong class="d-block text-success"><span class="me-1">+</span> $280</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../static/images/profile/young-woman-with-round-glasses-yellow-sweater.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p><a href="../static/transation-detail.html">Store</a></p>
-
-                                            <small class="text-muted">Payment Received</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>22/8/2023</small>
-                                        <strong class="d-block text-success"><span class="me-1">+</span> $280</strong>
-                                    </div>
-                                </div>
-
-                                <div class="border-top pt-4 mt-4 text-center">
-                                    <a class="btn custom-btn" href="../static/guesture.html">
-                                        View all transations
-                                        <i class="bi-arrow-up-right-circle-fill ms-2"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="custom-block primary-bg">
-                                <h5 class="text-white mb-4">Send Money</h5>
-
-                                <a href="#">
-                                    <img src="../static/images/profile/young-woman-with-round-glasses-yellow-sweater.jpg" class="profile-image img-fluid" alt="">
-                                </a>
-
-                                <a href="#">
-                                    <img src="../static/images/profile/young-beautiful-woman-pink-warm-sweater.jpg" class="profile-image img-fluid" alt="">
-                                </a>
-
-                                <a href="#">
-                                    <img src="../static/images/profile/senior-man-white-sweater-eyeglasses.jpg" class="profile-image img-fluid" alt="">
-                                </a>
-
-                                <div class="profile-rounded">
-                                    <a href="#">
-                                        <i class="profile-rounded-icon bi-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <footer class="site-footer">
+                    <section class="hero-slide" id="section_1">
                         <div class="container">
                             <div class="row">
-                                
-                                <div class="col-lg-12 col-12">
-                                    <p class="copyright-text">Copyright © Mini Finance 2048 
-                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+
+                                <div class="col-lg-8 col-12 text-center mx-auto">
+                                    <div class="hero-section-text">
+                                        <small class="section-small-title">Welcome to Moso Interior <i class="hero-icon bi-house"></i></small>
+
+                                        <h1 class="hero-title text-white mt-2 mb-4">Decorate a beautiful interior for your space</h1>
+
+                                        <form class="custom-form hero-form" action="#" method="get" role="form">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-6 col-12">
+                                                    <div class="input-group align-items-center">
+                                                        <label for="product-name">Product</label>
+
+                                                        <input type="text" name="product-name" id="product-name" class="form-control" placeholder="Bathroom, Living Room..." required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-5 col-md-6 col-12">
+                                                    <div class="input-group align-items-center">
+                                                        <label for="last-name">Price</label>
+
+                                                        <select name="price-range" class="form-select form-control" id="price-range" aria-label="Default select example">
+                                                            <option value="500" selected>$500 to $990</option>
+                                                            <option value="1000">$1,000 - 2,900</option>
+                                                            <option value="3000">$3,000 - 5,000</option>
+                                                            <option value="5000">$5,000 - 10,000</option>
+                                                            <option value="11000">$11,000 - 25,000</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-6 col-12">
+                                                    <button type="submit" class="form-control">Search</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div class="hero-btn d-flex justify-content-center align-items-center">
+                                            <a class="bi-arrow-down hero-btn-link smoothscroll" href="#section_2"></a>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
-                    </footer>
+                    </section>
+
+                    <section class="about-section section-padding" id="section_2">
+                        <div class="container">
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-5 col-12">
+                                    <small class="section-small-title">Our Story</small>
+
+                                    <h2 class="mt-2 mb-4"><span class="text-muted">Introducing</span> Moso</h2>
+
+                                    <h4 class="text-muted mb-3">Since 1986, We crafted interior products for better spaces</h4>
+
+                                    <p>Moso Interior is a free Bootstrap 5 HTML CSS template for your website. Tooplate is one of the best websites to download 100% free HTML Templates for web designers and developers around the world. Thank you for visiting.</p>
+                                </div>
+
+                                <div class="col-lg-3 col-md-5 col-5 mx-lg-auto">
+                                    <img src="../static/images/sharing-design-ideas-with-family.jpg" class="about-image about-image-small img-fluid" alt="">
+                                </div>
+
+                                <div class="col-lg-4 col-md-7 col-7">
+                                    <img src="../static/images/living-room-interior-wall-mockup-warm-tones-with-leather-sofa-which-is-kitchen-3d-rendering.jpg" class="about-image img-fluid" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="featured-section section-padding">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-5 col-12">
+                                    <div class="custom-block featured-custom-block">
+                                        <h2 class="mt-2 mb-4">Opening Hours</h2>
+
+                                        <div class="d-flex">
+                                            <i class="featured-icon bi-clock me-3"></i>
+
+                                            <div>
+                                                <p class="mb-2">
+                                                    Mon - Friday ~
+                                                    <strong class="d-inline">
+                                                        8:00 AM - 6:00 PM
+                                                    </strong>
+                                                </p>
+
+                                                <p class="mb-2">
+                                                    Saturday ~
+                                                    <strong class="d-inline">
+                                                        10:00 AM - 10:00 PM
+                                                    </strong>
+                                                </p>
+
+                                                <p>Sunday ~ Closed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="shop-section section-padding" id="section_3">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-12 col-12">
+                                    <small class="section-small-title">Moso Design Shop</small>
+
+                                    <h2 class="mt-2 mb-4"><span class="tooplate-red">Interior</span> Products</h2>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="shop-thumb">
+                                        <div class="shop-image-wrap">
+                                            <a href="shop-detail.html">
+                                                <img src="../static/images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg" class="shop-image img-fluid" alt="">
+                                            </a>
+
+                                            <div class="shop-icons-wrap">
+                                                <div class="shop-icons d-flex flex-column align-items-center">
+                                                    <a href="#" class="shop-icon bi-heart"></a>
+
+                                                    <a href="#" class="shop-icon bi-bookmark"></a>
+                                                </div>
+
+                                                <p class="shop-pricing mb-0 mt-3">
+                                                    <span class="badge custom-badge">$3,600</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="shop-btn-wrap">
+                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="shop-body">
+                                            <h4>Bathroom</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="shop-thumb">
+                                        <div class="shop-image-wrap">
+                                            <a href="shop-detail.html">
+                                                <img src="../static/images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg" class="shop-image img-fluid" alt="">
+                                            </a>
+
+                                            <div class="shop-icons-wrap">
+                                                <div class="shop-icons d-flex flex-column align-items-center">
+                                                    <a href="#" class="shop-icon bi-heart"></a>
+
+                                                    <a href="#" class="shop-icon bi-bookmark"></a>
+                                                </div>
+
+                                                <p class="shop-pricing mb-0 mt-3">
+                                                    <span class="badge custom-badge">$6,400</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="shop-btn-wrap">
+                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="shop-body">
+                                            <h4>Dining</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-12">
+                                    <div class="shop-thumb">
+                                        <div class="shop-image-wrap">
+                                            <a href="shop-detail.html">
+                                                <img src="../static/images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg" class="shop-image img-fluid" alt="">
+                                            </a>
+
+                                            <div class="shop-icons-wrap">
+                                                <div class="shop-icons d-flex flex-column align-items-center">
+                                                    <a href="#" class="shop-icon bi-heart"></a>
+
+                                                    <a href="#" class="shop-icon bi-bookmark"></a>
+                                                </div>
+
+                                                <p class="shop-pricing mb-0 mt-3">
+                                                    <span class="badge custom-badge">$2,400</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="shop-btn-wrap">
+                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="shop-body">
+                                            <h4>Living Room</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-12">
+                                    <div class="shop-thumb">
+                                        <div class="shop-image-wrap">
+                                            <a href="shop-detail.html">
+                                                <img src="../static/images/shop/concept-home-cooking-with-female-chef.jpg" class="shop-image img-fluid" alt="">
+                                            </a>
+
+                                            <div class="shop-icons-wrap">
+                                                <div class="shop-icons d-flex flex-column align-items-center">
+                                                    <a href="#" class="shop-icon bi-heart"></a>
+
+                                                    <a href="#" class="shop-icon bi-bookmark"></a>
+                                                </div>
+
+                                                <p class="shop-pricing mb-0 mt-3">
+                                                    <span class="badge custom-badge">$3,800</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="shop-btn-wrap">
+                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="shop-body">
+                                            <h4>Chef Kitchen</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-12">
+                                    <div class="shop-thumb">
+                                        <div class="shop-image-wrap">
+                                            <a href="shop-detail.html">
+                                                <img src="../static/images/shop/childrens-bed-nursery-cot-velvet-childrens-room.jpg" class="shop-image img-fluid" alt="">
+                                            </a>
+
+                                            <div class="shop-icons-wrap">
+                                                <div class="shop-icons d-flex flex-column align-items-center">
+                                                    <a href="#" class="shop-icon bi-heart"></a>
+
+                                                    <a href="#" class="shop-icon bi-bookmark"></a>
+                                                </div>
+
+                                                <p class="shop-pricing mb-0 mt-3">
+                                                    <span class="badge custom-badge">$850</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="shop-btn-wrap">
+                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="shop-body">
+                                            <h4>Childrens Bedroom</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="page-item active" aria-current="page">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">3</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">4</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">5</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="reviews-section section-padding pb-0" id="section_4">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-12 col-12">
+                                    <small class="section-small-title">Happy customers.</small>
+
+                                    <h2 class="mt-2 mb-4">Reviews</h2>
+
+                                    <div class="owl-carousel reviews-carousel">
+                                        <div class="reviews-thumb">
+                                            <div class="reviews-body">
+                                                <h4>Moso Interior is the most suitable website layout.</h4>
+                                            </div>
+
+                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                                <img src="../static/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="avatar-image img-fluid" alt="">
+
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                                    <p class="text-white mb-0">
+                                                        <strong>Sandy</strong>, <small>CEO</small>
+                                                    </p>
+
+                                                    <div class="reviews-icons">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews-thumb">
+                                            <div class="reviews-body">
+                                                <h4>Explore more HTML Templates to download for your website.</h4>
+                                            </div>
+
+                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                                <img src="../static/images/avatar/studio-portrait-emotional-happy-funny-smiling-boyfriend-man-with-heavy-beard-stands-with-arms-crossed-dressed-red-t-shirt-isolated-blue.jpg" class="avatar-image img-fluid" alt="">
+
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                                    <p class="text-white mb-0">
+                                                        <strong>Jack</strong>, <small>Partner</small>
+                                                    </p>
+
+                                                    <div class="reviews-icons">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star"></i>
+                                                        <i class="bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews-thumb">
+                                            <div class="reviews-body">
+                                                <h4>Please recommend Tooplate website to your friends.</h4>
+                                            </div>
+
+                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                                <img src="../static/images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="avatar-image img-fluid" alt="">
+
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                                    <p class="text-white mb-0">
+                                                        <strong>Helen</strong>, <small>Client</small>
+                                                    </p>
+
+                                                    <div class="reviews-icons">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews-thumb">
+                                            <div class="reviews-body">
+                                                <h4>This Bootstrap 5 layout is free to use for your website.</h4>
+                                            </div>
+
+                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                                <img src="../static/images/avatar/portrait-young-redhead-bearded-male-wears-white-t-shirt-keeps-his-eyes-closed-smiling-feels-happy-yellow.jpg" class="avatar-image img-fluid" alt="">
+
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                                    <p class="text-white mb-0">
+                                                        <strong>Bill</strong>, <small>Designer</small>
+                                                    </p>
+
+                                                    <div class="reviews-icons">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star"></i>
+                                                        <i class="bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews-thumb">
+                                            <div class="reviews-body">
+                                                <h4>Thank you for visiting Tooplate to download free templates.</h4>
+                                            </div>
+
+                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                                <img src="../static/images/avatar/portrait-young-beautiful-woman-gesticulating.jpg" class="avatar-image img-fluid" alt="">
+
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                                    <p class="text-white mb-0">
+                                                        <strong>Susan</strong>, <small>Boss</small>
+                                                    </p>
+
+                                                    <div class="reviews-icons">
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                        <i class="bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <p class="d-flex justify-content-center align-items-center mt-lg-5">Write some reviews on <a href="#" class="custom-btn btn ms-3"><i class="bi-facebook me-2"></i>facebook</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="contact-section" id="section_5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-12 col-12">
+                                    <small class="section-small-title">Ask anything.</small>
+
+                                    <h2 class="mb-4">Say Hello</h2>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <form class="custom-form contact-form" action="#" method="post" role="form">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="input-group align-items-center">
+                                                    <label for="first-name">First Name</label>
+
+                                                    <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Jack" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="input-group align-items-center">
+                                                    <label for="last-name">Last Name</label>
+
+                                                    <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group align-items-center">
+                                            <label for="email">Email Address</label>
+
+                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com" required>
+                                        </div>
+
+                                        <div class="input-group textarea-group">
+                                            <label for="message">Message</label>
+
+                                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="What can we help you?"></textarea>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-4 col-6">
+                                            <button type="submit" class="form-control">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                                    <div class="custom-block">
+
+                                        <h3 class="text-white mb-2">Store</h3>
+
+                                        <p class="text-white mb-2">
+                                            <i class="contact-icon bi-geo-alt me-1"></i>
+
+                                            102 Utah Road, Berlin, Germany
+                                        </p>
+
+                                        <h3 class="text-white mt-3 mb-2">Contact Info</h3>
+
+                                        <div class="d-flex flex-wrap">
+                                            <p class="text-white mb-2 me-4">
+                                                <i class="contact-icon bi-telephone me-1"></i>
+
+                                                <a href="tel: 090-080-0760" class="text-white">
+                                                    090-080-0760
+                                                </a>
+                                            </p>
+
+                                            <p class="text-white">
+                                                <i class="contact-icon bi-envelope me-1"></i>
+
+                                                <a href="mailto:info@company.com" class="text-white">
+                                                    info@company.com
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                        <iframe class="google-map mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4800.184803804974!2d-0.10174304922518053!3d51.5087879746898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605f6fc62fa3d%3A0xc5a39e7cf4e3a9a4!2sTate%20Modern%20Garden!5e1!3m2!1sen!2smm!4v1679331839559!5m2!1sen!2smm" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#36363e" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
                 </main>
 
             </div>
@@ -600,86 +828,7 @@ Bootstrap 5 Dashboard Admin Template
         <script src="../static/js/bootstrap.bundle.min.js"></script>
         <script src="../static/js/apexcharts.min.js"></script>
         <script src="../static/js/custom.js"></script>
-
-        <script type="text/javascript">
-            var options = {
-              series: [13, 43, 22],
-              chart: {
-              width: 380,
-              type: 'pie',
-            },
-            labels: ['Balance', 'Expense', 'Credit Loan',],
-            responsive: [{
-              breakpoint: 480,
-              options: {
-                chart: {
-                  width: 200
-                },
-                legend: {
-                  position: 'bottom'
-                }
-              }
-            }]
-            };
-
-            var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
-            chart.render();
-        </script>
-
-        <script type="text/javascript">
-            var options = {
-              series: [{
-              name: 'Income',
-              data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-            }, {
-              name: 'Expense',
-              data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-            }, {
-              name: 'Transfer',
-              data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-            }],
-              chart: {
-              type: 'bar',
-              height: 350
-            },
-            plotOptions: {
-              bar: {
-                horizontal: false,
-                columnWidth: '55%',
-                endingShape: 'rounded'
-              },
-            },
-            dataLabels: {
-              enabled: false
-            },
-            stroke: {
-              show: true,
-              width: 2,
-              colors: ['transparent']
-            },
-            xaxis: {
-              categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-            },
-            yaxis: {
-              title: {
-                text: '$ (thousands)'
-              }
-            },
-            fill: {
-              opacity: 1
-            },
-            tooltip: {
-              y: {
-                formatter: function (val) {
-                  return "$ " + val + " thousands"
-                }
-              }
-            }
-            };
-
-            var chart = new ApexCharts(document.querySelector("#chart"), options);
-            chart.render();
-        </script>
+        <script src="../static/js/jquery.backstretch.min.js"></script>
 
     </body>
 </html>

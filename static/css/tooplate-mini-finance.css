@@ -1148,3 +1148,16 @@ strong {
   }
 }
 
+.hero-section {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  min-height: 580px;
+}
+
+
+@media screen and (min-width: 991px) {
+  .hero-section {
+    height: calc(100vh - 70px);
+  }
+}
