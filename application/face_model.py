@@ -14,7 +14,7 @@ class Face_recognize:
     #建立人脸库
     def save_data(self):
         face_database = {
-            "Zeng": "zeng.png",
+            "Zeng": "zeng.jpg",
             "Huang": "huang.jpg",
             # 添加更多人脸和对应的图像路径
         }
@@ -39,7 +39,7 @@ class Face_recognize:
         self.known_faces = data['known_faces']
         self.known_face_names = data['known_face_names']
         self.known_face_encodings = data['known_face_encodings']
-        self.kown_faces_path=[ "zeng.png", "huang.jpg"]
+        self.kown_faces_path=[ "zeng.jpg", "huang.jpg"]
     def process_frame(self, frame):
 
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
@@ -95,7 +95,7 @@ class Face_recognize:
                 #没检测到人
                 if not face_locations:
                     #帧率，检测到的人脸个数，名字，距离，人脸库中对应的图片（没有匹配的返回公仔self.img_tmp）
-                    self.face_info=[self.fps, len(face_locations), None, None]
+                    self.face_info=[self.fps, len(face_locations), "None", "None"]
                     print(self.fps, len(face_locations), None, None)
                 else:
                     #有匹配的人,face_names是检测到的所有人的名字，min_distances是检测到的所有人的距离，每一个检测到的人的时间都用网页当前时间表示

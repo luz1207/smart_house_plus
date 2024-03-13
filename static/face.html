@@ -367,20 +367,20 @@ Bootstrap 5 Dashboard Admin Template
                                 </div>
                                 <h6 style="text-align: center">人脸识别结果</h6>
                                 <div class="face_info">
-                                    <p style="margin-top: 30px;margin-left: 30px">帧率：</p>
+                                    <p id="fpsDisplay" style="margin-top: 30px;margin-left: 30px">帧率:</p>
                                 </div>
                                 <div class="face_info">
-                                    <p style="margin-top: 6px;margin-left: 30px">人脸：</p>
+                                    <p id="nameDisplay" style="margin-top: 6px;margin-left: 30px">人脸：</p>
                                 </div>
                                 <div class="recognize_res">
-                                    <img src="./images/face/error.png" style="width: 90%;height: 90%">
-                                    <p style="margin-top: 15px">认证失败</p>
+                                    <img id="verify_img"  src="../static/images/face/scanning.gif" style="width: 90%;height: 90%;object-fit: cover">
+                                    <p id="verify_status" style="margin-top: 15px">未检测到人脸</p>
                                 </div>
                                 <div style="margin-top: 30px;margin-left: 30%">
                                     <h8>人脸库比对结果</h8>
                                 </div>
                                 <div class="face_info">
-                                    <p style="margin-top: 30px;margin-left: 30px">个数：</p>
+                                    <p id="numdisplay" style="margin-top: 30px;margin-left: 30px">个数：</p>
                                 </div>
                                 <div class="face_info">
                                     <p style="margin-top: 6px;margin-left: 30px">距离：</p>
