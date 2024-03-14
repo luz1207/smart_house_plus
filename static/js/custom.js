@@ -4,11 +4,11 @@
   "use strict";
 
     // HERO SLIDE
-    $('.hero-slide').backstretch([
-      "./images/slideshow/slide2.jpg",
-      "./images/slideshow/slide1.jpg",
-      "./images/slideshow/slide3.jpg"
-    ],  {duration: 2000, fade: 750});
+    // $('.hero-slide').backstretch([
+    //   "./images/slideshow/slide2.jpg",
+    //   "./images/slideshow/slide1.jpg",
+    //   "./images/slideshow/slide3.jpg"
+    // ],  {duration: 2000, fade: 750});
 
     // MENU
     $('#sidebarMenu .nav-link').on('click',function(){
