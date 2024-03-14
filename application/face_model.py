@@ -108,7 +108,7 @@ class Face_recognize:
                     #帧率，检测到的人脸个数，名字，距离，人脸库中对应的图片（没有匹配的返回公仔self.img_tmp）
                     self.face_info=[self.fps, len(face_locations), -1, "None","None"]
                     # print(self.fps, len(face_locations), None, None)
-                    print(self.face_info)
+                    # print(self.face_info)
                 else:
                     #有匹配的人,face_names是检测到的所有人的名字，min_distances是检测到的所有人的距离，每一个检测到的人的时间都用网页当前时间表示
                     if flag:
@@ -116,10 +116,10 @@ class Face_recognize:
                         #只 打印检测到的最后一个人的信息
                         self.face_info=[self.fps, len(face_locations), face_names, min_distances,times]
                         # print(self.fps, len(face_locations), face_names, min_distances)
-                        print(self.face_info)
+                        # print(self.face_info)
                     else:
                         self.face_info=[self.fps, len(face_locations), face_names, min_distances,times]
-                        print(self.face_info)
+                        # print(self.face_info)
 
                 _, buffer = cv2.imencode('.jpg', frame)
                 frame = buffer.tobytes()

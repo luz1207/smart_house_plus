@@ -9,12 +9,27 @@
 }
 
 .face_video{
-    /*background-color: #86d986;*/
-    height: 55%;
-    width: 90%;
+    background-color: #4b4b4b;
+    height: 90%;
+    width: 55%;
     /*margin-top: 5px;*/
     /*margin-left: 5%;*/
-    margin-bottom: 6px;
+    margin: 8px;
+    float: left;
+}
+.face_emotion{
+    width: 99%;
+    height: 56%;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: row;
+}
+
+.emotion_video{
+    background-color: #4b4b4b;
+    height: 90%;
+    width: 55%;
+    margin: 8px;
 }
 
 .face_box{
@@ -81,29 +96,6 @@
     /*background-color: #0f5132;*/
 }
 
-/*.face_result span {*/
-/*    position: absolute;*/
-/*}*/
-
-/*.face_result span:nth-child(1) {*/
-/*    top: 0;*/
-/*    left: -2px;*/
-/*    width: 2px;*/
-/*    height: 100%;*/
-/*    background: linear-gradient(360deg, transparent, #03e9f4);*/
-/*    animation: animate1 1s linear infinite;*/
-/*}*/
-
-/*@keyframes animate1 {*/
-/*    0% {*/
-/*        left: -2px;*/
-/*        opacity: 0; !* 初始时，元素透明度为0，即不可见 *!*/
-/*    }*/
-/*    50%, 100% {*/
-/*        left: 0;*/
-/*        opacity: 1; !* 在动画的一半和末尾时，元素透明度为1，即完全可见 *!*/
-/*    }*/
-/*}*/
 
 
 .face_result {
@@ -124,7 +116,7 @@
 
 .record_list {
     border-collapse: collapse;
-    width: 90%;
+    width: 58%;
     border: 1px solid #7a7a7a; /* 添加外边框 */
     margin-top: 2%;
 }
@@ -133,8 +125,8 @@
 .record_list th, .record_list td {
     text-align: left;
     color: #0c0c0c; /* 修改字体颜色 */
-    font-size: 14px; /* 修改字体大小 */
-    padding: 8px;
+    font-size: 12px; /* 修改字体大小 */
+    padding: 8px  5px;
     border-bottom: 1px solid #7a7a7a; /* 添加底部边框 */
 }
 
@@ -144,4 +136,5 @@
 .record_list th {
     background-color: #b1eadc;
     color: #0c0c0c;
+    padding: 8px  4px;
 }

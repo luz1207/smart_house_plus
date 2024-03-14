@@ -9,12 +9,9 @@ from flask import Flask, request, jsonify
 from application.guesture_model import gesTure
 from mediapipe.tasks import python
 from application.face_model import  Face_recognize
+from application.emotion_model import emotion_model
 from mediapipe.tasks.python import vision
-# from tencentcloud.common import credential
-# from tencentcloud.common.profile.http_profile import HttpProfile
-# from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
-# from tencentcloud.common.profile.client_profile import ClientProfile
-# from tencentcloud.iai.v20200303 import iai_client, models
+
 
 # STEP 2: Create an GestureRecognizer object.一定要放在函数外面
 base_options = python.BaseOptions(model_asset_path='./application/gesture_recognizer.task')
@@ -28,6 +25,7 @@ camera1 = cv2.VideoCapture(0)
 # camera1 = cv2.VideoCapture(0)
 x = gesTure(recognizer)
 face_model = Face_recognize()
+emotion = emotion_model()
 
 def guesture_recognition(recognizer):
 
@@ -39,6 +37,10 @@ def guesture_recognition(recognizer):
 def face_recognition():
 
     return face_model.show()
+
+def emotion_detect():
+
+    return emotion.detect_emotion()
 
 
 @app.route('/')
@@ -63,6 +65,10 @@ def guesture_index():
                     status = 1
                 elif x.status == 2:
                     status = 2
+                elif x.status == 3:
+                    status = 3
+                elif x.status == 4:
+                    status = 4
 
                 # result=json.dumps(json_dict,ensure_ascii=False)
                 data = json.dumps({"status": status, "name": name},ensure_ascii=False)
@@ -73,6 +79,10 @@ def guesture_index():
 @app.route('/face_video_feed')
 def face_video_feed():
     return Response(face_recognition(),mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/emotion_video_feed')
+def emotion_video_feed():
+    return Response(emotion_detect(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/get_face_info')
 def get_face_info():
