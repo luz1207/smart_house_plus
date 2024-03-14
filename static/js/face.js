@@ -128,29 +128,29 @@ eventSource.onmessage = function(event) {
         return `${year}-${month}-${day} ${hour}:${minite}:${seconds<10?'0'+seconds:seconds}`
     }
 
-    if(data[2] !== -1){
-        console.log("弹出")
-        if (!localStorage.getItem('hideUnknownPrompt')) {
-            if (data[2].includes("Unknown")) {
-                // 显示提示框
-                if (confirm("检测到未知人脸，是否继续？")) {
-                    // 用户点击确认后，设置 localStorage，十分钟内不再显示提示框
-                    localStorage.setItem('hideUnknownPrompt', true);
-                    localStorage.setItem('hideUnknownPromptTime', Date.now() +  5 * 60 * 1000);
-                }
-            }
-        } else {
-            // 如果存在记录，检查时间是否超过十分钟，如果超过则移除记录
-            const hideUntil = parseInt(localStorage.getItem('hideUnknownPromptTime'));
-            if (Date.now() > hideUntil) {
-                localStorage.removeItem('hideUnknownPrompt');
-                localStorage.removeItem('hideUnknownPromptTime');
-            }
-        }
-    }
-    else{
-        localStorage.removeItem('hideUnknownPrompt');
-        localStorage.removeItem('hideUnknownPromptTime');
-    }
+    // if(data[2] !== -1){
+    //     console.log("弹出")
+    //     if (!localStorage.getItem('hideUnknownPrompt')) {
+    //         if (data[2].includes("Unknown")) {
+    //             // 显示提示框
+    //             if (confirm("检测到未知人脸，是否继续？")) {
+    //                 // 用户点击确认后，设置 localStorage，十分钟内不再显示提示框
+    //                 localStorage.setItem('hideUnknownPrompt', true);
+    //                 localStorage.setItem('hideUnknownPromptTime', Date.now() +  5 * 60 * 1000);
+    //             }
+    //         }
+    //     } else {
+    //         // 如果存在记录，检查时间是否超过十分钟，如果超过则移除记录
+    //         const hideUntil = parseInt(localStorage.getItem('hideUnknownPromptTime'));
+    //         if (Date.now() > hideUntil) {
+    //             localStorage.removeItem('hideUnknownPrompt');
+    //             localStorage.removeItem('hideUnknownPromptTime');
+    //         }
+    //     }
+    // }
+    // else{
+    //     localStorage.removeItem('hideUnknownPrompt');
+    //     localStorage.removeItem('hideUnknownPromptTime');
+    // }
 
 };
