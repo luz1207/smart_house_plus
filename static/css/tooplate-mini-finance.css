@@ -10,7 +10,7 @@ https://www.tooplate.com/view/2135-mini-finance
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
+  --white-color: #ffffff;
   --primary-color:                #E63946;
   --secondary-color:              #F1FAEE;
   --section-bg-color:             #ececec;
@@ -382,6 +382,7 @@ strong {
   NAVIGATION              
 -----------------------------------------*/
 .sidebar {
+  width: 250px;
   background: var(--white-color);
   position: fixed;
   top: 0;
@@ -1001,6 +1002,7 @@ strong {
 
 @media screen and (max-width: 767px) {
   #sidebarMenu {
+
     top: 60px;
   }
 
@@ -1010,7 +1012,7 @@ strong {
   }
 
   .navbar .header-form {
-    width: 100%;
+    width: 80%;
     margin: 10px;
   }
 
@@ -1019,14 +1021,14 @@ strong {
   }
 
   .navbar-nav .dropdown:last-child {
-    margin-right: 50px;
+    margin-right: 20px;
   }
 }
 
 
 @media screen and (max-width: 580px) {
   .navbar-nav .dropdown-menu {
-    width: 95%;
+    width: 90%;
     min-width: 240px;
     margin: auto;
     top: 60px;

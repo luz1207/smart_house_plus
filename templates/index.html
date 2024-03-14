@@ -35,7 +35,7 @@ Bootstrap 5 Dashboard Admin Template
 
     </head>
     
-    <body>
+    <body style="overflow-x: hidden;">
         <header class="navbar sticky-top flex-md-nowrap">
             <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                 <a class="navbar-brand" href="/">
@@ -213,7 +213,7 @@ Bootstrap 5 Dashboard Admin Template
         </header>
 
         <div class="container-fluid">
-            <div class="row">
+            <div style="width: 250px">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
                     <div class="position-sticky py-4 px-3 sidebar-sticky">
                         <ul class="nav flex-column h-100">
@@ -253,7 +253,7 @@ Bootstrap 5 Dashboard Admin Template
                             </li>
 
                             <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
-                                <img src="../static/images/credit-card.png" class="img-fluid" alt="">
+                                <img src="../static/images/credit-card.png"  alt="">
 
                                 <a class="btn custom-btn" href="#">Upgrade</a>
                             </li>
@@ -268,10 +268,10 @@ Bootstrap 5 Dashboard Admin Template
                     </div>
                 </nav>
 
-                <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+                <main class="main-wrapper" style="background-color: chartreuse;min-width: calc(100vw - 200px);margin-left: 220px;">
 
-                    <section class="hero-slide" id="section_1">
-                        <div class="container">
+                    <section class="my_section1" id="section_1" >
+                        <div class="container" id="my_container" >
                             <div class="row">
 
                                 <div class="col-lg-8 col-12 text-center mx-auto">
@@ -829,6 +829,7 @@ Bootstrap 5 Dashboard Admin Template
         <script src="../static/js/apexcharts.min.js"></script>
         <script src="../static/js/custom.js"></script>
         <script src="../static/js/jquery.backstretch.min.js"></script>
+        <script src="../static/js/my_index.js"></script>
 
     </body>
 </html>

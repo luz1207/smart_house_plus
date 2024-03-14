@@ -1,12 +1,16 @@
 .guesture_video{
-    width: 60vw;
+    width: 80vw;
     height: 45vh;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 17%;
     /*background-color: #0a58ca;*/
 }
 
 .lamp_container{
-    width: 35vw;
-    height: 40vh;
+    width: 30%;
+    height: 84%;
     /*background-color: #0dcaf0;*/
     text-align: center;
     align-content: center;
@@ -79,7 +83,8 @@ input.cmn-toggle-round:checked + label:after {
     width: 885px;
     /*background-color: #0a58ca;*/
     border-radius: 5px;
-    background-color: rgba(185, 250, 252, 0.6);
+    /*background-color: rgba(185, 250, 252, 0.6);*/
+    margin-left: 17%;
 }
 
 .guesture_lib_img{

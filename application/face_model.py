@@ -1,7 +1,8 @@
-import time
 import cv2
-import face_recognition
+import time
 import numpy as np
+import face_recognition
+from datetime import datetime
 
 
 class Face_recognize:
@@ -77,12 +78,22 @@ class Face_recognize:
         cap = cv2.VideoCapture(0)
         self.pTime = 0
 
+        times = []
+
         while cap.isOpened():
             ret, frame = cap.read()
             if ret:
                 frame = cv2.flip(frame, 1)
                 face_locations, face_names, min_distances, best_match_index ,flag= self.process_frame(frame)
                 for (top, right, bottom, left), name in zip(face_locations, face_names):
+
+                    # 获取当前时间
+                    current_datetime = datetime.now()
+
+                    # 将日期和时间格式化为字符串
+                    formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+                    times.append(formatted_datetime)
+
                     top *= 4
                     right *= 4
                     bottom *= 4
@@ -95,21 +106,25 @@ class Face_recognize:
                 #没检测到人
                 if not face_locations:
                     #帧率，检测到的人脸个数，名字，距离，人脸库中对应的图片（没有匹配的返回公仔self.img_tmp）
-                    self.face_info=[self.fps, len(face_locations), "None", "None"]
-                    print(self.fps, len(face_locations), None, None)
+                    self.face_info=[self.fps, len(face_locations), -1, "None","None"]
+                    # print(self.fps, len(face_locations), None, None)
+                    print(self.face_info)
                 else:
                     #有匹配的人,face_names是检测到的所有人的名字，min_distances是检测到的所有人的距离，每一个检测到的人的时间都用网页当前时间表示
                     if flag:
                         #检测到的每个人的信息：face_names，min_distances一一对应
                         #只 打印检测到的最后一个人的信息
-                        self.face_info=[self.fps, len(face_locations), face_names, min_distances]
-                        print(self.fps, len(face_locations), face_names, min_distances)
+                        self.face_info=[self.fps, len(face_locations), face_names, min_distances,times]
+                        # print(self.fps, len(face_locations), face_names, min_distances)
+                        print(self.face_info)
                     else:
-                        self.face_info=[self.fps, len(face_locations), face_names, min_distances]
-                        print(self.fps, len(face_locations), face_names, min_distances)
+                        self.face_info=[self.fps, len(face_locations), face_names, min_distances,times]
+                        print(self.face_info)
 
                 _, buffer = cv2.imencode('.jpg', frame)
                 frame = buffer.tobytes()
+
+                times = []
 
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
