@@ -1,5 +1,6 @@
 // 创建一个 EventSource 对象来连接到服务器上的 /get_face_info 路由
 const eventSource = new EventSource('/get_face_info');
+const eventSource_emotion = new EventSource('/get_emotion_info')
 var globle_index = 0
 
 // 监听 message 事件，当接收到新的数据时触发
@@ -128,29 +129,57 @@ eventSource.onmessage = function(event) {
         return `${year}-${month}-${day} ${hour}:${minite}:${seconds<10?'0'+seconds:seconds}`
     }
 
-    // if(data[2] !== -1){
-    //     console.log("弹出")
-    //     if (!localStorage.getItem('hideUnknownPrompt')) {
-    //         if (data[2].includes("Unknown")) {
-    //             // 显示提示框
-    //             if (confirm("检测到未知人脸，是否继续？")) {
-    //                 // 用户点击确认后，设置 localStorage，十分钟内不再显示提示框
-    //                 localStorage.setItem('hideUnknownPrompt', true);
-    //                 localStorage.setItem('hideUnknownPromptTime', Date.now() +  5 * 60 * 1000);
-    //             }
-    //         }
-    //     } else {
-    //         // 如果存在记录，检查时间是否超过十分钟，如果超过则移除记录
-    //         const hideUntil = parseInt(localStorage.getItem('hideUnknownPromptTime'));
-    //         if (Date.now() > hideUntil) {
-    //             localStorage.removeItem('hideUnknownPrompt');
-    //             localStorage.removeItem('hideUnknownPromptTime');
-    //         }
-    //     }
-    // }
-    // else{
-    //     localStorage.removeItem('hideUnknownPrompt');
-    //     localStorage.removeItem('hideUnknownPromptTime');
-    // }
+};
+
+var flag = 0;
+
+eventSource_emotion.onmessage = function (event1){
+    const emotion_data = JSON.parse(event1.data);
+    const probability = emotion_data.probability;
+    const emotion = emotion_data.emotion;
+
+    const max_len = 200
+    const angry_bar = document.getElementById("angrybar");
+    angry_bar.style.width = probability[0]*max_len + 'px';
+    console.log(probability[0]*max_len)
+    const disgustbar_bar = document.getElementById("disgustbar");
+    disgustbar_bar.style.width = probability[1]*max_len + 'px';
+    const fear_bar = document.getElementById("fearbar");
+    fear_bar.style.width = probability[2]*max_len + 'px';
+    const happy_bar = document.getElementById("happybar");
+    happy_bar.style.width = probability[3]*max_len + 'px';
+    const sad_bar = document.getElementById("sadbar");
+    sad_bar.style.width = probability[4]*max_len + 'px';
+    const surprise_bar = document.getElementById("surprisebar");
+    surprise_bar.style.width = probability[5]*max_len + 'px';
+    const neutral_bar = document.getElementById("neutralbar");
+    neutral_bar.style.width = probability[6]*max_len + 'px';
+
+    if (flag === 0){
+        if(emotion === 'happy'){
+            const happy_music = new Audio('./sing/happy.mp3');
+            happy_music.play();
+            console.log("happy")
+            flag = 1 ;
+        }
+        else if(emotion === 'sad'){
+            const sad_music = new Audio('./sing/sad.mp3');
+            sad_music.play();
+            flag = 1 ;
+        }
+    }
 
 };
+
+function transposeLag() {
+    // 这里是转置 lag 的代码，你需要根据你的需求来实现
+    console.log("Transposing lag...");
+    if(flag === 1){
+        flag =0
+    }
+}
+
+// 每隔五分钟执行一次 transposeLag 函数
+setInterval(transposeLag, 2 * 60 * 1000); // 五分钟的毫秒数
+
+

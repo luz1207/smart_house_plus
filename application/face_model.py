@@ -36,6 +36,8 @@ class Face_recognize:
         # 公仔图片
         # self.img_tmp = face_recognition.load_image_file("test.jpg")
         self.face_info=[]
+        self.emotion = 'None'
+        self.probability = 'None'
 
     #建立人脸库
     def save_data(self):
@@ -189,7 +191,7 @@ class Face_recognize:
 
                     emotion_prediction = emotion_classifier.predict(gray_face)
 
-                    self.probability = list(emotion_prediction)
+                    self.probability = [float(item) for sublist in emotion_prediction for item in sublist]
 
                     emotion_probability = np.max(emotion_prediction)
                     emotion_label_arg = np.argmax(emotion_prediction)
@@ -205,7 +207,7 @@ class Face_recognize:
 
                     if emotion_text == 'angry':
                         color = emotion_probability * np.asarray((255, 0, 0))
-                        self.emotion = 'angray'
+                        self.emotion = 'angry'
                     elif emotion_text == 'sad':
                         color = emotion_probability * np.asarray((0, 0, 255))
                         self.emotion = 'sad'
@@ -215,6 +217,15 @@ class Face_recognize:
                     elif emotion_text == 'surprise':
                         color = emotion_probability * np.asarray((0, 255, 255))
                         self.emotion = 'surprise'
+                    elif emotion_text == 'disgust':
+                        color = emotion_probability * np.asarray((100, 200, 255))
+                        self.emotion = 'disgust'
+                    elif emotion_text == 'fear':
+                        color = emotion_probability * np.asarray((200, 200, 100))
+                        self.emotion = 'fear'
+                    elif emotion_text == 'neutral':
+                        color = emotion_probability * np.asarray((167, 24, 188))
+                        self.emotion = 'neutral'
                     else:
                         color = emotion_probability * np.asarray((0, 255, 0))
                         self.emotion = 'undetected'

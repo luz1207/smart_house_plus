@@ -9,7 +9,6 @@ from flask import Flask, request, jsonify
 from application.guesture_model import gesTure
 from mediapipe.tasks import python
 from application.face_model import  Face_recognize
-from application.emotion_model import emotion_model
 from mediapipe.tasks.python import vision
 
 
@@ -25,7 +24,6 @@ camera1 = cv2.VideoCapture(0)
 # camera1 = cv2.VideoCapture(0)
 x = gesTure(recognizer)
 face_model = Face_recognize()
-emotion = emotion_model()
 cap = cv2.VideoCapture(0)
 # ret, frame = cap.read()
 def guesture_recognition(recognizer):
@@ -93,6 +91,17 @@ def get_face_info():
                 data = face_model.face_info
                 yield 'data: {}\n\n'.format(json.dumps(data))
     return Response(generate_face_info(),mimetype='text/event-stream')
+
+@app.route('/get_emotion_info')
+def get_emotion_info():
+    def generate_emotion_info():
+        while True:
+            emotion = face_model.emotion
+            probability = face_model.probability
+            with app.app_context():
+                data = json.dumps({"emotion": emotion, "probability": probability},ensure_ascii=False)
+                yield 'data: {}\n\n'.format(data)
+    return Response(generate_emotion_info(),mimetype='text/event-stream')
 
 @app.route('/download')
 def download_file():

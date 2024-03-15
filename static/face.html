@@ -279,16 +279,49 @@ Bootstrap 5 Dashboard Admin Template
                                         <img src="http://127.0.0.1:8080/emotion_video_feed" style="width: 90%;height: 100%;">
                                     </div>
                                 </div>
-                                <table class="record_list" id="record">
-                                    <tr>
-                                        <th>序号</th>
-                                        <th>标识符</th>
-                                        <th>名字</th>
-                                        <th>时间</th>
-                                        <th>距离</th>
-                                    </tr>
+                                <div class="data_show">
+                                    <table class="record_list" id="record">
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>标识符</th>
+                                            <th>名字</th>
+                                            <th>时间</th>
+                                            <th>距离</th>
+                                        </tr>
 
-                                </table>
+                                    </table>
+                                    <div class="emotion_bar">
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">angry </p>
+                                            <div class="rightbar" id="angrybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">disgust </p>
+                                            <div class="rightbar" id="disgustbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">fear </p>
+                                            <div class="rightbar" id="fearbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">happy </p>
+                                            <div class="rightbar" id="happybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">sad </p>
+                                            <div class="rightbar" id="sadbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">surprise </p>
+                                            <div class="rightbar" id="surprisebar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+                                        <div class="emotion_info">
+                                            <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">neutral </p>
+                                            <div class="rightbar" id="neutralbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="face_result">
@@ -319,7 +352,6 @@ Bootstrap 5 Dashboard Admin Template
                                 <div class="face_info">
                                     <p id="show_time" style="margin-top: 6px;margin-left: 7px;font-size: 15px;color: #021e2f">时间：</p>
                                 </div>
-
 
 
                             </div>
