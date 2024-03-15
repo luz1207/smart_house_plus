@@ -47,8 +47,8 @@ class gesTure:
         return annotated_image,title,gestures.category_name#放回输出的一张图像和对应的手势名字和分数,
 
     #主函数
-    def Control(self):
-        cap = cv2.VideoCapture(0)
+    def Control(self,cap):
+        # cap = cv2.VideoCapture(0)
         self.resize_w,self.resize_h= 640,480 #原窗口大小
         self.pTime = 0  # 设置第一帧开始处理的起始时间
         font = cv2.FONT_HERSHEY_SIMPLEX
@@ -58,6 +58,7 @@ class gesTure:
         position = (50, 50)
         while cap.isOpened():
             red,self.img = cap.read()
+            # self.img = frame
             if red:
                 img1 = cv2.flip(self.img, 1)  # 镜头翻转
                 # 将图像数据转换为RGB格式

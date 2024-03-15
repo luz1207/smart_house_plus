@@ -26,21 +26,22 @@ camera1 = cv2.VideoCapture(0)
 x = gesTure(recognizer)
 face_model = Face_recognize()
 emotion = emotion_model()
-
+cap = cv2.VideoCapture(0)
+# ret, frame = cap.read()
 def guesture_recognition(recognizer):
 
-    res = x.Control()
+    res = x.Control(cap)
 
     return res
 
 
 def face_recognition():
 
-    return face_model.show()
+    return face_model.show(cap)
 
 def emotion_detect():
-
-    return emotion.detect_emotion()
+    while True:
+        return face_model.detect_emotion(cap)
 
 
 @app.route('/')

@@ -13,7 +13,6 @@ from utils.inference import apply_offsets
 from utils.inference import load_detection_model
 from utils.preprocessor import preprocess_input
 
-USE_WEBCAM = True # If false, loads video file source
 
 # parameters for loading data and images
 emotion_model_path = './application/emotion_model.hdf5'
@@ -40,12 +39,10 @@ class emotion_model:
         self.emotion = 'None'
         self.probability = 'None'
 
-    def detect_emotion(self):
-        cap = cv2.VideoCapture(0) # Webcam source
-
+    def detect_emotion(self,cap):
+        # cap = cv2.VideoCapture(0) # Webcam source
         while cap.isOpened(): # True:
             ret, frame = cap.read()
-
             if ret:
                 frame = cv2.flip(frame, 1)
                 gray_image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -109,8 +106,6 @@ class emotion_model:
                     draw_bounding_box(face_utils.rect_to_bb(face_coordinates), rgb_image, color)
                     draw_text(face_utils.rect_to_bb(face_coordinates), rgb_image, name,
                               color, 0, -45, 0.5, 1)
-
-
 
                 frame = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
 
