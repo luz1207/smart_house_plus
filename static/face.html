@@ -23,6 +23,7 @@
         <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
 
         <link href="./css/face.css" rel="stylesheet">
+        <link href="font/iconfont.css" rel="stylesheet" >
 <!--
 
 Tooplate 2135 Mini Finance
@@ -267,7 +268,7 @@ Bootstrap 5 Dashboard Admin Template
                     </div>
                 </nav>
 
-                <main class="main-wrapper" style="min-width: calc(100vw - 200px);margin-left: 1%">
+                <main class="main-wrapper" style="min-width: calc(100vw - 200px);margin-left: 1%;height:100vh">
                     <div>
                         <div class="face_container">
                             <div class="face_box">
@@ -322,6 +323,10 @@ Bootstrap 5 Dashboard Admin Template
 
                                     </div>
                                 </div>
+                                <div class="emotion_graph">
+                                    <div class="line_graph" id="emotion_line"></div>
+                                    <div class="pie_graph" id="emotion_pie"></div>
+                                </div>
                             </div>
 
                             <div class="face_result">
@@ -331,10 +336,10 @@ Bootstrap 5 Dashboard Admin Template
                                 <span></span>
                                 <h6 style="text-align: center">人脸识别结果</h6>
                                 <div class="face_info">
-                                    <p id="fpsDisplay" style="margin-top: 20px;margin-left:7px;font-size: 16px;color: #021e2f">帧率:</p>
+                                    <p id="fpsDisplay" style="margin-top: 10px;margin-left:4px;font-size: 13px;color: #021e2f">帧率:</p>
                                 </div>
                                 <div class="face_info">
-                                    <p id="nameDisplay" style="margin-top: 6px;margin-left: 7px;font-size: 16px;color: #021e2f">人脸：</p>
+                                    <p id="nameDisplay" style="margin-top: 2px;margin-left: 4px;font-size: 13px;color: #021e2f">人脸：</p>
                                 </div>
                                 <div class="recognize_res">
                                     <img id="verify_img"  src="../static/images/face/scanning.gif" style="width: 90%;height: 90%;object-fit: cover">
@@ -344,13 +349,60 @@ Bootstrap 5 Dashboard Admin Template
                                     <h8>人脸库比对结果</h8>
                                 </div>
                                 <div class="face_info">
-                                    <p id="numdisplay" style="margin-top: 30px;margin-left: 7px;font-size: 15px;color: #021e2f">个数：</p>
+                                    <p id="numdisplay" style="margin-top: 25px;margin-left: 4px;font-size: 13px;color: #021e2f">个数：</p>
                                 </div>
                                 <div class="face_info">
-                                    <p id="distdisplay" style="margin-top: 6px;margin-left: 7px;font-size: 15px;color: #021e2f">距离：</p>
+                                    <p id="distdisplay" style="margin-top: 2px;margin-left: 4px;font-size: 13px;color: #021e2f">距离：</p>
                                 </div>
                                 <div class="face_info">
-                                    <p id="show_time" style="margin-top: 6px;margin-left: 7px;font-size: 15px;color: #021e2f">时间：</p>
+                                    <p id="show_time" style="margin-top: 2px;margin-left: 4px;font-size: 13px;color: #021e2f">时间：</p>
+                                </div>
+                                <div class="music_player">
+                                    <div id="player">
+                                        <!-- 歌曲信息模块 -->
+                                        <div id="player-content1">
+                                            <!-- 歌曲名 -->
+                                            <div class="music-name"></div>
+                                            <!-- 歌手名 -->
+                                            <div class="artist-name"></div>
+                                            <!-- 歌曲时间 -->
+                                            <div class="time">
+                                                <!-- 当前播放的时间 -->
+                                                <div class="current-time"></div>
+                                                <!-- 歌曲总时长 -->
+                                                <div class="total-time"></div>
+                                            </div>
+                                            <!-- 进度条 -->
+                                            <div id="s-area">
+                                                <!-- 鼠标移动到进度条上，显示的时间信息 -->
+                                                <div id="ins-time"></div>
+                                                <!-- 鼠标移动到进度条上，进度条变暗部分-->
+                                                <div id="s-hover"></div>
+                                                <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+                                                <div id="seek-bar"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 控制模块 -->
+                                        <div id="player-content2">
+                                            <!-- 左侧歌曲封面旋转模块 -->
+                                            <div class="music-imgs">
+                                                <!-- 封面图 -->
+                                                <div class="img"></div>
+                                                <!-- 歌曲缓冲时的提示文字 -->
+                                                <div id="buffer-box">缓冲…</div>
+                                            </div>
+                                            <!-- 右侧歌曲操作模块 -->
+                                            <div class="player-controls">
+                                                <!-- 上一首按钮 -->
+                                                <div class="btn prev iconfont">&#xe603;</div>
+                                                <!-- 暂停/播放 按钮 -->
+                                                <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+                                                <!-- 下一首按钮 -->
+                                                <div class="btn next iconfont">&#xe602;</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
 
@@ -360,18 +412,7 @@ Bootstrap 5 Dashboard Admin Template
 
                     </div>
 
-                    <footer class="site-footer">
-                        <div class="container">
-                            <div class="row">
-                                
-                                <div class="col-lg-12 col-12">
-                                    <p class="copyright-text">Copyright © Mini Finance 2048 
-                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
-                                </div>
 
-                            </div>
-                        </div>
-                    </footer>
                 </main>
 
             </div>
@@ -382,6 +423,10 @@ Bootstrap 5 Dashboard Admin Template
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/custom.js"></script>
         <script src="./js/face.js"></script>
+        <script src="./js/echarts.min.js"></script>
+        <script src="./js/music.js"></script>
+
+
 
     </body>
 </html>

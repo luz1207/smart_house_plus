@@ -176,7 +176,7 @@ class Face_recognize:
 
 
                 for face_coordinates in faces:
-                    print ("forrrrr")
+                    # print ("forrrrr")
                     x1, x2, y1, y2 = apply_offsets(face_utils.rect_to_bb(face_coordinates), emotion_offsets)
                     gray_face = gray_image[y1:y2, x1:x2]
                     try:

@@ -132,13 +132,22 @@ eventSource.onmessage = function(event) {
 };
 
 var flag = 0;
+var emotion_value;
+
 
 eventSource_emotion.onmessage = function (event1){
     const emotion_data = JSON.parse(event1.data);
-    const probability = emotion_data.probability;
     const emotion = emotion_data.emotion;
+    var probability;
 
     const max_len = 200
+    if(emotion !== 'None'){
+        probability = emotion_data.probability;
+    }
+    else{
+        probability =[0,0,0,0,0,0,0];
+    }
+
     const angry_bar = document.getElementById("angrybar");
     angry_bar.style.width = probability[0]*max_len + 'px';
     console.log(probability[0]*max_len)
@@ -169,6 +178,30 @@ eventSource_emotion.onmessage = function (event1){
         }
     }
 
+    if(emotion === 'angry'){
+        emotion_value = 1;
+    } else if(emotion === 'disgust'){
+        emotion_value = 2;
+    } else if(emotion === 'fear'){
+        emotion_value = 3;
+    } else if(emotion === 'happy'){
+        emotion_value = 4;
+    } else if(emotion === 'sad'){
+        emotion_value = 5;
+    } else if(emotion === 'surprise'){
+        emotion_value = 6;
+    } else if(emotion === 'neutral'){
+        emotion_value = 7;
+    } else {
+        emotion_value = 0;
+    }
+
+    const names = ["angry", "disgust", "fear","happy","sad","surprise","neutral"];
+    const probabilityData = probability.map((value, index) => {
+        return { value: (value * 1000).toFixed(2), name: names[index] };
+    });
+    setInterval(() => graph_pie(probabilityData), 1000);
+
 };
 
 function transposeLag() {
@@ -182,4 +215,139 @@ function transposeLag() {
 // 每隔五分钟执行一次 transposeLag 函数
 setInterval(transposeLag, 2 * 60 * 1000); // 五分钟的毫秒数
 
+const data = [];
 
+function chart_test() {
+    // 画出情绪折线图
+    var current_time = getCurrentTime();
+    var chartDom = document.getElementById('emotion_line');
+
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    var current_emotion = emotion_value;
+
+    // 添加当前时间和情绪值到数据列表中
+    data.push([current_time, current_emotion]);
+    if (data.length > 20) {
+        data.shift(); // 删除最旧的数据，保留最新的十条数据
+    }
+
+    const dateList = data.map(function (item) {
+        return item[0];
+    });
+    const valueList = data.map(function (item) {
+        return item[1];
+    });
+
+    option = {
+        // Make gradient line here
+        visualMap: [
+            {
+                show: false,
+                type: 'continuous',
+                seriesIndex: 0,
+                min: 0,
+                max: 7
+            }
+        ],
+        title: [
+            {
+                left: 'center',
+                text: 'Emotion Record List'
+            }
+        ],
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: [
+            {
+                data: dateList
+            }
+        ],
+        yAxis: [
+            {
+                type: 'category',
+                data: ['undetected','angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral'],
+                axisLabel: {
+                    interval: 0, // 强制显示所有标签
+                    formatter: function (value) {
+                        return value.toString(); // 将标签转换为字符串
+                    }
+                }
+            }
+        ],
+        grid: [
+            {
+                bottom: '20%',
+                left: '15%'
+            }
+        ],
+        series: [
+            {
+                type: 'line',
+                showSymbol: false,
+                data: valueList
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+}
+
+
+
+function getCurrentTime() {
+    const currentDate = new Date();
+    const hours = addLeadingZero(currentDate.getHours());
+    const minutes = addLeadingZero(currentDate.getMinutes());
+    const seconds = addLeadingZero(currentDate.getSeconds());
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+// 添加前导零
+function addLeadingZero(number) {
+    return number < 10 ? "0" + number : number;
+}
+
+// 每隔一分钟执行一次更新函数
+setInterval(chart_test, 1000); // 一分钟为间隔
+
+
+function graph_pie(data){
+    var piechartDom = document.getElementById('emotion_pie');
+    var pieChart = echarts.init(piechartDom);
+    var option;
+
+    option = {
+        legend: {
+            top: 'bottom'
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+                saveAsImage: { show: true }
+            }
+        },
+        series: [
+            {
+                name: 'Nightingale Chart',
+                type: 'pie',
+                radius: [20, 100],
+                center: ['50%', '50%'],
+                roseType: 'area',
+                itemStyle: {
+                    borderRadius: 8
+                },
+                data: data,
+                tooltip: {
+                    formatter: '{d}%' // 只显示百分比
+                }
+            }
+        ]
+    };
+    option && pieChart.setOption(option);
+}
