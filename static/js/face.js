@@ -361,7 +361,6 @@ function graph_pie(data){
 
 
 
-//音乐播放器
 $(function(){
     var playerContent1 = $('#player-content1');// 歌曲信息模块部分dom元素
     var musicName = $('.music-name');          // 歌曲名部分dom元素
@@ -397,7 +396,8 @@ $(function(){
     // 作用：根据audio的paused属性 来检测当前音频是否已暂停  true:暂停  false:播放中
     function playPause(){
         console.log(emotion_value)
-        if(emotion_value === 1 || emotion_value === 5){
+        if(audio.paused ){
+
             console.log('emotionvalue1')
             playerContent1.addClass('active'); // 内容栏上移
             musicImgs.addClass('active');      // 左侧图片开始动画效果
@@ -405,14 +405,16 @@ $(function(){
             checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
         }
-        // else{
-        //     playerContent1.removeClass('active'); // 内容栏下移
-        //     musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
-        //     playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
-        //     clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
-        //     musicImgs.removeClass('buffering');    // 移除缓冲类名
-        //     audio.pause(); // 暂停
-        // }
+        else{
+            flag1 = 0;
+            playerContent1.removeClass('active'); // 内容栏下移
+            musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
+            playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
+            clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
+            musicImgs.removeClass('buffering');    // 移除缓冲类名
+            audio.pause(); // 暂停
+        }
+
     }
 
 
@@ -603,8 +605,8 @@ $(function(){
         audio.loop = false;   // 取消歌曲的循环播放功能
 
         // console.log(detected_play)
-        playPause();
-        // playPauseBtn.on('click',playPause); // 点击播放/暂停 按钮，触发playPause函数
+//        playPause();
+        playPauseBtn.on('click',playPause); // 点击播放/暂停 按钮，触发playPause函数
 
         // 进度条 移入/移出/点击 动作触发相应函数
         sArea.mousemove(function(event){ showHover(event); });
