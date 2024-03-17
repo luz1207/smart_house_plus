@@ -406,7 +406,6 @@ $(function(){
             audio.play();     // 播放
         }
         else{
-            flag1 = 0;
             playerContent1.removeClass('active'); // 内容栏下移
             musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
             playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮

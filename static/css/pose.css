@@ -1,7 +1,7 @@
 .out_container{
     width: 100%;
     height: 100%;
-    background-color: rgb(197, 196, 194);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction:row ;
     margin-left: 7%;
@@ -10,7 +10,7 @@
 .sitting_pose{
     width: 30%;
     height: 100%;
-    background-color: aqua;
+    /*background-color: aqua;*/
 }
 
 .main_video{
@@ -22,7 +22,7 @@
 .standing_pose{
     width: 30%;
     height: 100%;
-    background-color: red;
+    /*background-color: red;*/
 }
 
 .pose_video{
@@ -34,5 +34,71 @@
 }
 
 .sitting_video{
+    height: 57%;
+    width: 95%;
+    background-color: #8ce196;
+}
+
+.sitting_info{
+    width: 95%;
+    height: 40%;
+    margin-left: 2%;
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: radial-gradient(circle at center center, rgba(25, 25, 112, 0), rgba(25, 25, 112, 0)),
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(56, 144, 184, 0.60)) top,
+    linear-gradient(rgba(26, 87, 130, 0.60), rgba(26, 87, 130, 0.60)) bottom,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) left,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) right;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
 
 }
+
+.standing_video{
+    height: 57%;
+    width: 95%;
+    background-color: #8ce196;
+}
+
+.standing_info{
+    width: 95%;
+    height: 40%;
+    margin-left: 2%;
+    border-radius: 3%;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at center center, rgba(25, 25, 112, 0), rgba(25, 25, 112, 0)),
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
+    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(56, 144, 184, 0.60)) top,
+    linear-gradient(rgba(26, 87, 130, 0.60), rgba(26, 87, 130, 0.60)) bottom,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) left,
+    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) right;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+
+}
+
+.pose_label{
+    width: 100px;
+    height: 60px;
+}
+
