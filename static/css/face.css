@@ -20,7 +20,7 @@
 .face_emotion{
     width: 99%;
     height: 56%;
-    background-color: yellowgreen;
+    /*background-color: yellowgreen;*/
     display: flex;
     flex-direction: row;
 }
@@ -145,7 +145,7 @@
 .data_show{
     width: 100%;
     height: 40%;
-    background-color: #0f5132;
+    /*background-color: #0f5132;*/
     display: flex;
     flex-direction: row;
 }
@@ -180,26 +180,26 @@
     flex-direction: row;
     width: 100%;
     height: 60%;
-    background-color: #8ce196;
+    /*background-color: #8ce196;*/
 }
 
 .line_graph{
     width: 60%;
     height: 100%;
-    background-color: #0a53be;
+    /*background-color: #0a53be;*/
     /*margin-left: 40%;*/
 }
 
 .pie_graph{
     width: 40%;
     height: 100%;
-    background-color: #c6e5e7;
+    /*background-color: #c6e5e7;*/
 }
 
 .music_player{
     width: 100%;
-    height: 20%;
-    background-color: #8ce196;
+    height: 17%;
+    /*background-color: #8ce196;*/
     margin-top: 40%;
 }
 
@@ -221,10 +221,10 @@
 #player-content1{
     position: absolute;
     top:0px;
-    left:15px;
-    width:100%;
+    left:5px;
+    width:92%;
     height:90%;
-    padding:0 20px 0 130px;
+    padding:0 20px 0 95px;
     background: rgb(209, 226, 245);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -232,22 +232,24 @@
     transition:top 0.3s ease;
 }
 #player-content1.active{
-    top:-85px;
+    top:-60px;
 }
 .music-name,
 .artist-name{
     height: 20px;
     margin-top:5px;
-    font-size:14px;
+    font-size:12px;
 }
 .artist-name{
     font-size:12px;
     color: #656565
 }
 .time{
-    font-size:12px;
-    height:15px;
-    margin: 5px 0;
+    font-size:9px;
+    height:30%;
+    margin: 0px 0;
+    width: 100%;
+    /*background-color: #0a53be;*/
 }
 .current-time{
     float: left;
@@ -257,7 +259,7 @@
 }
 .current-time,.total-time{
     color: transparent;
-    font-size: 11px;
+    font-size: 8px;
     background-color: #e8f5ff;
     border-radius: 10px;
     transition: 0.3s ease all;
@@ -310,7 +312,7 @@
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: rgb(54, 127, 196);
+    /*background-color: rgb(54, 127, 196);*/
     transition: 0.2s ease width;
 }
 
@@ -326,10 +328,10 @@
 /* 左侧封面图模块 */
 .music-imgs{
     position: absolute;
-    top: -40px;
-    width: 70px;
+    top: -33px;
+    width: 30%;
     height: 70px;
-    margin-left: 30px;
+    margin-left: 20px;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
     transition: 0.3s ease all;
@@ -341,6 +343,7 @@
 .music-imgs.active{
     top: -50px;
     box-shadow: 0 0 0 4px #e8f5ff, 0 30px 50px -15px #afb7c1;
+    background-size: contain;
 }
 .music-imgs:before{
     content: '';
@@ -355,6 +358,7 @@
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px #fff;
     z-index: 2;
+    background-size: contain;
 }
 /* 左侧封面图模块下的 图片div */
 .music-imgs .img{
@@ -364,12 +368,15 @@
     left: 0;
     width: 100%;
     height: 100%;
+    /*background-color: #0f5132;*/
+    background-size: contain;
 }
 /* 封面图模块添加了active类名后，图片div的样式添加 */
 .music-imgs.active .img{
     z-index: 1;
     -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
+    background-size: contain;
 }
 @-webkit-keyframes rotateAlbumArt
 {
@@ -438,6 +445,6 @@
     line-height: 60px;
     font-size:24px;
     color:#D6DEE7;
-    margin-top: 30px;
+    margin-top: 18px;
     margin-left: 24px;
 }
