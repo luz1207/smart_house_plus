@@ -33,7 +33,7 @@
     -->
 </head>
 
-<body>
+<body style="background-color: #1B1B3D;overflow-x: hidden;">
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
         <a class="navbar-brand" href="/">
@@ -266,12 +266,13 @@
             </div>
         </nav>
 
-        <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start" style="height: 100vh;width: 100vw;">
+        <main  style="height: 100vh;width: 100vw;">
             <div class="out_container">
                 <div class="sitting_pose">
                     <div class="sitting_video">坐姿视频</div>
                     <div class="sitting_info">
                         坐姿检测结果
+                        <div class="pose_label">左倾</div>
                     </div>
                 </div>
                 <div class="main_video">
@@ -280,7 +281,9 @@
                 <div class="standing_pose">
                     <div class="standing_video">站姿视频</div>
                     <div class="standing_info">
-                        站姿检测结果
+                        <p style="color: white;font-size: 16px">站姿检测结果</p>
+                        <div class="pose_label" style="float: left">驼背</div>
+                        <div class="pose_label" style="float: right">抬头</div>
                     </div>
                 </div>
             </div>

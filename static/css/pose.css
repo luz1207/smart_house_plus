@@ -1,7 +1,7 @@
 .out_container{
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgba(183, 183, 183, 0);*/
     display: flex;
     flex-direction:row ;
     margin-left: 7%;
@@ -16,7 +16,7 @@
 .main_video{
     width: 40%;
     height: 100%;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
 }
 
 .standing_pose{
@@ -31,12 +31,15 @@
     margin-top: 40%;
     background-color: gray;
     margin-left: 2%;
+    border-radius: 5%;
 }
 
 .sitting_video{
     height: 57%;
     width: 95%;
     background-color: #8ce196;
+    margin: 2%;
+    border-radius: 5%;
 }
 
 .sitting_info{
@@ -69,36 +72,43 @@
     height: 57%;
     width: 95%;
     background-color: #8ce196;
+    margin: 2%;
+    border-radius: 5%;
 }
 
 .standing_info{
-    width: 95%;
+    width: 80%;
     height: 40%;
     margin-left: 2%;
     border-radius: 3%;
     text-align: center;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    background: radial-gradient(circle at center center, rgba(25, 25, 112, 0), rgba(25, 25, 112, 0)),
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
-    linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
-    linear-gradient(rgba(56, 144, 184, 0.60), rgba(56, 144, 184, 0.60)) top,
-    linear-gradient(rgba(26, 87, 130, 0.60), rgba(26, 87, 130, 0.60)) bottom,
-    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) left,
-    linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) right;
+    background: url('../images/pose/info_back.png');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
-    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
-
+    /*background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;*/
 }
 
 .pose_label{
-    width: 100px;
-    height: 60px;
+    width: 120px;
+    height: 40px;
+    /*margin-left: 50%;*/
+    background-color: #9db7da;
+    border:1px solid rgba(40, 236, 245, 0.6);
+    border-radius: 5%;
+    margin: 5%;
 }
 
+.glowing{
+
+}
+
+.pose_label:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow:   0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+}
