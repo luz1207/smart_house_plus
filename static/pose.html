@@ -33,7 +33,7 @@
     -->
 </head>
 
-<body style="background-color: #1B1B3D;overflow-x: hidden;">
+<body style="background-color: #0B182C;overflow-x: hidden;">
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
         <a class="navbar-brand" href="/">
@@ -267,12 +267,61 @@
         </nav>
 
         <main  style="height: 100vh;width: 100vw;">
+            <div class="my_header">
+                <div class="flex-col header">
+                    <div class="group">
+                        <img
+                                class="image"
+                                src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=0b9eb13fb2be7b28f716ada82cfd5418.png"
+                        />
+                        <img
+                                class="image_2 ml-79"
+                                src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=4c0ea968734482b280322318bc837ee9.png"
+                        />
+                    </div>
+                    <div class="flex-col group_2">
+                        <div class="flex-row items-center self-stretch">
+                            <span class="text">姿态矫正系统</span>
+                            <div class="flex-row relative group_3">
+                                <img
+                                        class="image_4"
+                                        src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=bef143cc15a9df6726dbad5006970899.png"
+                                />
+                                <img  class="self-center image_7"
+                                        src="images/pose/pose_header.png">
+                                <img
+                                        class="self-center image_8"
+                                        src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=f3cb4a81578b7e30ba9029ab90f17827.png"
+                                />
+                                <div class="divider pos_2"></div>
+                                <img
+                                        class="self-center image_9"
+                                        src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=9e9ef59c44f311d6b84b4c2e087732ad.png"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="out_container">
                 <div class="sitting_pose">
                     <div class="sitting_video">坐姿视频</div>
                     <div class="sitting_info">
-                        坐姿检测结果
-                        <div class="pose_label">左倾</div>
+                        <span class="font_2 text_3" style="float: left;margin-top: 2%">坐姿检测结果</span>
+                        <img src="images/pose/info_line.png" style="width: 100%">
+                        <div class="label_row">
+                            <div class="pose_label">仰头</div>
+                            <div class="pose_label">低头</div>
+                        </div>
+                        <div class="label_row">
+                            <div class="pose_label">左倾</div>
+                            <div class="pose_label">右倾</div>
+                        </div>
+                        <div class="label_row">
+                            <div class="pose_label">歪头</div>
+                            <div class="pose_label">斜肩</div>
+                        </div>
                     </div>
                 </div>
                 <div class="main_video">
@@ -281,9 +330,20 @@
                 <div class="standing_pose">
                     <div class="standing_video">站姿视频</div>
                     <div class="standing_info">
-                        <p style="color: white;font-size: 16px">站姿检测结果</p>
-                        <div class="pose_label" style="float: left">驼背</div>
-                        <div class="pose_label" style="float: right">抬头</div>
+                        <span class="font_2 text_3" style="float: left;margin-top: 2%">站姿检测结果</span>
+                        <img src="images/pose/info_line.png" style="width: 100%">
+                        <div class="label_row">
+                            <div class="pose_label">驼背</div>
+                            <div class="pose_label">抬头</div>
+                        </div>
+                        <div class="label_row">
+                            <div class="pose_label">罗圈腿</div>
+                            <div class="pose_label">x型腿</div>
+                        </div>
+                        <div class="label_row">
+                            <div class="pose_label">左倾</div>
+                            <div class="pose_label">右倾</div>
+                        </div>
                     </div>
                 </div>
             </div>
