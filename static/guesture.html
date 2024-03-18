@@ -35,7 +35,7 @@ Bootstrap 5 Dashboard Admin Template
 -->
     </head>
     
-    <body style="overflow-x: hidden;">
+    <body style="overflow-x: hidden;background-color: #050f32">
         <header class="navbar sticky-top flex-md-nowrap">
             <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                 <a class="navbar-brand" href="/">
@@ -268,18 +268,60 @@ Bootstrap 5 Dashboard Admin Template
                     </div>
                 </nav>
 
-                <main class="main-wrapper">
-
-
-                <div class="row my-4">
-                        <div class="col-lg-12 col-12">
-                            <div class="custom-block bg-white">
-                                <div class = "guesture_video">
-                                    <img id="guesture_video" src="http://127.0.0.1:8080/video_feed0" width="50%" height="100%" alt="" style="margin-right: 10%">
+                <main >
+                        <div class="guesture_container">
+                            <div class="guesture_header">
+                                <div class="section">
+                                    <img
+                                            class="image_2 image_3"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=cbd700acf0eb851c80e3e4c726a2a3ca.png"
+                                    />
+                                    <img
+                                            class="image_2 image_4"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=660b9b8c04d9524008f0bbf8bdd22756.png"
+                                    />
+                                    <img
+                                            class="image pos_2"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=7e502ce59e09b2ff3bff8df99365b6e9.png"
+                                    />
+                                    <span class="text pos">手势识别监控页面</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="guesture_video1">
+                                    <span class="text_30 ml-13" style="color: white;padding: 2px">手势检测视频</span>
+                                    <img id="guesture_video" src="http://127.0.0.1:8080/video_feed0" width="95%" height="90%" alt="" >
+                                </div>
+                            </div>
+                            <div class="device_viewer">
+                                <p style="color: white;font-size: 16px;margin: 2%;width: 100%">家居设备</p>
+                                <div class=" section_3">
+                                    <div class="flex-row items-center">
+                                        <span class="font_3">空调</span>
+                                        <img
+                                                class="shrink-0 image_10 ml-221"
+                                                src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=21bb9a69428312d4c10973a4da7049c1.png"
+                                        />
+                                    </div>
+                                    <div class="flex-col items-center mt-41">
+                                        <span class="text_16">27℃</span>
+                                        <span class="font_2 text_19">Temperture</span>
+                                        <img
+                                                class="image_11"
+                                                src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=ee72d1d12df8e82b67823f506598f37e.png"
+                                        />
+                                        <img
+                                                class="image_12"
+                                                src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=9e08ce5e6b43aa8caac5de74c160295c.png"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="device_light">
+                                    <p style="font-size: 15px;color: white;margin: 4%">灯光</p>
                                     <div class="lamp_container">
-                                        <img id="lamp1" src="/static/images/guesture/close.png" style="width: 70%;height: 70%;margin-top: 20px" >
+                                        <img id="lamp1" src="/static/images/guesture/close.png" style="width: 60px;height: 60px;float: left" >
 
-                                        <div class="switchs_container">
+                                        <div class="switchs_container" style="margin-left: 70%">
                                             <div class="switch1">
                                                 <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                                 <label for="cmn-toggle-1"></label>
@@ -296,13 +338,13 @@ Bootstrap 5 Dashboard Admin Template
 
                                         </div>
 
-                                        <p id="guesture_index_res" style="margin-top: 4%">设备状态 </p>
+                                        <p id="guesture_index_res" style="margin-top: 31%;font-size: 16px;color: white;margin-left:14px">灯 1 </p>
 
                                     </div>
-                                    <div class="lamp_container">
-                                        <img id="lamp2" src="/static/images/guesture/close2.png" style="width: 70%;height: 70%;margin-top: 20px" >
+                                    <div class="lamp_container1">
+                                        <img id="lamp2" src="/static/images/guesture/close2.png" style="width: 60px;height: 60px;float: left" >
 
-                                        <div class="switchs_container">
+                                        <div class="switchs_container" style="margin-left: 70%">
                                             <div class="switch2">
                                                 <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                                 <label for="cmn-toggle-1"></label>
@@ -319,168 +361,76 @@ Bootstrap 5 Dashboard Admin Template
 
                                         </div>
 
-                                        <p id="guesture_index_res" style="margin-top: 4%">设备状态 </p>
+                                        <p id="guesture_index_res" style="margin-top: 31%;font-size: 16px;color: white;margin-left:14px">灯 2 </p>
 
                                     </div>
                                 </div>
-                                <div id="guesture_title_div"><p style="margin-left: 24%">手势检测结果</p></div>
-
-                                <div class="gesture_library">
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/1.jpg">
-                                        <div class="circle-light light1" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/4.jpg">
-                                        <div class="circle-light light2" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/7.jpg">
-                                        <div class="circle-light light3" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/6.jpg">
-                                        <div class="circle-light light4" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/5.jpg">
-                                        <div class="circle-light light5" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/3.jpg">
-                                        <div class="circle-light light6" id="circleLight"></div>
-                                    </div>
-                                    <div class="guesture_lib_child">
-                                        <img class="guesture_lib_img" src="../static/images/guesture/2.jpg">
-                                        <div class="circle-light light7" id="circleLight"></div>
-                                    </div>
+                                <div class="device_grid">
+                                    <img
+                                            class="device_grid-item"
+                                            src="images/pose/tv.png" style="width: 163px;height: 150px"
+                                    />
+                                    <img
+                                            class="device_grid-item"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=874df2fcbc700fec188d491925416b73.png"
+                                            style="width: 163px;height: 150px;"
+                                    />
+                                    <img
+                                            class="device_grid-item"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=4a7d007c9d34b5cb7a327f3c6a73cad1.png"
+                                            style="width: 163px;height: 150px"
+                                    />
+                                    <img
+                                            class="device_grid-item"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=f4414dbccead568923e822d40deb5d40.png"
+                                            style="width: 163px;height: 150px"
+                                    />
+                                    <img
+                                            class="device_grid-item"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=40449e4c9e0e0bfc777fffd3dab93f70.png"
+                                            style="width: 163px;height: 150px"
+                                    />
+                                    <img
+                                            class="device_grid-item"
+                                            src="https://ide.code.fun/api/image?token=65f7f14e731c75001100612a&name=dbcbe5143142787a5bb0ec088f31f3cc.png"
+                                            style="width: 163px;height: 150px"
+                                    />
+                                </div>
+                                <div class="pic"></div>
+                            </div>
+                            <div class="gesture_library">
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/1.jpg">
+                                    <div class="circle-light light1" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/4.jpg">
+                                    <div class="circle-light light2" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/7.jpg">
+                                    <div class="circle-light light3" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/6.jpg">
+                                    <div class="circle-light light4" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/5.jpg">
+                                    <div class="circle-light light5" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/3.jpg">
+                                    <div class="circle-light light6" id="circleLight"></div>
+                                </div>
+                                <div class="guesture_lib_child">
+                                    <img class="guesture_lib_img" src="../static/images/guesture/2.jpg">
+                                    <div class="circle-light light7" id="circleLight"></div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-lg-7 col-12">
-                            <div class="custom-block custom-block-balance">
-                                <small>Your Balance</small>
-
-                                <h2 class="mt-2 mb-3">$254,800</h2>
-
-                                <div class="custom-block-numbers d-flex align-items-center">
-                                    <span>****</span>
-                                    <span>****</span>
-                                    <span>****</span>
-                                    <p>2560</p>
-                                </div>
-
-                                <div class="d-flex">
-                                    <div>
-                                        <small>Valid Date</small>
-                                        <p>12/2028</p>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>Card Holder</small>
-                                        <p>Thomas</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="custom-block custom-block-bottom d-flex flex-wrap">
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-wallet"></i>
-
-                                        <small>Top up</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-upc-scan"></i>
-
-                                        <small>Scan & Pay</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-send"></i>
-
-                                        <small>Send</small>
-                                    </a>
-                                </div>
-
-                                <div class="custom-block-bottom-item">
-                                    <a href="#" class="d-flex flex-column">
-                                        <i class="custom-block-icon bi-arrow-down"></i>
-
-                                        <small>Request</small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12">
-                            <div class="custom-block custom-block-transations">
-                                <h5 class="mb-4">Recent Transations</h5>
-
-                                <div class="d-flex flex-wrap align-items-center mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/profile/senior-man-white-sweater-eyeglasses.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>
-                                                <a href="transation-detail.html">Daniel Jones</a>
-                                            </p>
-
-                                            <small class="text-muted">C2C Transfer</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>05/12/2023</small>
-                                        <strong class="d-block text-danger"><span class="me-1">-</span> $250</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap align-items-center mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/profile/young-beautiful-woman-pink-warm-sweater.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p>
-                                                <a href="transation-detail.html">Public Bank</a>
-                                            </p>
-
-                                            <small class="text-muted">Mobile Reload</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>22/8/2023</small>
-                                        <strong class="d-block text-success"><span class="me-1">+</span> $280</strong>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/profile/young-woman-with-round-glasses-yellow-sweater.jpg" class="profile-image img-fluid" alt="">
-
-                                        <div>
-                                            <p><a href="transation-detail.html">Store</a></p>
-
-                                            <small class="text-muted">Payment Received</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="ms-auto">
-                                        <small>22/8/2023</small>
-                                        <strong class="d-block text-success"><span class="me-1">+</span> $280</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="left_viewer"></div>
 
                         </div>
-                    </div>
 
                     <footer class="site-footer">
                         <div class="container">
