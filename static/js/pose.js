@@ -2,12 +2,64 @@ function connecteClient() {
     // 打开一个 web socket
     var ws = new WebSocket("ws://127.0.0.1:9002");
     // 注意这里的元素是 img 而不是 video，否则不会播放；id 根据实际换
-    const videoElement = document.getElementById('input_pose_video');
+    const mainVideoElement = document.getElementById('main_video');
+    const rawVideoElement = document.getElementById('sitting_video');
+    const skeletonVideoElement = document.getElementById('standing_video');
+    var pose = "正常";
+    var standingInfoDivs = document.querySelectorAll('.standing_info');
+    var sittingInfoDivs = document.querySelectorAll('.sitting_info');
     ws.onmessage = function (event) {
         const data = JSON.parse(event.data); // 解析收到的消息为JSON对象
-        const videoData = data.video; // 视频数据
-        const otherData = data.other; // 其他数据比如坐姿状态，根据需要从 c++ 代码那边传，用于后续处理
-        videoElement.src = 'data:image/jpeg;base64,' + videoData; // 更新图像元素的src属性
+        const raw_video = data.raw; // 视频数据
+        const body_video = data.body; // 其他数据比如坐姿状态，根据需要从 c++ 代码那边传，用于后续处理
+        const skeleton_video = data.skeleton;
+        const status = parseInt(data.pose);
+        mainVideoElement.src = 'data:image/jpeg;base64,' + body_video; // 更新图像元素的src属性
+        rawVideoElement.src = 'data:image/jpeg;base64,' + raw_video; // 更新图像元素的src属性
+        skeletonVideoElement.src = 'data:image/jpeg;base64,' + skeleton_video; // 更新图像元素的src属性
+        switch (status) {
+            case 1:
+                pose = "躺倒";
+                break;
+            case 7:
+            case 2:
+            case 3:
+                pose = "驼背";
+                break;
+            case 4:
+                pose = "低头";
+                break;
+            case 5:
+                pose = "左倾";
+                break;
+            case 6:
+                pose = "右倾";
+                break;
+            default:
+                pose = "正常"
+                break;
+        };
+        var glowing = document.getElementById('glowing');
+        if (glowing != null)
+            glowing.id = 'no';
+        if (pose != "正常") {
+            if (status > 6)
+                hightlight(standingInfoDivs, pose);
+            else
+                hightlight(sittingInfoDivs, pose);
+        };
+        console.log(data.pose);
     };
-}
+};
 connecteClient();
+
+function hightlight(type, name) {
+    type.forEach(function (div) {
+        let childDivs = div.querySelectorAll('.pose_label');
+        childDivs.forEach(function (cdiv) {
+            let divContent = cdiv.textContent;
+            if (divContent.includes(name))
+                cdiv.id = 'glowing'
+        })
+    });
+};
