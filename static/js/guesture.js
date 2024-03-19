@@ -112,3 +112,34 @@ eventSource.onmessage = function(event) {
 
 };
 
+
+//生成地图
+var map = new AMap.Map('container',{
+    resizeEnable: true,
+    zoom: 10,
+    center: [116.480983, 40.0958]
+});
+//获取当前天气信息，并展示
+$(function(){
+    $.ajax({
+        url:"http://api.map.baidu.com/telematics/v3/weather?location=深圳&output=json&ak=ZbeFXv8desxK2Rmq76o5ytCk",
+        type:"get",
+        dataType:"jsonp",
+        success:function(data){
+            var city = data.results[0].currentCity;//当前城市
+            var pm25 = data.results[0].pm25;//当前PM2.5
+            var weathers = data.results[0].weather_data[0];//获取今天的实时天气情况
+            var date = weathers.date;//获取日期和实时气温：周日 02月19日（实时：10°C）
+            var dayPic = weathers.dayPictureUrl;//白天天气图片
+            var nightPic = weathers.nightPictureUrl;//夜间天气图片
+            var temp = weathers.temperature;//气温
+            var weather = weathers.weather;//天气描述
+            var wind = weathers.wind;//风力
+            var htmlCon = ""+city+"&nbsp;<img src='"+dayPic+"'>"+weather+"&nbsp;"+wind+"&nbsp;"+date;
+            $(".weather").append(htmlCon);
+        },
+        error:function(e){
+            alert("error");
+        }
+    });
+});

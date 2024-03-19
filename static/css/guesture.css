@@ -127,7 +127,7 @@ input.cmn-toggle-round:checked + label:after {
     /*background-color: #0a58ca;*/
     border-radius: 5px;
     /*background-color: rgba(185, 250, 252, 0.6);*/
-    margin-left: 29%;
+    margin-left: 30%;
     top: 74%;
 }
 
@@ -142,7 +142,7 @@ input.cmn-toggle-round:checked + label:after {
 .guesture_lib_child{
     width: 120px;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 6px;
     text-align: center;
     align-content: center;
     border-radius: 5%;
@@ -331,9 +331,15 @@ input.cmn-toggle-round:checked + label:after {
 }
 
 .left_viewer{
-    width: 35%;
+    width: 18.5%;
     height: 100%;
-    background-color: #8ce196;
+    background-color: #151423;
+    box-shadow: 0rem 0rem 0.19rem #202124 inset, -0.31rem -0.31rem 0.75rem #232239, 0.38rem 0.38rem 0.75rem #121120;
+    border-left: solid 0.063rem #26243f;
+    border-right: solid 0.063rem #26243f;
+    border-top: solid 0.063rem #26243f;
+    border-bottom: solid 0.063rem #26243f;
     position: absolute;
-
+    left: 12.3%;
+    top: 15%;
 }
