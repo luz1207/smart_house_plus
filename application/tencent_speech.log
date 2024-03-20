@@ -1,0 +1,3 @@
+2024-03-20 21:49:43,925 tencent_speech.log-INFO  start:295 b4f5d789-e6c0-11ee-84ce-7c8ae17fda2a recognition start
+2024-03-20 21:53:20,863 tencent_speech.log-INFO  on_message:243 b4f5d789-e6c0-11ee-84ce-7c8ae17fda2a recognition complete
+2024-03-20 21:53:20,867 tencent_speech.log-INFO  on_close:265 websocket closed  voice id b4f5d789-e6c0-11ee-84ce-7c8ae17fda2a

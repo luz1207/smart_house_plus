@@ -762,6 +762,8 @@ url("../fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("wo
 .bi-gear-wide-connected::before { content: "\f3e3"; }
 .bi-gear-wide::before { content: "\f3e4"; }
 .bi-gear::before { content: "\f3e5"; }
+
+
 .bi-gem::before { content: "\f3e6"; }
 .bi-geo-alt-fill::before { content: "\f3e7"; }
 .bi-geo-alt::before { content: "\f3e8"; }

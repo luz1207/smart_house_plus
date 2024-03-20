@@ -356,15 +356,6 @@ input.cmn-toggle-round:checked + label:after {
 }
 
 
-ul {
-    list-style: none;
-    top: -16px;
-    margin: 0;
-    padding: 0;
-    left:13%;
-    position: absolute;
-    text-align: center;
-}
 
 .clock_li {
     position: absolute;
@@ -373,10 +364,16 @@ ul {
 }
 
 .hours {
-    left: 105px;
     font-size: 23.3333333333px;
     letter-spacing: -1.6px;
     line-height: 45px;
+    list-style: none;
+    top: -16px;
+    margin: 0;
+    padding: 0;
+    left:37%;
+    position: absolute;
+    text-align: center;
 }
 .hours li {
     width: 75px;

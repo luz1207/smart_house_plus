@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mini Finance - Profile Page</title>
+    <title>Mini Finance - Help Center</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +21,7 @@
     <link href="./css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
-    <link href="./css/pose.css" rel="stylesheet">
+    <link href="./css/voice_assistant.css" rel="stylesheet">
     <!--
 
     Tooplate 2135 Mini Finance
@@ -34,7 +33,7 @@
     -->
 </head>
 
-<body style="background-color: #0B182C;overflow-x: hidden;">
+<body style="overflow-x: hidden;">
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
         <a class="navbar-brand" href="/">
@@ -43,27 +42,22 @@
         </a>
     </div>
 
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0"
-          action="#" method="get" role="form">
+    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
         <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
     </form>
 
     <div class="navbar-nav me-lg-2">
         <div class="nav-item text-nowrap d-flex align-items-center">
             <div class="dropdown ps-3">
-                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi-bell"></i>
-                    <span
-                            class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                            <span class="visually-hidden">New alerts</span>
-                        </span>
+                    <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
                 </a>
 
                 <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
@@ -114,8 +108,7 @@
             </div>
 
             <div class="dropdown ps-1">
-                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi-three-dots-vertical"></i>
                 </a>
 
@@ -169,15 +162,13 @@
             </div>
 
             <div class="dropdown px-3">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
                 </a>
                 <ul class="dropdown-menu bg-white shadow">
                     <li>
                         <div class="dropdown-menu-profile-thumb d-flex">
-                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3"
-                                 alt="">
+                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
 
                             <div class="d-flex flex-column">
                                 <small>Thomas</small>
@@ -194,7 +185,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="fece.html">
+                        <a class="dropdown-item" href="face.html">
                             <i class="bi-gear me-2"></i>
                             Settings
                         </a>
@@ -204,13 +195,6 @@
                         <a class="dropdown-item" href="down.html">
                             <i class="bi-question-circle me-2"></i>
                             Help
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="voice_assistant.html">
-                            <i class="bi-assistant me-2"></i>
-                            语音助手
                         </a>
                     </li>
 
@@ -246,7 +230,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="pose.html">
+                        <a class="nav-link" href="pose.html">
                             <i class="bi-person me-2"></i>
                             姿态检测
                         </a>
@@ -265,9 +249,10 @@
                             跌倒检测
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="voice_assistant.html">
-                            <i class="bi-assistant me-2"></i>
+                        <a class="nav-link active"  href="voice_assistant.html">
+                            <i class="bi-question-circle me-2"></i>
                             语音助手
                         </a>
                     </li>
@@ -288,92 +273,43 @@
             </div>
         </nav>
 
-        <main style="height: 100vh;width: 100vw;">
-            <div class="my_header">
-                <div class="flex-col header">
-                    <div class="group">
-                        <img class="image"
-                             src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=0b9eb13fb2be7b28f716ada82cfd5418.png" />
-                        <img class="image_2 ml-79"
-                             src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=4c0ea968734482b280322318bc837ee9.png" />
-                    </div>
-                    <div class="flex-col group_2">
-                        <div class="flex-row items-center self-stretch">
-                            <span class="text">姿态矫正系统</span>
-                            <div class="flex-row relative group_3">
-                                <img class="image_4"
-                                     src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=bef143cc15a9df6726dbad5006970899.png" />
-                                <img class="self-center image_7" src="images/pose/pose_header.png">
-                                <img class="self-center image_8"
-                                     src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=f3cb4a81578b7e30ba9029ab90f17827.png" />
-                                <div class="divider pos_2"></div>
-                                <img class="self-center image_9"
-                                     src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=9e9ef59c44f311d6b84b4c2e087732ad.png" />
+        <main class="main-wrapper" style="min-width: calc(100vw - 200px)">
+            <div class="assistant_container" >
+                <div class="assistant_header">
+                    <div class="flex-col header_1">
+                        <div class="group">
+                            <img class="image"
+                                 src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=0b9eb13fb2be7b28f716ada82cfd5418.png" />
+                            <img class="image_2 ml-79"
+                                 src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=4c0ea968734482b280322318bc837ee9.png" />
+                        </div>
+                        <div class="flex-col group_2">
+                            <div class="flex-row items-center self-stretch">
+                                <span class="text">智能语音交互界面</span>
+                                <div class="flex-row relative group_3">
+                                    <img class="image_4"
+                                         src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=bef143cc15a9df6726dbad5006970899.png" />
+                                    <img class="self-center image_7" src="images/pose/pose_header.png">
+                                    <img class="self-center image_8"
+                                         src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=f3cb4a81578b7e30ba9029ab90f17827.png" />
+                                    <div class="divider pos_2"></div>
+                                    <img class="self-center image_9"
+                                         src="https://ide.code.fun/api/image?token=65f7bb00731c750011004958&name=9e9ef59c44f311d6b84b4c2e087732ad.png" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="out_container">
-                <div class="sitting_pose">
-                    <div class="sitting_video">
-                        <p>原始视频</p>
-                        <img class="side_video" id="sitting_video">
 
-                    </div>
-                    <div class="sitting_info">
-                        <span class="font_2 text_3" style="float: left;margin-top: 2%">坐姿检测结果</span>
-                        <img src="images/pose/info_line.png" style="width: 100%">
-                        <div class="label_row">
-                            <div class="pose_label">驼背</div>
-                            <div class="pose_label">低头</div>
-                        </div>
-                        <div class="label_row">
-                            <div class="pose_label">左倾</div>
-                            <div class="pose_label">右倾</div>
-                        </div>
-                        <div class="label_row">
-                            <div class="pose_label">躺倒</div>
-                            <div class="pose_label">斜肩</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_video">
-                    <img class="pose_video" id="main_video">
-                </div>
-                <div class="standing_pose">
-                    <div class="standing_video">
-                        <p>骨架视频</p>
-                        <img class="side_video" id="standing_video">
 
-                    </div>
-                    <div class="standing_info">
-                        <span class="font_2 text_3" style="float: left;margin-top: 2%">站姿检测结果</span>
-                        <img src="images/pose/info_line.png" style="width: 100%">
-                        <div class="label_row">
-                            <div class="pose_label">驼背</div>
-                            <div class="pose_label">抬头</div>
-                        </div>
-                        <div class="label_row">
-                            <div class="pose_label">罗圈腿</div>
-                            <div class="pose_label">x型腿</div>
-                        </div>
-                        <div class="label_row">
-                            <div class="pose_label">左倾</div>
-                            <div class="pose_label">右倾</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <footer class="site-footer">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-lg-12 col-12">
                             <p class="copyright-text">Copyright © Mini Finance 2048
-                                - Design: <a rel="sponsored" href="https://www.tooplate.com"
-                                             target="_blank">Tooplate</a></p>
+                                - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
                         </div>
 
                     </div>
@@ -388,8 +324,6 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/custom.js"></script>
-<script src="./js/pose.js"></script>
 
 </body>
-
 </html>
