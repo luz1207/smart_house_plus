@@ -29,7 +29,7 @@ eventSource.onmessage = function(event) {
     //     lamp_img2.src = '/static/images/guesture/close2.png';
     // }
 
-     console.log(status)
+    console.log(status)
 
     if(status ===1 || status ===2){
         switches1.forEach(switchInput => {
@@ -143,3 +143,37 @@ $(function(){
         }
     });
 });
+
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+ctx.strokeStyle = '#00ffff';
+ctx.lineWidth = 17;
+ctx.shadowBlur= 15;
+ctx.shadowColor = '#00ffff'
+
+function degToRad(degree){
+    var factor = Math.PI/180;
+    return degree*factor;
+}
+
+
+var dateInfo = new Date();
+var hr = dateInfo.getHours() > 12 ? dateInfo.getHours() - 12 : dateInfo.getHours(),
+    min = dateInfo.getMinutes(),
+    sec = dateInfo.getSeconds(),
+    milsec = dateInfo.getMilliseconds();
+var hrAngle = hr * 30 + (min * 6 / 12),
+    minAngle = min * 6 + (sec * 6 / 60),
+    secAngle = sec * 6 + (milsec * 0.36 / 1000);
+
+// 设置手部包装纸的初始角度
+function setAngle(wrapper, angle) {
+    document.querySelector("." + wrapper).style.transform = "rotate(" + angle + "deg)";
+}
+setAngle("hr-wrapper", hrAngle);
+setAngle("min-wrapper", minAngle);
+setAngle("sec-wrapper", secAngle);
+
+
