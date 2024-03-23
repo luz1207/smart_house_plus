@@ -22,6 +22,8 @@
 
     <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
     <link href="./css/voice_assistant.css" rel="stylesheet">
+    <link href="./css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="./css/normalize.min.css" rel="stylesheet">
     <!--
 
     Tooplate 2135 Mini Finance
@@ -300,8 +302,66 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="chat_container">
+                    <div class="chat_box">
+                        <div class="chat" style="height: 96%;background: url('images/voice/back.png')">
+                            <div class="chat-title">
+                                <h1>Fabio Ottaviani</h1>
+                                <h2 style="color: black">Supah</h2>
+                                <figure class="avatar">
+                                    <img src="images/voice/robot_img.png" /></figure>
+                            </div>
+                            <div class="messages">
+                                <div class="messages-content"></div>
+                            </div>
+                            <div class="message-box">
+                                <canvas style="width: 100%;height: 101%"></canvas>
+                            </div>
 
+                        </div>
+                        <div class="bg"></div>
+                    </div>
+                    <div class="me_profile">
+                        <div class="flex-col section_3">
+
+                            <div class="flex-col justify-start items-center self-stretch group_4">
+                                <img
+                                        class="image_11"
+                                        src="./face_library/zeng.jpg"
+                                />
+                            </div>
+                            <span class="text_17">Zeng</span>
+                            <span class="text_19">中国，广东</span>
+                            <div class="profile_inf0">
+                                <span style="font-size: 16px">性别：</span>
+                                <span style="font-size: 16px">女</span>
+                            </div>
+                            <div class="profile_inf0" style="margin-top: 5%">
+                                <span style="font-size: 16px">ID：</span>
+                                <span style="font-size: 16px">哇酷瓦库</span>
+                            </div>
+                            <div class="profile_inf0" style="margin-top: 5%">
+                                <span style="font-size: 16px">邮箱：</span>
+                                <span style="font-size: 16px">123456@email.com</span>
+                            </div>
+                            <div class="profile_inf0" style="margin-top: 5%">
+                                <span style="font-size: 16px">电话：</span>
+                                <span style="font-size: 16px">13387758965</span>
+                            </div>
+
+                            <div class="listening_text" style="margin-top: 20%">I'm </div>
+                            <div class="listening_text" style="margin-left: 15%">listening</div>
+
+                            <img src="./images/voice/voice_wave.png" style="margin-top: 30%;width: 100%">
+                            <div id="status"></div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="robot_img"></div>
+            </div>
 
             <footer class="site-footer">
                 <div class="container">
@@ -324,6 +384,8 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/custom.js"></script>
+<script src="./js/voice.js"></script>
+<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </body>
 </html>

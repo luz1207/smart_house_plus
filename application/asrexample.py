@@ -7,15 +7,15 @@ import threading
 from datetime import datetime
 import json
 import pyaudio
-sys.path.append("../vioce_assistant")
+sys.path.append("../..")
 from common import credential
 from asr import speech_recognizer
 import wenxin
 import tts_ws_python3_demo as au
 
-APPID = "1325065479"
-SECRET_ID = "AKIDYCi5IKDwW2PuP5kUAuYG2wzz45vc6eJq"
-SECRET_KEY = "XvBc7UlxFOcbSCpLwT4dKD6CAKT2eQAq"
+APPID = "1318726746"
+SECRET_ID = "AKIDnaJtIZfbP6lQyaAmR0Skxyz461x39BKU"
+SECRET_KEY = "Le2Z3Rn6VsBKLAr9LRVchkcIl2A7829G"
 ENGINE_MODEL_TYPE = "16k_zh"
 SLICE_SIZE = 6400
 
@@ -25,41 +25,68 @@ class MySpeechRecognitionListener(speech_recognizer.SpeechRecognitionListener):
         self.id = id
 
     def on_recognition_start(self, response):
-        print("%s|%s|OnRecognitionStart\n" % (
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id']))
+        # print("%s|%s|OnRecognitionStart\n" % (
+        #     datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id']))
+        rsp_str = json.dumps(response, ensure_ascii=False)
+
+        # print(rsp_str)
 
     def on_sentence_begin(self, response):
         rsp_str = json.dumps(response, ensure_ascii=False)
-        print("%s|%s|OnRecognitionSentenceBegin, rsp %s\n" % (
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
+
+        # data = json.loads(rsp_str)
+        # print(data['result']['voice_text_str'])
+        # data = {"user": data['result']['voice_text_str']}
+        #
+        # # 将字典写入JSON文件
+        # with open('../static/user.json', 'w') as f:
+        #     json.dump(data, f)
+
+        # print("%s|%s|OnRecognitionSentenceBegin, rsp %s\n" % (
+        #     datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
 
     def on_recognition_result_change(self, response):
         rsp_str = json.dumps(response, ensure_ascii=False)
-        print("%s|%s|OnResultChange, rsp %s\n" % (datetime.now().strftime(
-            "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
+        # print("%s|%s|OnResultChange, rsp %s\n" % (datetime.now().strftime(
+        #     "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
+        data = json.loads(rsp_str)
+        print(data['result']['voice_text_str'])
+        data = {"user": data['result']['voice_text_str']}
+
+        # 将字典写入JSON文件
+        with open('../static/user.json', 'w') as f:
+            json.dump(data, f)
 
     def on_sentence_end(self, response):
         rsp_str = json.dumps(response, ensure_ascii=False)
-        print("%s|%s|OnSentenceEnd, rsp %s\n" % (datetime.now().strftime(
-            "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
+        # print("%s|%s|OnSentenceEnd, rsp %s\n" % (datetime.now().strftime(
+        #     "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
         #语音识别的内容 text
         text = response['result']['voice_text_str']
         print(text)
+        # print(text)
         #answer 大模型的回复
         answer = wenxin.create_gpt(text)
         print(answer)
+        data = {"answer": answer}
+
+        # 将字典写入JSON文件
+        with open('../static/output.json', 'w') as f:
+            json.dump(data, f)
         # create_audio调用生成音频文件并播放音乐
         au.create_audio(answer)
 
 
+
     def on_recognition_complete(self, response):
-        print("%s|%s|OnRecognitionComplete\n" % (
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id']))
+        # print("%s|%s|OnRecognitionComplete\n" % (
+        #     datetime.now().strftime("%Y-%m-%d %H:%M:%S"), response['voice_id']))
+        pass
 
     def on_fail(self, response):
         rsp_str = json.dumps(response, ensure_ascii=False)
-        print("%s|%s|OnFail,message %s\n" % (datetime.now().strftime(
-            "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
+        # print("%s|%s|OnFail,message %s\n" % (datetime.now().strftime(
+        #     "%Y-%m-%d %H:%M:%S"), response['voice_id'], rsp_str))
 
 
 def process(id):
