@@ -174,71 +174,73 @@ class Face_recognize:
 
                 faces = detector(rgb_image)
 
-
-                for face_coordinates in faces:
-                    # print ("forrrrr")
-                    x1, x2, y1, y2 = apply_offsets(face_utils.rect_to_bb(face_coordinates), emotion_offsets)
-                    gray_face = gray_image[y1:y2, x1:x2]
-                    try:
-                        gray_face = cv2.resize(gray_face, (emotion_target_size))
-                    except:
-                        continue
-
-
-                    gray_face = preprocess_input(gray_face, True)
-                    gray_face = np.expand_dims(gray_face, 0)
-                    gray_face = np.expand_dims(gray_face, -1)
-
-                    emotion_prediction = emotion_classifier.predict(gray_face)
-
-                    self.probability = [float(item) for sublist in emotion_prediction for item in sublist]
-
-                    emotion_probability = np.max(emotion_prediction)
-                    emotion_label_arg = np.argmax(emotion_prediction)
-                    emotion_text = emotion_labels[emotion_label_arg]
-                    emotion_window.append(emotion_text)
-
-                    if len(emotion_window) > frame_window:
-                        emotion_window.pop(0)
-                    try:
-                        emotion_mode = mode(emotion_window)
-                    except:
-                        continue
-
-                    if emotion_text == 'angry':
-                        color = emotion_probability * np.asarray((255, 0, 0))
-                        self.emotion = 'angry'
-                    elif emotion_text == 'sad':
-                        color = emotion_probability * np.asarray((0, 0, 255))
-                        self.emotion = 'sad'
-                    elif emotion_text == 'happy':
-                        color = emotion_probability * np.asarray((255, 255, 0))
-                        self.emotion = 'happy'
-                    elif emotion_text == 'surprise':
-                        color = emotion_probability * np.asarray((0, 255, 255))
-                        self.emotion = 'surprise'
-                    elif emotion_text == 'disgust':
-                        color = emotion_probability * np.asarray((100, 200, 255))
-                        self.emotion = 'disgust'
-                    elif emotion_text == 'fear':
-                        color = emotion_probability * np.asarray((200, 200, 100))
-                        self.emotion = 'fear'
-                    elif emotion_text == 'neutral':
-                        color = emotion_probability * np.asarray((167, 24, 188))
-                        self.emotion = 'neutral'
-                    else:
-                        color = emotion_probability * np.asarray((0, 255, 0))
-                        self.emotion = 'undetected'
-
-                    color = color.astype(int)
-                    color = color.tolist()
+                if len(faces)==0 :
+                    self.emotion = 'undetected'
+                else:
+                    for face_coordinates in faces:
+                        # print ("forrrrr")
+                        x1, x2, y1, y2 = apply_offsets(face_utils.rect_to_bb(face_coordinates), emotion_offsets)
+                        gray_face = gray_image[y1:y2, x1:x2]
+                        try:
+                            gray_face = cv2.resize(gray_face, (emotion_target_size))
+                        except:
+                            continue
 
 
-                    name = emotion_text
+                        gray_face = preprocess_input(gray_face, True)
+                        gray_face = np.expand_dims(gray_face, 0)
+                        gray_face = np.expand_dims(gray_face, -1)
 
-                    draw_bounding_box(face_utils.rect_to_bb(face_coordinates), rgb_image, color)
-                    draw_text(face_utils.rect_to_bb(face_coordinates), rgb_image, name,
-                              color, 0, -45, 0.5, 1)
+                        emotion_prediction = emotion_classifier.predict(gray_face)
+
+                        self.probability = [float(item) for sublist in emotion_prediction for item in sublist]
+
+                        emotion_probability = np.max(emotion_prediction)
+                        emotion_label_arg = np.argmax(emotion_prediction)
+                        emotion_text = emotion_labels[emotion_label_arg]
+                        emotion_window.append(emotion_text)
+
+                        if len(emotion_window) > frame_window:
+                            emotion_window.pop(0)
+                        try:
+                            emotion_mode = mode(emotion_window)
+                        except:
+                            continue
+
+                        if emotion_text == 'angry':
+                            color = emotion_probability * np.asarray((255, 0, 0))
+                            self.emotion = 'angry'
+                        elif emotion_text == 'sad':
+                            color = emotion_probability * np.asarray((0, 0, 255))
+                            self.emotion = 'sad'
+                        elif emotion_text == 'happy':
+                            color = emotion_probability * np.asarray((255, 255, 0))
+                            self.emotion = 'happy'
+                        elif emotion_text == 'surprise':
+                            color = emotion_probability * np.asarray((0, 255, 255))
+                            self.emotion = 'surprise'
+                        elif emotion_text == 'disgust':
+                            color = emotion_probability * np.asarray((100, 200, 255))
+                            self.emotion = 'disgust'
+                        elif emotion_text == 'fear':
+                            color = emotion_probability * np.asarray((200, 200, 100))
+                            self.emotion = 'fear'
+                        elif emotion_text == 'neutral':
+                            color = emotion_probability * np.asarray((167, 24, 188))
+                            self.emotion = 'neutral'
+                        else:
+                            color = emotion_probability * np.asarray((0, 255, 0))
+                            self.emotion = 'undetected'
+
+                        color = color.astype(int)
+                        color = color.tolist()
+
+
+                        name = emotion_text
+
+                        draw_bounding_box(face_utils.rect_to_bb(face_coordinates), rgb_image, color)
+                        draw_text(face_utils.rect_to_bb(face_coordinates), rgb_image, name,
+                                  color, 0, -45, 0.5, 1)
 
                 frame = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
 

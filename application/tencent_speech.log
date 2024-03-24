@@ -133,3 +133,4 @@
 2024-03-23 12:32:39,378 tencent_speech.log-INFO  start:295 619ea3a3-e8ce-11ee-b515-b06088d8c8a3 recognition start
 2024-03-23 13:47:02,612 tencent_speech.log-INFO  on_message:243 619ea3a3-e8ce-11ee-b515-b06088d8c8a3 recognition complete
 2024-03-23 13:47:02,615 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 619ea3a3-e8ce-11ee-b515-b06088d8c8a3
+2024-03-23 18:58:54,808 tencent_speech.log-INFO  start:295 5740cfb7-e904-11ee-9603-b06088d8c8a3 recognition start

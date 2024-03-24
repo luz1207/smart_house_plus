@@ -21,6 +21,7 @@
         <link href="./css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
+        <link href="./css/down.css" rel="stylesheet">
 <!--
 
 Tooplate 2135 Mini Finance
@@ -272,8 +273,79 @@ Bootstrap 5 Dashboard Admin Template
                     </div>
                 </nav>
 
-                <main class="main-wrapper" style="min-width: calc(100vw - 200px);margin-left: 17%">
+                <main class="main-wrapper" >
+                    <div class="down_container">
+                        <div class="down_header">
+                            <img src="images/title_header.png" style="width: 95%;height: 100%">
+                        </div>
+                        <div class="main_video_box">
+                            <span class="text_1" style="margin-top: 2%">跌倒检测视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%">
+                            <div class="main_video">骨架＋人视频</div>
+                            <div class="info_box">
+                                <div class="item">
+                                    <p class="info_text" id="is_down">是否跌倒：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="alert">警报：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="level">置信度：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="xmin">Xmin：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="ymin">Ymin：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="time">时间：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="xmax">Xmax：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="Ymax">Ymax：</p>
+                                </div>
+                                <div class="item">
+                                    <p class="info_text" id="down_img">跌倒图像：</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small_box" style="left: 13%;top: 12%">
+                            <span class="text" style="margin-left: 2%">输入视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
+                        <div class="small_box" style="left: 13%;top: 41%">
+                            <span class="text" style="margin-left: 2%">骨架视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
+                        <div class="small_box" style="left: 13%;top: 71%">
+                            <span class="text" style="margin-left: 2%">深度视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
 
+                        <div class="small_box" style="left: 77%;top: 12%">
+                            <span class="text" style="margin-left: 2%">目标检测</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
+                        <div class="small_box" style="left: 77%;top: 41%">
+                            <span class="text" style="margin-left: 2%">mesh图</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
+                        <div class="small_box" style="left: 77%;top: 71%">
+                            <span class="text" style="margin-left: 2%">场景重建图</span>
+                            <img src="images/pose/info_line.png" style="width: 100%;margin-top: 6%">
+                            <div class="small_video">视频</div>
+                        </div>
+
+                    </div>
+                    <h3 class="down_title">跌倒检测页面</h3>
 
 
                     <footer class="site-footer">

@@ -1,45 +1,72 @@
 .face_container{
     /*background-color: #0dcaf0;*/
     height: 100vh;
-    width: 85vw;
-    border-radius: 10px;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    margin-left: 18%;
+    background-color: #0B182C;
+}
+
+.face_header{
+    width: 100%;
+    height: 8%;
+
+}
+
+.face_title{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 8%;
 }
 
 .face_video{
     background-color: #4b4b4b;
-    height: 90%;
-    width: 55%;
+    height: 85%;
+    width: 95%;
     /*margin-top: 5px;*/
     /*margin-left: 5%;*/
-    margin: 8px;
     float: left;
-}
-.face_emotion{
-    width: 99%;
-    height: 56%;
-    /*background-color: yellowgreen;*/
-    display: flex;
-    flex-direction: row;
+    margin-left: 2.5%;
 }
 
 .emotion_video{
     background-color: #4b4b4b;
-    height: 90%;
-    width: 55%;
-    margin: 8px;
+    height: 85%;
+    width: 95%;
+    /*margin-top: 5px;*/
+    /*margin-left: 5%;*/
+    float: left;
+    margin-left: 2.5%;
 }
 
 .face_box{
-    height: 90%;
-    width: 72%;
-    /*background-color: #86b7fe;*/
-    text-align: center;
-    align-content: center;
+    position: absolute;
+    height: 40%;
+    width: 30%;
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #14233b;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    left: 15%;
+    top: 16%;
 }
 
+.emotion_box{
+    position: absolute;
+    height: 40%;
+    width: 30%;
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #14233b;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    left: 47%;
+    top: 16%;
+}
 
 
 .light_div{
@@ -85,21 +112,26 @@
 }
 
 .face_result{
-    position: relative;
+    position: absolute;
     display: inline-block;
     padding: 25px 30px;
     /*text-decoration: none;*/
     /*text-transform: uppercase;*/
     transition: 0.5s;
-    height: 90%;
-    width: 20%;
-    /*background-color: #0f5132;*/
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #14233b;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    left: 79%;
+    top: 16%;
 }
 
 
 
 .face_result {
-    height: 100vh;
+    height: 80vh;
     width: 20vw;
     border-left: 2px solid transparent;
     animation: animateBorder 1s linear infinite;
@@ -112,15 +144,19 @@
     50%, 100% {
         border-color: #03e9f4;
     }
+
 }
 
 .record_list {
+    position: absolute;
     border-collapse: collapse;
-    width: 58%;
+    width: 23%;
     border: 1px solid #7a7a7a; /* 添加外边框 */
     margin-top: 2%;
-    height: 10%;
+    height: 3%;
     margin-left: 2%;
+    left: 11%;
+    top: 56%;
 }
 
 
@@ -151,18 +187,20 @@
 }
 
 .emotion_bar{
-    width: 40%;
-    height: 90%;
-    /*background-color: #12436c;*/
-    display: flex;
-    flex-direction:column;
+    position: absolute;
+    width: 18%;
+    height: 26%;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     margin: 10px;
-    border-radius: 5%;
+    left: 36%;
+    top: 59%;
 }
 
 .emotion_info{
     width: 100%;
-    height: 14%;
+    height: 11%;
     display: flex;
     flex-direction: row;
     /*background-color: #8ce196;*/
@@ -170,7 +208,7 @@
 
 .rightbar{
     /*width: 50%;*/
-    height: 60%;
+    height: 40%;
     margin: 6px;
 
 }
@@ -183,11 +221,21 @@
     /*background-color: #8ce196;*/
 }
 
+.line_box{
+    position: absolute;
+    left: 55%;
+    top: 57%;
+    width: 22%;
+    height: 30%;
+    padding: 2.59rem 1.58rem 5.09rem 1.58rem;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0rem 0rem 1.25rem #655af933;
+}
+
 .line_graph{
-    width: 60%;
-    height: 100%;
-    /*background-color: #0a53be;*/
-    /*margin-left: 40%;*/
+    width: 110%;
+    height: 150%;
 }
 
 .pie_graph{
@@ -198,7 +246,7 @@
 
 .music_player{
     width: 100%;
-    height: 17%;
+    height: 20%;
     /*background-color: #8ce196;*/
     margin-top: 40%;
 }
@@ -232,13 +280,14 @@
     transition:top 0.3s ease;
 }
 #player-content1.active{
-    top:-60px;
+    top:-70px;
 }
 .music-name,
 .artist-name{
     height: 20px;
     margin-top:5px;
     font-size:12px;
+    margin-left: 20%;
 }
 .artist-name{
     font-size:12px;
@@ -248,7 +297,8 @@
     font-size:9px;
     height:30%;
     margin: 0px 0;
-    width: 100%;
+    width: 90%;
+    margin-left: 10%;
     /*background-color: #0a53be;*/
 }
 .current-time{
@@ -279,6 +329,8 @@
 #s-area{
     background-color:#e8f5ff;
     cursor: pointer;
+    width: 84%;
+    margin-left: 18%;
 }
 
 #ins-time{
@@ -318,8 +370,8 @@
 
 #player-content2{
     position: relative;
-    width:100%;
-    height:90%;
+    width:97%;
+    height:91%;
 
     background: #fff;
     border-radius: 20px;
@@ -330,12 +382,12 @@
     position: absolute;
     top: -33px;
     width: 30%;
-    height: 70px;
+    height: 80%;
     margin-left: 20px;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
     transition: 0.3s ease all;
-    box-shadow: 0 0 0 10px #fff;
+    box-shadow: 0 0 0 6px #fff;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -343,7 +395,6 @@
 .music-imgs.active{
     top: -50px;
     box-shadow: 0 0 0 4px #e8f5ff, 0 30px 50px -15px #afb7c1;
-    background-size: contain;
 }
 .music-imgs:before{
     content: '';
@@ -358,7 +409,6 @@
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px #fff;
     z-index: 2;
-    background-size: contain;
 }
 /* 左侧封面图模块下的 图片div */
 .music-imgs .img{
@@ -369,14 +419,13 @@
     width: 100%;
     height: 100%;
     /*background-color: #0f5132;*/
-    background-size: contain;
 }
 /* 封面图模块添加了active类名后，图片div的样式添加 */
 .music-imgs.active .img{
     z-index: 1;
     -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
     animation: rotateAlbumArt 3s linear 0s infinite forwards;
-    background-size: contain;
+    background-size: cover;
 }
 @-webkit-keyframes rotateAlbumArt
 {
@@ -445,6 +494,14 @@
     line-height: 60px;
     font-size:24px;
     color:#D6DEE7;
-    margin-top: 18px;
-    margin-left: 24px;
+    margin-top: 13%;
+    margin-left: 17%;
+}
+
+.text_1{
+    margin-left: 2%;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    line-height: 1.91rem;
 }
