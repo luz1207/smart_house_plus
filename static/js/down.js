@@ -45,6 +45,9 @@ function connecteClient() {
         switch (status) {
             case 12:
                 pose = "跌倒";
+                const music = new Audio('../static/alert/alert_voice.mp3');
+                music.play();
+                music.loop =false;
                 break;
             default:
                 pose = "正常"

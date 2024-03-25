@@ -20,20 +20,32 @@ function connecteClient() {
         switch (status) {
             case 1:
                 pose = "躺倒";
+                const music1 = new Audio('../static/alert/sitting_tanbei.mp3');
+                music1.play();
+                music1.loop =false;
                 break;
             case 7:
             case 2:
             case 3:
                 pose = "驼背";
+                const music = new Audio('../static/alert/sitting_tuobei.mp3');
+                music.play();
+                music.loop =false;
                 break;
             case 4:
                 pose = "低头";
                 break;
             case 5:
                 pose = "左倾";
+                const music2 = new Audio('../static/alert/sitting_left.mp3');
+                music2.play();
+                music2.loop =false;
                 break;
             case 6:
                 pose = "右倾";
+                const music3 = new Audio('../static/alert/sitting_right.mp3');
+                music3.play();
+                music3.loop =false;
                 break;
             default:
                 pose = "正常"
