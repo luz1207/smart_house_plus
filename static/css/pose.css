@@ -128,7 +128,7 @@
 
 .my_header {
     width: 100%;
-    height: 10%;
+    height: 7%;
     /*margin-left: 15%;*/
 }
 
@@ -266,4 +266,11 @@
     display: flex;
     flex-direction: row;
     margin-top: 5%;
+}
+
+.pose_title{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 8%;
 }
