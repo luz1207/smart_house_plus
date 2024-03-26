@@ -112,3 +112,32 @@
     margin-left: 8%;
     margin-top: 3%;
 }
+
+.flash_light {
+    margin-top: -2%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.flashing {
+    width: 30px;
+    height: 30px;
+    margin-top: -2%;
+    background-color: red;
+    box-shadow: 0 0 10px 5px red;
+    border-radius: 50px;
+    animation: flash 0.1s infinite alternate;
+}
+
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

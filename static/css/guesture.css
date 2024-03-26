@@ -127,7 +127,7 @@ input.cmn-toggle-round:checked + label:after {
     /*background-color: #0a58ca;*/
     border-radius: 5px;
     /*background-color: rgba(185, 250, 252, 0.6);*/
-    margin-left: 30%;
+    margin-left: 32%;
     top: 74%;
 }
 
@@ -302,17 +302,8 @@ input.cmn-toggle-round:checked + label:after {
     width: 96%;
     margin-left: 2%;
     margin-top: 3%;
-    display: grid;
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    row-gap: 0.09rem;
-    column-gap: 0.27rem;
-    background-image: url(https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/65f7053f5a7e3f0310b909b2/65f7e780731c750011005ca9/17107463954942480081.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 0% 100%;
-    background-color: #252525;
-    border-radius: 1.25rem;
+    background:black;
+    border-radius : 5%;
 }
 
 .device_grid-item {

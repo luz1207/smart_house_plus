@@ -175,5 +175,3 @@ function setAngle(wrapper, angle) {
 setAngle("hr-wrapper", hrAngle);
 setAngle("min-wrapper", minAngle);
 setAngle("sec-wrapper", secAngle);
-
-

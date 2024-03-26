@@ -1,3 +1,5 @@
+const alert_element = document.getElementById("alert");
+
 function connecteClient() {
     // 打开一个 web socket
     var ws = new WebSocket("ws://127.0.0.1:9002");
@@ -13,13 +15,11 @@ function connecteClient() {
     const y_max_element = document.getElementById("ymax");
     const y_min_element = document.getElementById("ymin");
     const is_down_element = document.getElementById("is_down");
-    const alert_element = document.getElementById("alert");
     const level_element = document.getElementById("level");
     const time_element = document.getElementById("time");
     const down_img_element = document.getElementById("down_img");
 
     is_down_element.textContent = "无人跌倒";
-    alert_element.textContent = "None";
 
     var pose = "正常";
     var date = new Date();
@@ -67,7 +67,7 @@ function connecteClient() {
             y_max_element.textContent = y_max;
             y_min_element.textContent = y_min;
             is_down_element.textContent = "跌倒";
-            alert_element.textContent = "报警！";
+            alert_element.classList.add("flashing");
             level_element.textContent = Math.random() * (1 - 0.65) + 0.65;
             down_img_element.src = 'data:image/jpeg;base64,' + box_video;
         }
@@ -76,8 +76,9 @@ function connecteClient() {
             // x_min_element.textContent = x_min;
             // y_max_element.textContent = y_max;
             // y_min_element.textContent = y_min;
+
             is_down_element.textContent = "无人跌倒";
-            alert_element.textContent = "None";
+            alert_element.classList.remove("flashing");
             // level_element.textContent = Math.random()*(0-0.3)+0.3;
         };
         console.log(data.pose);
