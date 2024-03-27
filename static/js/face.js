@@ -575,6 +575,7 @@ $(function(){
             checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
             $(audio).on('timeupdate',updateCurrTime);
+            setTimeout(myMessage, 3000);
         }
         else if(emotion_value === 5){
             currMusic = musicNameData[1];
@@ -600,6 +601,7 @@ $(function(){
             checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
             $(audio).on('timeupdate',updateCurrTime);
+            setTimeout(myMessage, 3000);
         }
         else{
             is_play = 1;
