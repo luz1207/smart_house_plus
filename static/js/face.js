@@ -373,6 +373,8 @@ $(function(){
     var artistNameData = ['花粥/王胜娚','花粥/马雨阳','花粥']            // 创作歌手数组
     var musicUrls=['sing/happy.mp3','sing/sad.mp3','sing/music3.mp3'];// 歌曲mp3数组
 
+    currImg = musicImgsData[0];
+
     var buffInterval = null          // 初始化定时器 判断是否需要缓冲
     var len = musicNameData.length;  // 歌曲长度
 
@@ -541,34 +543,63 @@ $(function(){
         //     }
         // }
 
+        seekBar.width(0);           // 重置播放进度条为0
+        time.removeClass('active');
+        tProgress.text('00:00');    // 播放时间重置
+        totalTime.text('00:00');    // 总时间重置
 
         if(emotion_value === 4 ){
             currIndex = 0;
             console.log('进入')
             currMusic = musicNameData[0];
             currArtist = artistNameData[0];
-            currImg = musicImgsData[0];
             audio.src = musicUrls[0];
+
+            //渲染元素
+            // 将歌手名，歌曲名，图片链接，设置到元素上
+            artistName.text(currArtist);
+            musicName.text(currMusic);
+            musicImgs.find('.img').css({'background':'url('+currImg+')'})
+            musicImgs.find('.img').css('width', '150px');
+            musicImgs.find('.img').css('height', '150px');
+            musicImgs.find('.img').css('position', 'absolute');
+            musicImgs.find('.img').css('left', '-22%');
+            musicImgs.find('.img').css('top', '-34%');
+            musicImgs.find('.img').css('background-size', '100% 100%');
+
+
             playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
             playerContent1.addClass('active'); // 内容栏上移
             musicImgs.addClass('active');      // 左侧图片开始动画效果
             playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            // checkBuffering(); // 检测是否需要缓冲
+            checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
             $(audio).on('timeupdate',updateCurrTime);
-            is_play = 1;
         }
         else if(emotion_value === 5){
+            currMusic = musicNameData[1];
+            currArtist = artistNameData[1];
             audio.src = musicUrls[1];
-            flag = 0;
+
+            //渲染元素
+            // 将歌手名，歌曲名，图片链接，设置到元素上
+            artistName.text(currArtist);
+            musicName.text(currMusic);
+            musicImgs.find('.img').css({'background':'url('+currImg+')'})
+            musicImgs.find('.img').css('width', '150px');
+            musicImgs.find('.img').css('height', '150px');
+            musicImgs.find('.img').css('position', 'absolute');
+            musicImgs.find('.img').css('left', '-22%');
+            musicImgs.find('.img').css('top', '-34%');
+            musicImgs.find('.img').css('background-size', '100% 100%');
+
             playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
             playerContent1.addClass('active'); // 内容栏上移
             musicImgs.addClass('active');      // 左侧图片开始动画效果
             playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            // checkBuffering(); // 检测是否需要缓冲
+            checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
             $(audio).on('timeupdate',updateCurrTime);
-            is_play = 1;
         }
         else{
             is_play = 1;
@@ -605,17 +636,6 @@ $(function(){
         // currMusic = musicNameData[currIndex];
         // currArtist = artistNameData[currIndex];
         // currImg = musicImgsData[0];
-
-        // 将歌手名，歌曲名，图片链接，设置到元素上
-        artistName.text(currArtist);
-        musicName.text(currMusic);
-        musicImgs.find('.img').css({'background':'url('+currImg+')'})
-        musicImgs.find('.img').css('width', '150px');
-        musicImgs.find('.img').css('height', '150px');
-        musicImgs.find('.img').css('position', 'absolute');
-        musicImgs.find('.img').css('left', '-22%');
-        musicImgs.find('.img').css('top', '-34%');
-        musicImgs.find('.img').css('background-size', '100% 100%');
 
         nTime = 0;
         bTime = new Date();
