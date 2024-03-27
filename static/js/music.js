@@ -208,10 +208,6 @@ $(function(){
         currImg = musicImgsData[currIndex];
         audio.src = musicUrls[currIndex];
 
-        nTime = 0;
-        bTime = new Date();
-        bTime = bTime.getTime();
-
         // 如果点击的是上一首/下一首 则设置开始播放，添加相关类名，重新开启定时器
         if(flag != 0){
             audio.play();

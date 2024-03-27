@@ -190,7 +190,7 @@ eventSource_emotion.onmessage = function (event1){
     const probabilityData = probability.map((value, index) => {
         return { value: (value * 1000).toFixed(2), name: names[index] };
     });
-    setInterval(() => graph_pie(probabilityData), 1000);
+    // setInterval(() => graph_pie(probabilityData), 1000);
 
 };
 
@@ -342,10 +342,15 @@ function graph_pie(data){
     option && pieChart.setOption(option);
 }
 
+function delayedFunction() {
+    console.log("Two seconds have passed!");
+}
 
-var is_play = 0;
 
 $(function(){
+
+    var is_play = 0;
+
     var playerContent1 = $('#player-content1');// 歌曲信息模块部分dom元素
     var musicName = $('.music-name');          // 歌曲名部分dom元素
     var artistName = $('.artist-name');        // 歌手名部分dom元素
@@ -373,33 +378,13 @@ $(function(){
     var artistNameData = ['花粥/王胜娚','花粥/马雨阳','花粥']            // 创作歌手数组
     var musicUrls=['sing/happy.mp3','sing/sad.mp3','sing/music3.mp3'];// 歌曲mp3数组
 
+    var audio = new Audio();
+
     currImg = musicImgsData[0];
 
     var buffInterval = null          // 初始化定时器 判断是否需要缓冲
     var len = musicNameData.length;  // 歌曲长度
 
-
-    // 点击 播放/暂停 按钮，触发该函数
-    // 作用：根据audio的paused属性 来检测当前音频是否已暂停  true:暂停  false:播放中
-    function playPause(){
-        if(audio.paused ){
-
-            playerContent1.addClass('active'); // 内容栏上移
-            musicImgs.addClass('active');      // 左侧图片开始动画效果
-            playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            // checkBuffering(); // 检测是否需要缓冲
-            audio.play();     // 播放
-        }
-        else{
-            playerContent1.removeClass('active'); // 内容栏下移
-            musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
-            playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
-            clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
-            musicImgs.removeClass('buffering');    // 移除缓冲类名
-            audio.pause(); // 暂停
-        }
-
-    }
 
 
     // 鼠标移动在进度条上， 触发该函数
@@ -530,166 +515,89 @@ $(function(){
     // 点击上一首/下一首时，触发该函数。
     //注意：后面代码初始化时，会触发一次selectTrack(0)，因此下面一些地方需要判断flag是否为0
     function selectTrack(){
-        audio = new Audio();
-        // if( flag == 0 || flag == 1 ){  // 初始 || 点击下一首
-        //     ++ currIndex;
-        //     if(currIndex >=len){      // 当处于最后一首时，点击下一首，播放索引置为第一首
-        //         currIndex = 0;
-        //     }
-        // }else{                    // 点击上一首
-        //     --currIndex;
-        //     if(currIndex<=-1){    // 当处于第一首时，点击上一首，播放索引置为最后一首
-        //         currIndex = len-1;
-        //     }
-        // }
 
+        if(is_play === 0){
+
+            if(emotion_value === 4 ){
+                currIndex = 0;
+                console.log('进入')
+                currMusic = musicNameData[0];
+                currArtist = artistNameData[0];
+
+                //渲染元素
+                // 将歌手名，歌曲名，图片链接，设置到元素上
+                artistName.text(currArtist);
+                musicName.text(currMusic);
+                musicImgs.find('.img').css({'background':'url('+currImg+')'})
+                musicImgs.find('.img').css('width', '150px');
+                musicImgs.find('.img').css('height', '150px');
+                musicImgs.find('.img').css('position', 'absolute');
+                musicImgs.find('.img').css('left', '-22%');
+                musicImgs.find('.img').css('top', '-34%');
+                musicImgs.find('.img').css('background-size', '100% 100%');
+
+
+                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
+                playerContent1.addClass('active'); // 内容栏上移
+                musicImgs.addClass('active');      // 左侧图片开始动画效果
+                playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
+                audio.src = 'sing/happy.mp3' ;
+                // init();
+                // checkBuffering(); // 检测是否需要缓冲
+                audio.play();     // 播放
+                // $(audio).on('timeupdate',updateCurrTime);
+                is_play = 1;
+            }
+            else if(emotion_value === 5){
+                currMusic = musicNameData[1];
+                currArtist = artistNameData[1];
+
+                //渲染元素
+                // 将歌手名，歌曲名，图片链接，设置到元素上
+                artistName.text(currArtist);
+                musicName.text(currMusic);
+                musicImgs.find('.img').css({'background':'url('+currImg+')'})
+                musicImgs.find('.img').css('width', '150px');
+                musicImgs.find('.img').css('height', '150px');
+                musicImgs.find('.img').css('position', 'absolute');
+                musicImgs.find('.img').css('left', '-22%');
+                musicImgs.find('.img').css('top', '-34%');
+                musicImgs.find('.img').css('background-size', '100% 100%');
+
+                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
+                playerContent1.addClass('active'); // 内容栏上移
+                musicImgs.addClass('active');      // 左侧图片开始动画效果
+                playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
+
+                audio.src = musicUrls[1];
+                audio.src = 'sing/sad.mp3' ;
+                checkBuffering(); // 检测是否需要缓冲
+                audio.play();     // 播放
+                $(audio).on('timeupdate',updateCurrTime);
+                is_play = 1;
+            }
+
+        }
+    }
+
+
+    function init(){
         seekBar.width(0);           // 重置播放进度条为0
         time.removeClass('active');
         tProgress.text('00:00');    // 播放时间重置
         totalTime.text('00:00');    // 总时间重置
 
-        if(emotion_value === 4 ){
-            currIndex = 0;
-            console.log('进入')
-            currMusic = musicNameData[0];
-            currArtist = artistNameData[0];
-            audio.src = musicUrls[0];
-
-            //渲染元素
-            // 将歌手名，歌曲名，图片链接，设置到元素上
-            artistName.text(currArtist);
-            musicName.text(currMusic);
-            musicImgs.find('.img').css({'background':'url('+currImg+')'})
-            musicImgs.find('.img').css('width', '150px');
-            musicImgs.find('.img').css('height', '150px');
-            musicImgs.find('.img').css('position', 'absolute');
-            musicImgs.find('.img').css('left', '-22%');
-            musicImgs.find('.img').css('top', '-34%');
-            musicImgs.find('.img').css('background-size', '100% 100%');
-
-
-            playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
-            playerContent1.addClass('active'); // 内容栏上移
-            musicImgs.addClass('active');      // 左侧图片开始动画效果
-            playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            checkBuffering(); // 检测是否需要缓冲
-            audio.play();     // 播放
-            $(audio).on('timeupdate',updateCurrTime);
-            setTimeout(myMessage, 3000);
-        }
-        else if(emotion_value === 5){
-            currMusic = musicNameData[1];
-            currArtist = artistNameData[1];
-            audio.src = musicUrls[1];
-
-            //渲染元素
-            // 将歌手名，歌曲名，图片链接，设置到元素上
-            artistName.text(currArtist);
-            musicName.text(currMusic);
-            musicImgs.find('.img').css({'background':'url('+currImg+')'})
-            musicImgs.find('.img').css('width', '150px');
-            musicImgs.find('.img').css('height', '150px');
-            musicImgs.find('.img').css('position', 'absolute');
-            musicImgs.find('.img').css('left', '-22%');
-            musicImgs.find('.img').css('top', '-34%');
-            musicImgs.find('.img').css('background-size', '100% 100%');
-
-            playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
-            playerContent1.addClass('active'); // 内容栏上移
-            musicImgs.addClass('active');      // 左侧图片开始动画效果
-            playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            checkBuffering(); // 检测是否需要缓冲
-            audio.play();     // 播放
-            $(audio).on('timeupdate',updateCurrTime);
-            setTimeout(myMessage, 3000);
-        }
-        else{
-            is_play = 1;
-        }
-
-            // if(audio.paused){
-            //     playerContent1.removeClass('active'); // 内容栏下移
-            //     musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
-            //     playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
-            //     clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
-            //     musicImgs.removeClass('buffering');    // 移除缓冲类名
-            //     audio.pause(); // 暂停
-            // }
-
-            // playerContent1.removeClass('active'); // 内容栏下移
-            // musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
-            // playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
-            // clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
-            // musicImgs.removeClass('buffering');    // 移除缓冲类名
-            // audio.pause(); // 暂停
-
-
-
-
-        // if( flag === 0 ){
-        //     playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
-        // }else{
-        //     musicImgs.removeClass('buffering');
-        //     playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-        // }
-
-
-        // 获取当前索引的:歌曲名，歌手名，图片，歌曲链接等信息
-        // currMusic = musicNameData[currIndex];
-        // currArtist = artistNameData[currIndex];
-        // currImg = musicImgsData[0];
-
         nTime = 0;
         bTime = new Date();
         bTime = bTime.getTime();
-
-        // 如果点击的是上一首/下一首 则设置开始播放，添加相关类名，重新开启定时器
-
-            // if (flag === 0) {
-            //     console.log('进入')
-            //     playerContent1.addClass('active'); // 内容栏上移
-            //     musicImgs.addClass('active');      // 左侧图片开始动画效果
-            //     playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
-            //     checkBuffering(); // 检测是否需要缓冲
-            //     audio.play();     // 播放
-            //     $(audio).on('timeupdate',updateCurrTime);
-            // }
-            // // 进度条 移入/移出/点击 动作触发相应函数
-            // sArea.mousemove(function(event){ showHover(event); });
-            // sArea.mouseout(hideHover);
-            // sArea.on('click',playFromClickedPos);
-
-
-
-
-
     }
-
-
-    // 初始化函数
-//     function initPlayer() {
-//         audio = new Audio();  // 创建Audio对象
-//         // selectTrack();       // 初始化第一首歌曲的相关信息
-//
-//         audio.loop = false;   // 取消歌曲的循环播放功能
-//
-// //        playPause();
-//         playPauseBtn.on('click',playPause); // 点击播放/暂停 按钮，触发playPause函数
-//
-//         // 进度条 移入/移出/点击 动作触发相应函数
-//         sArea.mousemove(function(event){ showHover(event); });
-//         sArea.mouseout(hideHover);
-//         sArea.on('click',playFromClickedPos);
-//
-//         // 实时更新播放时间
-//         $(audio).on('timeupdate',updateCurrTime);
-//
-//         // 上下首切换
-//         playPrevBtn.on('click',function(){ selectTrack(-1);} );
-//         playNextBtn.on('click',function(){ selectTrack(1);});
-//     }
 
     // 调用初始化函数
     setInterval(selectTrack, 1000);
+    setInterval(function() {
+        if(is_play === 1 )
+            is_play = 0;
+        console.log("is_flag 现在的值为: " + is_play);
+    }, 2000);
 
 });
