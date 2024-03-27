@@ -134,3 +134,90 @@
 2024-03-23 13:47:02,612 tencent_speech.log-INFO  on_message:243 619ea3a3-e8ce-11ee-b515-b06088d8c8a3 recognition complete
 2024-03-23 13:47:02,615 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 619ea3a3-e8ce-11ee-b515-b06088d8c8a3
 2024-03-23 18:58:54,808 tencent_speech.log-INFO  start:295 5740cfb7-e904-11ee-9603-b06088d8c8a3 recognition start
+2024-03-26 21:40:13,085 tencent_speech.log-INFO  start:295 5f31e862-eb76-11ee-ae6f-b06088d8c8a3 recognition start
+2024-03-26 21:43:05,666 tencent_speech.log-INFO  start:295 c60fbfc7-eb76-11ee-b4ed-b06088d8c8a3 recognition start
+2024-03-26 21:43:32,816 tencent_speech.log-INFO  start:295 d63e8802-eb76-11ee-9f10-b06088d8c8a3 recognition start
+2024-03-26 21:43:48,971 tencent_speech.log-INFO  start:295 dfdf94ab-eb76-11ee-a537-b06088d8c8a3 recognition start
+2024-03-26 21:44:02,487 tencent_speech.log-INFO  start:295 e7ee0d51-eb76-11ee-bf07-b06088d8c8a3 recognition start
+2024-03-26 21:44:20,450 tencent_speech.log-INFO  start:295 f2a2f5f6-eb76-11ee-8a4d-b06088d8c8a3 recognition start
+2024-03-26 21:53:04,824 tencent_speech.log-INFO  start:295 2b30162e-eb78-11ee-aed6-b06088d8c8a3 recognition start
+2024-03-26 21:53:20,370 tencent_speech.log-INFO  on_message:243 2b30162e-eb78-11ee-aed6-b06088d8c8a3 recognition complete
+2024-03-26 21:53:20,374 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 2b30162e-eb78-11ee-aed6-b06088d8c8a3
+2024-03-26 21:53:22,229 tencent_speech.log-INFO  start:295 358fc2ce-eb78-11ee-bdb7-b06088d8c8a3 recognition start
+2024-03-26 21:57:14,705 tencent_speech.log-INFO  start:295 c020c67a-eb78-11ee-aed2-b06088d8c8a3 recognition start
+2024-03-26 21:58:02,464 tencent_speech.log-INFO  on_message:243 c020c67a-eb78-11ee-aed2-b06088d8c8a3 recognition complete
+2024-03-26 21:58:02,464 tencent_speech.log-INFO  on_close:265 websocket closed  voice id c020c67a-eb78-11ee-aed2-b06088d8c8a3
+2024-03-26 21:58:05,501 tencent_speech.log-INFO  start:295 de67930c-eb78-11ee-a161-b06088d8c8a3 recognition start
+2024-03-26 21:59:38,166 tencent_speech.log-INFO  on_message:243 de67930c-eb78-11ee-a161-b06088d8c8a3 recognition complete
+2024-03-26 21:59:38,169 tencent_speech.log-INFO  on_close:265 websocket closed  voice id de67930c-eb78-11ee-a161-b06088d8c8a3
+2024-03-26 23:14:59,223 tencent_speech.log-INFO  start:295 9c64bc97-eb83-11ee-9c76-b06088d8c8a3 recognition start
+2024-03-26 23:14:59,230 tencent_speech.log-ERROR  on_error:259 websocket error [Errno 11001] getaddrinfo failed  voice id 9c64bc97-eb83-11ee-9c76-b06088d8c8a3
+2024-03-26 23:14:59,230 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 9c64bc97-eb83-11ee-9c76-b06088d8c8a3
+2024-03-26 23:18:39,684 tencent_speech.log-INFO  start:295 1fcc3f68-eb84-11ee-a81c-b06088d8c8a3 recognition start
+2024-03-26 23:18:51,733 tencent_speech.log-ERROR  on_error:259 websocket error [Errno 11001] getaddrinfo failed  voice id 1fcc3f68-eb84-11ee-a81c-b06088d8c8a3
+2024-03-26 23:18:51,734 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 1fcc3f68-eb84-11ee-a81c-b06088d8c8a3
+2024-03-26 23:20:07,596 tencent_speech.log-INFO  start:295 5433cd49-eb84-11ee-a8c4-b06088d8c8a3 recognition start
+2024-03-26 23:22:00,740 tencent_speech.log-INFO  on_message:243 5433cd49-eb84-11ee-a8c4-b06088d8c8a3 recognition complete
+2024-03-26 23:22:00,744 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 5433cd49-eb84-11ee-a8c4-b06088d8c8a3
+2024-03-26 23:22:06,130 tencent_speech.log-INFO  start:295 9ad9d081-eb84-11ee-9550-b06088d8c8a3 recognition start
+2024-03-26 23:22:47,740 tencent_speech.log-INFO  on_message:243 9ad9d081-eb84-11ee-9550-b06088d8c8a3 recognition complete
+2024-03-26 23:22:47,742 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 9ad9d081-eb84-11ee-9550-b06088d8c8a3
+2024-03-26 23:22:52,389 tencent_speech.log-INFO  start:295 b66c54e0-eb84-11ee-bd93-b06088d8c8a3 recognition start
+2024-03-26 23:26:35,138 tencent_speech.log-INFO  on_message:243 b66c54e0-eb84-11ee-bd93-b06088d8c8a3 recognition complete
+2024-03-26 23:26:35,140 tencent_speech.log-INFO  on_close:265 websocket closed  voice id b66c54e0-eb84-11ee-bd93-b06088d8c8a3
+2024-03-26 23:26:39,595 tencent_speech.log-INFO  start:295 3dd9dc84-eb85-11ee-aa79-b06088d8c8a3 recognition start
+2024-03-26 23:28:09,603 tencent_speech.log-INFO  start:295 738028c4-eb85-11ee-84c5-b06088d8c8a3 recognition start
+2024-03-26 23:28:20,570 tencent_speech.log-INFO  on_message:243 738028c4-eb85-11ee-84c5-b06088d8c8a3 recognition complete
+2024-03-26 23:28:20,571 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 738028c4-eb85-11ee-84c5-b06088d8c8a3
+2024-03-26 23:28:22,082 tencent_speech.log-INFO  start:295 7af04be8-eb85-11ee-9607-b06088d8c8a3 recognition start
+2024-03-26 23:30:48,325 tencent_speech.log-INFO  on_message:243 7af04be8-eb85-11ee-9607-b06088d8c8a3 recognition complete
+2024-03-26 23:30:48,325 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 7af04be8-eb85-11ee-9607-b06088d8c8a3
+2024-03-26 23:30:50,029 tencent_speech.log-INFO  start:295 d31f4695-eb85-11ee-9966-b06088d8c8a3 recognition start
+2024-03-26 23:30:59,880 tencent_speech.log-INFO  on_message:243 d31f4695-eb85-11ee-9966-b06088d8c8a3 recognition complete
+2024-03-26 23:30:59,881 tencent_speech.log-INFO  on_close:265 websocket closed  voice id d31f4695-eb85-11ee-9966-b06088d8c8a3
+2024-03-26 23:31:01,409 tencent_speech.log-INFO  start:295 d9e7a3ad-eb85-11ee-8484-b06088d8c8a3 recognition start
+2024-03-26 23:31:28,400 tencent_speech.log-INFO  on_message:243 d9e7a3ad-eb85-11ee-8484-b06088d8c8a3 recognition complete
+2024-03-26 23:31:28,403 tencent_speech.log-INFO  on_close:265 websocket closed  voice id d9e7a3ad-eb85-11ee-8484-b06088d8c8a3
+2024-03-26 23:31:30,303 tencent_speech.log-INFO  start:295 eb1d89e8-eb85-11ee-9c6b-b06088d8c8a3 recognition start
+2024-03-26 23:31:44,364 tencent_speech.log-INFO  on_message:243 eb1d89e8-eb85-11ee-9c6b-b06088d8c8a3 recognition complete
+2024-03-26 23:31:44,365 tencent_speech.log-INFO  on_close:265 websocket closed  voice id eb1d89e8-eb85-11ee-9c6b-b06088d8c8a3
+2024-03-26 23:31:45,988 tencent_speech.log-INFO  start:295 f479dbed-eb85-11ee-a1f1-b06088d8c8a3 recognition start
+2024-03-26 23:44:40,908 tencent_speech.log-INFO  on_message:243 f479dbed-eb85-11ee-a1f1-b06088d8c8a3 recognition complete
+2024-03-26 23:44:40,911 tencent_speech.log-INFO  on_close:265 websocket closed  voice id f479dbed-eb85-11ee-a1f1-b06088d8c8a3
+2024-03-26 23:44:43,010 tencent_speech.log-INFO  start:295 c39e1c2a-eb87-11ee-890f-b06088d8c8a3 recognition start
+2024-03-26 23:44:58,089 tencent_speech.log-INFO  on_message:243 c39e1c2a-eb87-11ee-890f-b06088d8c8a3 recognition complete
+2024-03-26 23:44:58,090 tencent_speech.log-INFO  on_close:265 websocket closed  voice id c39e1c2a-eb87-11ee-890f-b06088d8c8a3
+2024-03-26 23:45:09,529 tencent_speech.log-INFO  start:295 d36c8431-eb87-11ee-855d-b06088d8c8a3 recognition start
+2024-03-26 23:48:25,375 tencent_speech.log-INFO  on_message:243 d36c8431-eb87-11ee-855d-b06088d8c8a3 recognition complete
+2024-03-26 23:48:25,378 tencent_speech.log-INFO  on_close:265 websocket closed  voice id d36c8431-eb87-11ee-855d-b06088d8c8a3
+2024-03-26 23:48:27,589 tencent_speech.log-INFO  start:295 497a3504-eb88-11ee-b69e-b06088d8c8a3 recognition start
+2024-03-26 23:48:38,873 tencent_speech.log-INFO  on_message:243 497a3504-eb88-11ee-b69e-b06088d8c8a3 recognition complete
+2024-03-26 23:48:38,877 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 497a3504-eb88-11ee-b69e-b06088d8c8a3
+2024-03-26 23:48:40,552 tencent_speech.log-INFO  start:295 513400bc-eb88-11ee-a09b-b06088d8c8a3 recognition start
+2024-03-26 23:54:38,844 tencent_speech.log-INFO  on_message:243 513400bc-eb88-11ee-a09b-b06088d8c8a3 recognition complete
+2024-03-26 23:54:38,846 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 513400bc-eb88-11ee-a09b-b06088d8c8a3
+2024-03-26 23:54:54,780 tencent_speech.log-INFO  start:295 3042c6af-eb89-11ee-9b94-b06088d8c8a3 recognition start
+2024-03-26 23:57:43,831 tencent_speech.log-INFO  on_message:243 3042c6af-eb89-11ee-9b94-b06088d8c8a3 recognition complete
+2024-03-26 23:57:43,834 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 3042c6af-eb89-11ee-9b94-b06088d8c8a3
+2024-03-26 23:57:45,399 tencent_speech.log-INFO  start:295 95f5296a-eb89-11ee-b50f-b06088d8c8a3 recognition start
+2024-03-26 23:58:06,994 tencent_speech.log-INFO  on_message:243 95f5296a-eb89-11ee-b50f-b06088d8c8a3 recognition complete
+2024-03-26 23:58:06,997 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 95f5296a-eb89-11ee-b50f-b06088d8c8a3
+2024-03-26 23:58:08,335 tencent_speech.log-INFO  start:295 a3a0df31-eb89-11ee-bd51-b06088d8c8a3 recognition start
+2024-03-27 00:02:16,404 tencent_speech.log-INFO  on_message:243 a3a0df31-eb89-11ee-bd51-b06088d8c8a3 recognition complete
+2024-03-27 00:02:16,404 tencent_speech.log-INFO  on_close:265 websocket closed  voice id a3a0df31-eb89-11ee-bd51-b06088d8c8a3
+2024-03-27 00:02:18,021 tencent_speech.log-INFO  start:295 38740be1-eb8a-11ee-9735-b06088d8c8a3 recognition start
+2024-03-27 00:03:12,574 tencent_speech.log-INFO  on_message:243 38740be1-eb8a-11ee-9735-b06088d8c8a3 recognition complete
+2024-03-27 00:03:12,579 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 38740be1-eb8a-11ee-9735-b06088d8c8a3
+2024-03-27 09:24:08,441 tencent_speech.log-INFO  start:295 b56be4b0-ebd8-11ee-a9f2-b06088d8c8a3 recognition start
+2024-03-27 09:24:08,633 tencent_speech.log-ERROR  on_error:259 websocket error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'asr.cloud.tencent.com'. (_ssl.c:1131)  voice id b56be4b0-ebd8-11ee-a9f2-b06088d8c8a3
+2024-03-27 09:24:08,633 tencent_speech.log-INFO  on_close:265 websocket closed  voice id b56be4b0-ebd8-11ee-a9f2-b06088d8c8a3
+2024-03-27 09:24:28,718 tencent_speech.log-INFO  start:295 c183d699-ebd8-11ee-9505-b06088d8c8a3 recognition start
+2024-03-27 09:24:28,842 tencent_speech.log-ERROR  on_error:259 websocket error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'asr.cloud.tencent.com'. (_ssl.c:1131)  voice id c183d699-ebd8-11ee-9505-b06088d8c8a3
+2024-03-27 09:24:28,842 tencent_speech.log-INFO  on_close:265 websocket closed  voice id c183d699-ebd8-11ee-9505-b06088d8c8a3
+2024-03-27 09:24:43,032 tencent_speech.log-INFO  start:295 ca090901-ebd8-11ee-ba77-b06088d8c8a3 recognition start
+2024-03-27 09:27:52,439 tencent_speech.log-INFO  on_message:243 ca090901-ebd8-11ee-ba77-b06088d8c8a3 recognition complete
+2024-03-27 09:27:52,440 tencent_speech.log-INFO  on_close:265 websocket closed  voice id ca090901-ebd8-11ee-ba77-b06088d8c8a3
+2024-03-27 09:27:53,987 tencent_speech.log-INFO  start:295 3bdd6ef4-ebd9-11ee-afb9-b06088d8c8a3 recognition start
+2024-03-27 09:28:58,785 tencent_speech.log-INFO  on_message:243 3bdd6ef4-ebd9-11ee-afb9-b06088d8c8a3 recognition complete
+2024-03-27 09:28:58,789 tencent_speech.log-INFO  on_close:265 websocket closed  voice id 3bdd6ef4-ebd9-11ee-afb9-b06088d8c8a3
+2024-03-27 09:29:00,053 tencent_speech.log-INFO  start:295 633e5859-ebd9-11ee-a3e6-b06088d8c8a3 recognition start

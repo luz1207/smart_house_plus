@@ -50,8 +50,7 @@ function insertMessage(text) {
 // })
 
 var Fake = [
-    'Hi there, I\'m Fabio and you?',
-    ':)'
+    'Hi，如果您有什么需要，可以唤醒我！',
 ]
 
 function fakeMessage(answer) {
@@ -103,7 +102,7 @@ setInterval(function() {
             }
         })
         .catch(error => console.error('Error:', error));
-}, 500); // 1秒检查一次
+}, 1500); // 1秒检查一次
 
 lastModifiedTime1 = 0
 
@@ -138,7 +137,7 @@ setInterval(function() {
             }
         })
         .catch(error => console.error('Error:', error));
-}, 100); // 1秒检查一次
+}, 1000); // 1秒检查一次
 
 
 const cvs = document.querySelector('canvas')
