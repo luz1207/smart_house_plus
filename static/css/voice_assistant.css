@@ -175,7 +175,7 @@ Chat
     transform: translate(-50%, -50%);
     width: 78%;
     height: 100%;
-    max-height: 800px;
+    max-height: 960px;
     z-index: 2;
     overflow: hidden;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
@@ -212,13 +212,13 @@ Chat Title
 }
 .chat-title h1, .chat-title h2 {
     font-weight: normal;
-    font-size: 10px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
 .chat-title h2 {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1px;
 }
 .chat-title .avatar {
