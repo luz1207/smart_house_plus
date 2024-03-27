@@ -20,12 +20,15 @@ ENGINE_MODEL_TYPE = "16k_zh"
 SLICE_SIZE = 6400
 
 name_list=['小奇','小七','小齐','小琪','小旗']
+close_text = "关机"
+
 
 class MySpeechRecognitionListener(speech_recognizer.SpeechRecognitionListener):
     def __init__(self, id):
         self.id = id
         self.first_time = True
         self.flag = 0
+        self.is_closed = False
 
     def on_recognition_start(self, response):
         print("%s|%s|OnRecognitionStart\n" % (
@@ -87,20 +90,48 @@ class MySpeechRecognitionListener(speech_recognizer.SpeechRecognitionListener):
                     json.dump(data, f)
 
                 au.create_audio(answer)
+                self.is_closed = False
 
         else:
-            data = {"user": text}
+            if "中国大学生计算机设计大赛" in text:
+                data = {"user": text}
+                # 将字典写入JSON文件
+                with open('../static/user.json', 'w') as f:
+                    json.dump(data, f)
 
-            # 将字典写入JSON文件
-            with open('../static/user.json', 'w') as f:
-                json.dump(data, f)
+                answer = "中国大学生计算机设计大赛是由中国教育部、中国计算机学会和全国高等学校计算机教育研究会联合举办的面向全国高校学生的计算机科学与技术类竞赛活动。该比赛旨在促进大学生的计算机科学技术创新能力，提高学生的实践能力和团队协作能力，推动计算机教育和学科建设。它是国内具有一定影响力和知名度的大学生科技竞赛之一，吸引了众多高校学生积极参与，展示了中国大学生在计算机科学领域的创新能力和技术水平。"
+                answer_data = {"answer": answer}
+                with open('../static/output.json', 'w') as f:
+                    json.dump(answer_data, f)
+                au.create_audio(answer)
 
-            answer = wenxin.create_gpt(text)
-            # create_audio调用生成音频文件并播放音乐
-            answer_data = {"answer": answer}
-            with open('../static/output.json', 'w') as f:
-                json.dump(answer_data, f)
-            au.create_audio(answer)
+            else:
+                if close_text in text:
+                    answer = "好的，再见！有任何需要时，随时呼唤我哦。"
+                    # create_audio调用生成音频文件并播放音乐
+                    answer_data = {"answer": answer}
+                    with open('../static/output.json', 'w') as f:
+                        json.dump(answer_data, f)
+                    au.create_audio(answer)
+
+                    self.is_closed = True
+                    self.first_time = True
+
+                else:
+                    if not self.is_closed:
+                        data = {"user": text}
+                        # 将字典写入JSON文件
+                        with open('../static/user.json', 'w') as f:
+                            json.dump(data, f)
+
+                        modify_text = text+"回复在十五个字以内"
+
+                        answer = wenxin.create_gpt(modify_text)
+                        # create_audio调用生成音频文件并播放音乐
+                        answer_data = {"answer": answer}
+                        with open('../static/output.json', 'w') as f:
+                            json.dump(answer_data, f)
+                        au.create_audio(answer)
 
 
 
