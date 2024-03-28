@@ -346,10 +346,8 @@ function delayedFunction() {
     console.log("Two seconds have passed!");
 }
 
-
+var is_play = 0;
 $(function(){
-
-    var is_play = 0;
 
     var playerContent1 = $('#player-content1');// 歌曲信息模块部分dom元素
     var musicName = $('.music-name');          // 歌曲名部分dom元素
@@ -385,7 +383,6 @@ $(function(){
 
     var buffInterval = null          // 初始化定时器 判断是否需要缓冲
     var len = musicNameData.length;  // 歌曲长度
-
 
 
     // 鼠标移动在进度条上， 触发该函数
@@ -486,9 +483,14 @@ $(function(){
         seekBar.width(playProgress+'%');
 
         // 进度条为100 即歌曲播放完时
-        if( playProgress == 100 )
+        if( playProgress === 100 )
         {
-            playPauseBtn.attr('class','btn play-pause icon-jiedankaishi iconfont'); // 显示播放按钮
+
+
+            playerContent1.removeClass('active'); // 内容栏上移
+            musicImgs.removeClass('active');      // 左侧图片开始动画效果
+
+            playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
             seekBar.width(0);              // 播放进度条重置为0
             tProgress.text('00:00');       // 播放时间重置为 00:00
             musicImgs.removeClass('buffering').removeClass('active');  // 移除相关类名
@@ -536,12 +538,12 @@ $(function(){
                 musicImgs.find('.img').css('width', '150px');
                 musicImgs.find('.img').css('height', '150px');
                 musicImgs.find('.img').css('position', 'absolute');
-                musicImgs.find('.img').css('left', '-22%');
-                musicImgs.find('.img').css('top', '-34%');
+                musicImgs.find('.img').css('left', '-17%');
+                musicImgs.find('.img').css('top', '-18%');
                 musicImgs.find('.img').css('background-size', '100% 100%');
 
 
-                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
+//                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
                 playerContent1.addClass('active'); // 内容栏上移
                 musicImgs.addClass('active');      // 左侧图片开始动画效果
                 playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
@@ -550,7 +552,7 @@ $(function(){
                 // init();
                 // checkBuffering(); // 检测是否需要缓冲
                 audio.play();     // 播放
-                // $(audio).on('timeupdate',updateCurrTime);
+                $(audio).on('timeupdate',updateCurrTime);
                 is_play = 1;
             }
             else if(emotion_value === 5){
@@ -565,11 +567,11 @@ $(function(){
                 musicImgs.find('.img').css('width', '150px');
                 musicImgs.find('.img').css('height', '150px');
                 musicImgs.find('.img').css('position', 'absolute');
-                musicImgs.find('.img').css('left', '-22%');
-                musicImgs.find('.img').css('top', '-34%');
+                musicImgs.find('.img').css('left', '-17%');
+                musicImgs.find('.img').css('top', '-18%');
                 musicImgs.find('.img').css('background-size', '100% 100%');
 
-                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
+//                playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放图标
                 playerContent1.addClass('active'); // 内容栏上移
                 musicImgs.addClass('active');      // 左侧图片开始动画效果
                 playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
@@ -586,22 +588,25 @@ $(function(){
 
 
     function init(){
-        seekBar.width(0);           // 重置播放进度条为0
-        time.removeClass('active');
-        tProgress.text('00:00');    // 播放时间重置
-        totalTime.text('00:00');    // 总时间重置
+        musicImgs.find('.img').css('background','url("./images/music_player.png")')
+        musicImgs.find('.img').css('width', '150px');
+        musicImgs.find('.img').css('height', '150px');
+        musicImgs.find('.img').css('position', 'absolute');
+        musicImgs.find('.img').css('left', '-14%');
+        musicImgs.find('.img').css('top', '-16%');
+        musicImgs.find('.img').css('background-size', '100% 100%');
 
-        nTime = 0;
-        bTime = new Date();
-        bTime = bTime.getTime();
     }
 
+    init();
     // 调用初始化函数
     setInterval(selectTrack, 1000);
     setInterval(function() {
-        if(is_play === 1 )
-            is_play = 0;
-        // console.log("is_flag 现在的值为: " + is_play);
-    }, 2000);
+
+        is_play = 0;
+        console.log("is_flag 现在的值为: " + is_play);
+
+
+    }, 9000);
 
 });
