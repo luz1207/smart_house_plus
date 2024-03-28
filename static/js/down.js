@@ -83,5 +83,8 @@ function connecteClient() {
         };
         console.log(data.pose);
     };
+    ws.onopen = function (event) {
+        ws.send("1");
+    }
 };
 connecteClient();

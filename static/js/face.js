@@ -379,6 +379,7 @@ $(function(){
     var musicUrls=['sing/happy.mp3','sing/sad.mp3','sing/music3.mp3'];// 歌曲mp3数组
 
     var audio = new Audio();
+    audio.loop = false;   // 取消歌曲的循环播放功能
 
     currImg = musicImgsData[0];
 
@@ -441,6 +442,7 @@ $(function(){
         nTime = new Date();      // 获取当前时间
         nTime = nTime.getTime(); // 将该时间转化为毫秒数
 
+
         // 计算当前音频播放的时间
         curMinutes = Math.floor(audio.currentTime  / 60);
         curSeconds = Math.floor(audio.currentTime  - curMinutes * 60);
@@ -451,6 +453,8 @@ $(function(){
 
         // 计算播放进度百分比
         playProgress = (audio.currentTime  / audio.duration) * 100;
+
+        console.log(playProgress);
 
         // 如果时间为个位数，设置其格式
         if(curMinutes < 10)
@@ -520,7 +524,7 @@ $(function(){
 
             if(emotion_value === 4 ){
                 currIndex = 0;
-                console.log('进入')
+
                 currMusic = musicNameData[0];
                 currArtist = artistNameData[0];
 
@@ -541,6 +545,7 @@ $(function(){
                 playerContent1.addClass('active'); // 内容栏上移
                 musicImgs.addClass('active');      // 左侧图片开始动画效果
                 playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
+
                 audio.src = 'sing/happy.mp3' ;
                 // init();
                 // checkBuffering(); // 检测是否需要缓冲
@@ -569,9 +574,8 @@ $(function(){
                 musicImgs.addClass('active');      // 左侧图片开始动画效果
                 playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
 
-                audio.src = musicUrls[1];
                 audio.src = 'sing/sad.mp3' ;
-                checkBuffering(); // 检测是否需要缓冲
+                // checkBuffering(); // 检测是否需要缓冲
                 audio.play();     // 播放
                 $(audio).on('timeupdate',updateCurrTime);
                 is_play = 1;
@@ -597,7 +601,7 @@ $(function(){
     setInterval(function() {
         if(is_play === 1 )
             is_play = 0;
-        console.log("is_flag 现在的值为: " + is_play);
+        // console.log("is_flag 现在的值为: " + is_play);
     }, 2000);
 
 });

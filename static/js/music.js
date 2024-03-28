@@ -104,6 +104,7 @@ $(function(){
         nTime = new Date();      // 获取当前时间
         nTime = nTime.getTime(); // 将该时间转化为毫秒数
 
+        console.log(audio.currentTime)
         // 计算当前音频播放的时间
         curMinutes = Math.floor(audio.currentTime  / 60);
         curSeconds = Math.floor(audio.currentTime  - curMinutes * 60);
