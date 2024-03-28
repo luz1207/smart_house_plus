@@ -22,7 +22,7 @@ function connecteClient() {
         skeletonVideoElement.src = "data:image/jpeg;base64," + skeleton_video; // 更新图像元素的src属性
         switch (status) {
             case 1:
-                pose = "躺倒";
+                pose = "瘫坐";
                 audio.src = "../static/alert/sitting_tanbei.mp3";
                 audio.play();
                 audio.loop = false;
@@ -35,6 +35,9 @@ function connecteClient() {
                 break;
             case 3:
                 pose = "低头";
+                audio.src = "../static/alert/sitting_ditou.mp3";
+                audio.play();
+                audio.loop = false;
                 break;
             case 5:
             case 13:

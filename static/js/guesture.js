@@ -57,29 +57,29 @@ eventSource.onmessage = function(event) {
     }
 
     if (name === 'Pointing_Up'){
-        const circleLight = document.querySelector('.circle-light.light2');
+        const circleLight = document.querySelector('.circle-light.light7');
         circleLight.style.backgroundColor = '#86d986';
     }
     else {
-        const circleLight = document.querySelector('.circle-light.light2');
+        const circleLight = document.querySelector('.circle-light.light7');
         circleLight.style.backgroundColor = '#b7b7b7';
     }
 
     if (name === 'Victory'){
-        const circleLight = document.querySelector('.circle-light.light3');
+        const circleLight = document.querySelector('.circle-light.light6');
         circleLight.style.backgroundColor = '#86d986';
     }
     else {
-        const circleLight = document.querySelector('.circle-light.light3');
+        const circleLight = document.querySelector('.circle-light.light6');
         circleLight.style.backgroundColor = '#b7b7b7';
     }
 
     if (name === 'Thumb_Down'){
-        const circleLight = document.querySelector('.circle-light.light4');
+        const circleLight = document.querySelector('.circle-light.light2');
         circleLight.style.backgroundColor = '#86d986';
     }
     else {
-        const circleLight = document.querySelector('.circle-light.light4');
+        const circleLight = document.querySelector('.circle-light.light2');
         circleLight.style.backgroundColor = '#b7b7b7';
     }
 
@@ -93,20 +93,20 @@ eventSource.onmessage = function(event) {
     }
 
     if (name === 'Closed_Fist'){
-        const circleLight = document.querySelector('.circle-light.light6');
+        const circleLight = document.querySelector('.circle-light.light4');
         circleLight.style.backgroundColor = '#86d986';
     }
     else {
-        const circleLight = document.querySelector('.circle-light.light6');
+        const circleLight = document.querySelector('.circle-light.light4');
         circleLight.style.backgroundColor = '#b7b7b7';
     }
 
     if (name === 'Open_Palm'){
-        const circleLight = document.querySelector('.circle-light.light7');
+        const circleLight = document.querySelector('.circle-light.light3');
         circleLight.style.backgroundColor = '#86d986';
     }
     else {
-        const circleLight = document.querySelector('.circle-light.light7');
+        const circleLight = document.querySelector('.circle-light.light3');
         circleLight.style.backgroundColor = '#b7b7b7';
     }
 
