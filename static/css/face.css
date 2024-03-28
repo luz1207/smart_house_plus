@@ -169,7 +169,12 @@
     height: 8%;
 }
 
-.record_list tr:nth-child(even){background-color: #f2f2f2
+.record_list tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.record_list tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 
 .record_list th {
@@ -286,7 +291,7 @@
 .artist-name{
     height: 20px;
     margin-top:5px;
-    font-size:12px;
+    font-size:16px;
     margin-left: 20%;
 }
 .artist-name{
@@ -303,16 +308,19 @@
 }
 .current-time{
     float: left;
+    margin-left:6%;
 }
 .total-time{
     float: right;
 }
 .current-time,.total-time{
     color: transparent;
-    font-size: 8px;
+    font-size: 10px;
     background-color: #e8f5ff;
     border-radius: 10px;
     transition: 0.3s ease all;
+    margin-top:3%
+
 }
 .time.active .current-time, .time.active .total-time{
     color: rgb(54, 127, 196);
@@ -322,22 +330,24 @@
 
 #s-area, #seek-bar{
     position: relative;
-    height: 4px;
+    height: 5px;
     border-radius: 4px;
 }
+
 
 #s-area{
     background-color:#e8f5ff;
     cursor: pointer;
     width: 84%;
     margin-left: 18%;
+    margin-top:-2%;
 }
 
 #ins-time{
     position: absolute;
     top: -29px;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     white-space: pre;
     padding: 5px 6px;
     border-radius: 4px;
@@ -364,7 +374,7 @@
     bottom: 0;
     left: 0;
     width: 0;
-    /*background-color: rgb(54, 127, 196);*/
+    background-color: rgb(54, 127, 196);
     transition: 0.2s ease width;
 }
 
@@ -501,7 +511,7 @@
 .text_1{
     margin-left: 2%;
     color: white;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     line-height: 1.91rem;
 }

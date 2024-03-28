@@ -1,851 +1,821 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="Tooplate">
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
 
-        <title>Mini Finance Dashboard Template</title>
+    <title>Mini Finance Dashboard Template</title>
 
-        <!-- CSS FILES -->      
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
 
-        <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="../static/css/apexcharts.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
 
-        <link href="../static/css/tooplate-mini-finance.css" rel="stylesheet">
-        <link href="../static/font/iconfont.css" rel="stylesheet" >
-<!--
+    <link href="../static/css/apexcharts.css" rel="stylesheet">
 
-Tooplate 2135 Mini Finance
+    <link href="../static/css/tooplate-mini-finance.css" rel="stylesheet">
+    <link href="../static/font/iconfont.css" rel="stylesheet" >
+    <!--
 
-https://www.tooplate.com/view/2135-mini-finance
+    Tooplate 2135 Mini Finance
 
-Bootstrap 5 Dashboard Admin Template
+    https://www.tooplate.com/view/2135-mini-finance
 
--->
+    Bootstrap 5 Dashboard Admin Template
 
-    </head>
-    
-    <body style="overflow-x: hidden;">
-        <header class="navbar sticky-top flex-md-nowrap">
-            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-                <a class="navbar-brand" href="/">
-                    <i class="bi-box"></i>
-                    智能家居
-                </a>
-            </div>
+    -->
 
-            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+</head>
 
-            <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
-                <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
-            </form>
+<body style="overflow-x: hidden;">
+<header class="navbar sticky-top flex-md-nowrap">
+    <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+        <a class="navbar-brand" href="/">
+            <i class="bi-box"></i>
+            智能家居
+        </a>
+    </div>
 
-            <div class="navbar-nav me-lg-2">
-                <div class="nav-item text-nowrap d-flex align-items-center">
-                    <div class="dropdown ps-3">
-                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbarLightDropdownMenuLink">
-                            <i class="bi-bell"></i>
-                            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+        <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+    </form>
+
+    <div class="navbar-nav me-lg-2">
+        <div class="nav-item text-nowrap d-flex align-items-center">
+            <div class="dropdown ps-3">
+                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbarLightDropdownMenuLink">
+                    <i class="bi-bell"></i>
+                    <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">New alerts</span>
                             </span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow" aria-labelledby="navbarLightDropdownMenuLink">
+                    <small>Notifications</small>
+
+                    <li class="notifications-block border-bottom pb-2 mb-2">
+                        <a class="dropdown-item d-flex  align-items-center" href="#">
+                            <div class="notifications-icon-wrap bg-success">
+                                <i class="notifications-icon bi-check-circle-fill"></i>
+                            </div>
+
+                            <div>
+                                <span>Your account has been created successfuly.</span>
+
+                                <p>12 days ago</p>
+                            </div>
                         </a>
+                    </li>
 
-                        <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow" aria-labelledby="navbarLightDropdownMenuLink">
-                            <small>Notifications</small>
+                    <li class="notifications-block border-bottom pb-2 mb-2">
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="notifications-icon-wrap bg-info">
+                                <i class="notifications-icon bi-folder"></i>
+                            </div>
 
-                            <li class="notifications-block border-bottom pb-2 mb-2">
-                                <a class="dropdown-item d-flex  align-items-center" href="#">
-                                    <div class="notifications-icon-wrap bg-success">
-                                        <i class="notifications-icon bi-check-circle-fill"></i>
-                                    </div>
+                            <div>
+                                <span>Please check. We have sent a Daily report.</span>
 
-                                    <div>
-                                        <span>Your account has been created successfuly.</span>
-
-                                        <p>12 days ago</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="notifications-block border-bottom pb-2 mb-2">
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="notifications-icon-wrap bg-info">
-                                        <i class="notifications-icon bi-folder"></i>
-                                    </div>
-
-                                    <div>
-                                        <span>Please check. We have sent a Daily report.</span>
-
-                                        <p>10 days ago</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="notifications-block">
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="notifications-icon-wrap bg-danger">
-                                        <i class="notifications-icon bi-question-circle"></i>
-                                    </div>
-
-                                    <div>
-                                        <span>Account verification failed.</span>
-
-                                        <p>1 hour ago</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown ps-1">
-                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi-three-dots-vertical"></i>
+                                <p>10 days ago</p>
+                            </div>
                         </a>
+                    </li>
 
-                        <div class="dropdown-menu dropdown-menu-social bg-white shadow">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/search.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Google</span>
-                                        </a>
-                                    </div>
+                    <li class="notifications-block">
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="notifications-icon-wrap bg-danger">
+                                <i class="notifications-icon bi-question-circle"></i>
+                            </div>
 
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/spotify.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Spotify</span>
-                                        </a>
-                                    </div>
+                            <div>
+                                <span>Account verification failed.</span>
 
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/telegram.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Telegram</span>
-                                        </a>
-                                    </div>
+                                <p>1 hour ago</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/snapchat.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Snapchat</span>
-                                        </a>
-                                    </div>
+            <div class="dropdown ps-1">
+                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi-three-dots-vertical"></i>
+                </a>
 
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/tiktok.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Tiktok</span>
-                                        </a>
-                                    </div>
+                <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/search.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Google</span>
+                                </a>
+                            </div>
 
-                                    <div class="col-lg-4 col-md-4 col-4">
-                                        <a class="dropdown-item text-center" href="#">
-                                            <img src="../static/images/social/youtube.png" class="profile-image img-fluid" alt="">
-                                            <span class="d-block">Youtube</span>
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/spotify.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Spotify</span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/telegram.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Telegram</span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/snapchat.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Snapchat</span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/tiktok.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Tiktok</span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <a class="dropdown-item text-center" href="#">
+                                    <img src="../static/images/social/youtube.png" class="profile-image img-fluid" alt="">
+                                    <span class="d-block">Youtube</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="dropdown px-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../static/images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
-                        </a>
-                        <ul class="dropdown-menu bg-white shadow">
-                            <li>
-                                <div class="dropdown-menu-profile-thumb d-flex">
-                                    <img src="../static/images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
-
-                                    <div class="d-flex flex-column">
-                                        <small>Thomas</small>
-                                        <a href="#">thomas@site.com</a>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../static/pose.html">
-                                    <i class="bi-person me-2"></i>
-                                    Profile
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../static/face.html">
-                                    <i class="bi-gear me-2"></i>
-                                    Settings
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../static/down.html">
-                                    <i class="bi-question-circle me-2"></i>
-                                    Help
-                                </a>
-                            </li>
-
-                            <li class="border-top mt-3 pt-2 mx-4">
-                                <a class="dropdown-item ms-0 me-0" href="#">
-                                    <i class="bi-box-arrow-left me-2"></i>
-                                    Logout
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </header>
 
-        <div class="container-fluid">
-            <div style="width: 250px;">
-                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
-                    <div class="position-sticky py-4 px-3 sidebar-sticky">
-                        <ul class="nav flex-column h-100">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">
-                                    <i class="bi-house-fill me-2"></i>
-                                    首页
-                                </a>
-                            </li>
+            <div class="dropdown px-3">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../static/images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
+                </a>
+                <ul class="dropdown-menu bg-white shadow">
+                    <li>
+                        <div class="dropdown-menu-profile-thumb d-flex">
+                            <img src="../static/images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/guesture.html">
-                                    <i class="bi-wallet me-2"></i>
-                                    手势识别
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/pose.html">
-                                    <i class="bi-person me-2"></i>
-                                    姿态检测
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/face.html">
-                                    <i class="bi-gear me-2"></i>
-                                    人脸识别
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/down.html">
-                                    <i class="bi-question-circle me-2"></i>
-                                    跌倒检测
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/voice_assistant.html">
-                                    <i class="bi-question-circle me-2"></i>
-                                    语音助手
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../static/Virtual_fitting.html">
-                                    <i class="bi-question-circle me-2"></i>
-                                    虚拟试衣
-                                </a>
-                            </li>
-
-                            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
-                                <img src="../static/images/smarthouse.jpg" style="background-size: 100% 100%" alt="">
-
-                                <a class="btn custom-btn" href="#">Upgrade</a>
-                            </li>
-
-                            <li class="nav-item border-top mt-auto pt-2">
-                                <a class="nav-link" href="#">
-                                    <i class="bi-box-arrow-left me-2"></i>
-                                    Logout
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
-                <main class="main-wrapper" style="background-color: chartreuse;min-width: calc(100vw - 200px);margin-left: 220px;">
-
-                    <section class="my_section1" id="section_1" >
-                        <div class="container" id="my_container" style="background-size: 100% 100%;height: 90vh">
-                            <div class="row">
-
-                                <div class="col-lg-8 col-12 text-center mx-auto">
-                                    <div class="hero-section-text">
-                                        <small class="section-small-title">Welcome to Moso Interior <i class="hero-icon bi-house"></i></small>
-
-                                        <h1 class="hero-title text-white mt-2 mb-4">Decorate a beautiful interior for your space</h1>
-
-                                        <form class="custom-form hero-form" action="#" method="get" role="form">
-                                            <div class="row">
-                                                <div class="col-lg-5 col-md-6 col-12">
-                                                    <div class="input-group align-items-center">
-                                                        <label for="product-name">Product</label>
-
-                                                        <input type="text" name="product-name" id="product-name" class="form-control" placeholder="Bathroom, Living Room..." required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-5 col-md-6 col-12">
-                                                    <div class="input-group align-items-center">
-                                                        <label for="last-name">Price</label>
-
-                                                        <select name="price-range" class="form-select form-control" id="price-range" aria-label="Default select example">
-                                                            <option value="500" selected>$500 to $990</option>
-                                                            <option value="1000">$1,000 - 2,900</option>
-                                                            <option value="3000">$3,000 - 5,000</option>
-                                                            <option value="5000">$5,000 - 10,000</option>
-                                                            <option value="11000">$11,000 - 25,000</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-2 col-md-6 col-12">
-                                                    <button type="submit" class="form-control">Search</button>
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <div class="hero-btn d-flex justify-content-center align-items-center">
-                                            <a class="bi-arrow-down hero-btn-link smoothscroll" href="#section_2"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <div class="d-flex flex-column">
+                                <small>Thomas</small>
+                                <a href="#">thomas@site.com</a>
                             </div>
                         </div>
-                    </section>
-
-                    <section class="about-section section-padding" id="section_2">
-                        <div class="container">
-                            <div class="row align-items-center">
-
-                                <div class="col-lg-5 col-12">
-                                    <small class="section-small-title">Our Story</small>
-
-                                    <h2 class="mt-2 mb-4"><span class="text-muted">Introducing</span> Moso</h2>
-
-                                    <h4 class="text-muted mb-3">Since 1986, We crafted interior products for better spaces</h4>
-
-                                    <p>Moso Interior is a free Bootstrap 5 HTML CSS template for your website. Tooplate is one of the best websites to download 100% free HTML Templates for web designers and developers around the world. Thank you for visiting.</p>
-                                </div>
-
-                                <div class="col-lg-3 col-md-5 col-5 mx-lg-auto">
-                                    <img src="../static/images/sharing-design-ideas-with-family.jpg" class="about-image about-image-small img-fluid" alt="">
-                                </div>
-
-                                <div class="col-lg-4 col-md-7 col-7">
-                                    <img src="../static/images/living-room-interior-wall-mockup-warm-tones-with-leather-sofa-which-is-kitchen-3d-rendering.jpg" class="about-image img-fluid" alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="featured-section section-padding">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-lg-5 col-12">
-                                    <div class="custom-block featured-custom-block">
-                                        <h2 class="mt-2 mb-4">Opening Hours</h2>
-
-                                        <div class="d-flex">
-                                            <i class="featured-icon bi-clock me-3"></i>
-
-                                            <div>
-                                                <p class="mb-2">
-                                                    Mon - Friday ~
-                                                    <strong class="d-inline">
-                                                        8:00 AM - 6:00 PM
-                                                    </strong>
-                                                </p>
-
-                                                <p class="mb-2">
-                                                    Saturday ~
-                                                    <strong class="d-inline">
-                                                        10:00 AM - 10:00 PM
-                                                    </strong>
-                                                </p>
-
-                                                <p>Sunday ~ Closed</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="shop-section section-padding" id="section_3">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-lg-12 col-12">
-                                    <small class="section-small-title">Moso Design Shop</small>
-
-                                    <h2 class="mt-2 mb-4"><span class="tooplate-red">Interior</span> Products</h2>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="shop-thumb">
-                                        <div class="shop-image-wrap">
-                                            <a href="shop-detail.html">
-                                                <img src="../static/images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg" class="shop-image img-fluid" alt="">
-                                            </a>
-
-                                            <div class="shop-icons-wrap">
-                                                <div class="shop-icons d-flex flex-column align-items-center">
-                                                    <a href="#" class="shop-icon bi-heart"></a>
-
-                                                    <a href="#" class="shop-icon bi-bookmark"></a>
-                                                </div>
-
-                                                <p class="shop-pricing mb-0 mt-3">
-                                                    <span class="badge custom-badge">$3,600</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="shop-btn-wrap">
-                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="shop-body">
-                                            <h4>Bathroom</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="shop-thumb">
-                                        <div class="shop-image-wrap">
-                                            <a href="shop-detail.html">
-                                                <img src="../static/images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg" class="shop-image img-fluid" alt="">
-                                            </a>
-
-                                            <div class="shop-icons-wrap">
-                                                <div class="shop-icons d-flex flex-column align-items-center">
-                                                    <a href="#" class="shop-icon bi-heart"></a>
-
-                                                    <a href="#" class="shop-icon bi-bookmark"></a>
-                                                </div>
-
-                                                <p class="shop-pricing mb-0 mt-3">
-                                                    <span class="badge custom-badge">$6,400</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="shop-btn-wrap">
-                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="shop-body">
-                                            <h4>Dining</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-12">
-                                    <div class="shop-thumb">
-                                        <div class="shop-image-wrap">
-                                            <a href="shop-detail.html">
-                                                <img src="../static/images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg" class="shop-image img-fluid" alt="">
-                                            </a>
-
-                                            <div class="shop-icons-wrap">
-                                                <div class="shop-icons d-flex flex-column align-items-center">
-                                                    <a href="#" class="shop-icon bi-heart"></a>
-
-                                                    <a href="#" class="shop-icon bi-bookmark"></a>
-                                                </div>
-
-                                                <p class="shop-pricing mb-0 mt-3">
-                                                    <span class="badge custom-badge">$2,400</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="shop-btn-wrap">
-                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="shop-body">
-                                            <h4>Living Room</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-12">
-                                    <div class="shop-thumb">
-                                        <div class="shop-image-wrap">
-                                            <a href="shop-detail.html">
-                                                <img src="../static/images/shop/concept-home-cooking-with-female-chef.jpg" class="shop-image img-fluid" alt="">
-                                            </a>
-
-                                            <div class="shop-icons-wrap">
-                                                <div class="shop-icons d-flex flex-column align-items-center">
-                                                    <a href="#" class="shop-icon bi-heart"></a>
-
-                                                    <a href="#" class="shop-icon bi-bookmark"></a>
-                                                </div>
-
-                                                <p class="shop-pricing mb-0 mt-3">
-                                                    <span class="badge custom-badge">$3,800</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="shop-btn-wrap">
-                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="shop-body">
-                                            <h4>Chef Kitchen</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-12">
-                                    <div class="shop-thumb">
-                                        <div class="shop-image-wrap">
-                                            <a href="shop-detail.html">
-                                                <img src="../static/images/shop/childrens-bed-nursery-cot-velvet-childrens-room.jpg" class="shop-image img-fluid" alt="">
-                                            </a>
-
-                                            <div class="shop-icons-wrap">
-                                                <div class="shop-icons d-flex flex-column align-items-center">
-                                                    <a href="#" class="shop-icon bi-heart"></a>
-
-                                                    <a href="#" class="shop-icon bi-bookmark"></a>
-                                                </div>
-
-                                                <p class="shop-pricing mb-0 mt-3">
-                                                    <span class="badge custom-badge">$850</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="shop-btn-wrap">
-                                                <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="shop-body">
-                                            <h4>Childrens Bedroom</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-12">
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="page-item active" aria-current="page">
-                                                <a class="page-link" href="#">1</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">2</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">3</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">4</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">5</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="reviews-section section-padding pb-0" id="section_4">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-lg-12 col-12">
-                                    <small class="section-small-title">Happy customers.</small>
-
-                                    <h2 class="mt-2 mb-4">Reviews</h2>
-
-                                    <div class="owl-carousel reviews-carousel">
-                                        <div class="reviews-thumb">
-                                            <div class="reviews-body">
-                                                <h4>Moso Interior is the most suitable website layout.</h4>
-                                            </div>
-
-                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-                                                <img src="../static/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="avatar-image img-fluid" alt="">
-
-                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-                                                    <p class="text-white mb-0">
-                                                        <strong>Sandy</strong>, <small>CEO</small>
-                                                    </p>
-
-                                                    <div class="reviews-icons">
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="reviews-thumb">
-                                            <div class="reviews-body">
-                                                <h4>Explore more HTML Templates to download for your website.</h4>
-                                            </div>
-
-                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-                                                <img src="../static/images/avatar/studio-portrait-emotional-happy-funny-smiling-boyfriend-man-with-heavy-beard-stands-with-arms-crossed-dressed-red-t-shirt-isolated-blue.jpg" class="avatar-image img-fluid" alt="">
-
-                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-                                                    <p class="text-white mb-0">
-                                                        <strong>Jack</strong>, <small>Partner</small>
-                                                    </p>
-
-                                                    <div class="reviews-icons">
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star"></i>
-                                                        <i class="bi-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="reviews-thumb">
-                                            <div class="reviews-body">
-                                                <h4>Please recommend Tooplate website to your friends.</h4>
-                                            </div>
-
-                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-                                                <img src="../static/images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="avatar-image img-fluid" alt="">
-
-                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-                                                    <p class="text-white mb-0">
-                                                        <strong>Helen</strong>, <small>Client</small>
-                                                    </p>
-
-                                                    <div class="reviews-icons">
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="reviews-thumb">
-                                            <div class="reviews-body">
-                                                <h4>This Bootstrap 5 layout is free to use for your website.</h4>
-                                            </div>
-
-                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-                                                <img src="../static/images/avatar/portrait-young-redhead-bearded-male-wears-white-t-shirt-keeps-his-eyes-closed-smiling-feels-happy-yellow.jpg" class="avatar-image img-fluid" alt="">
-
-                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-                                                    <p class="text-white mb-0">
-                                                        <strong>Bill</strong>, <small>Designer</small>
-                                                    </p>
-
-                                                    <div class="reviews-icons">
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star"></i>
-                                                        <i class="bi-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="reviews-thumb">
-                                            <div class="reviews-body">
-                                                <h4>Thank you for visiting Tooplate to download free templates.</h4>
-                                            </div>
-
-                                            <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-                                                <img src="../static/images/avatar/portrait-young-beautiful-woman-gesticulating.jpg" class="avatar-image img-fluid" alt="">
-
-                                                <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-                                                    <p class="text-white mb-0">
-                                                        <strong>Susan</strong>, <small>Boss</small>
-                                                    </p>
-
-                                                    <div class="reviews-icons">
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                        <i class="bi-star-fill"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-12">
-                                        <p class="d-flex justify-content-center align-items-center mt-lg-5">Write some reviews on <a href="#" class="custom-btn btn ms-3"><i class="bi-facebook me-2"></i>facebook</a></p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="contact-section" id="section_5">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-lg-12 col-12">
-                                    <small class="section-small-title">Ask anything.</small>
-
-                                    <h2 class="mb-4">Say Hello</h2>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <form class="custom-form contact-form" action="#" method="post" role="form">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <div class="input-group align-items-center">
-                                                    <label for="first-name">First Name</label>
-
-                                                    <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Jack" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <div class="input-group align-items-center">
-                                                    <label for="last-name">Last Name</label>
-
-                                                    <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe" required>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="input-group align-items-center">
-                                            <label for="email">Email Address</label>
-
-                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com" required>
-                                        </div>
-
-                                        <div class="input-group textarea-group">
-                                            <label for="message">Message</label>
-
-                                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="What can we help you?"></textarea>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-4 col-6">
-                                            <button type="submit" class="form-control">Send</button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                                    <div class="custom-block">
-
-                                        <h3 class="text-white mb-2">Store</h3>
-
-                                        <p class="text-white mb-2">
-                                            <i class="contact-icon bi-geo-alt me-1"></i>
-
-                                            102 Utah Road, Berlin, Germany
-                                        </p>
-
-                                        <h3 class="text-white mt-3 mb-2">Contact Info</h3>
-
-                                        <div class="d-flex flex-wrap">
-                                            <p class="text-white mb-2 me-4">
-                                                <i class="contact-icon bi-telephone me-1"></i>
-
-                                                <a href="tel: 090-080-0760" class="text-white">
-                                                    090-080-0760
-                                                </a>
-                                            </p>
-
-                                            <p class="text-white">
-                                                <i class="contact-icon bi-envelope me-1"></i>
-
-                                                <a href="mailto:info@company.com" class="text-white">
-                                                    info@company.com
-                                                </a>
-                                            </p>
-                                        </div>
-
-                                        <iframe class="google-map mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4800.184803804974!2d-0.10174304922518053!3d51.5087879746898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605f6fc62fa3d%3A0xc5a39e7cf4e3a9a4!2sTate%20Modern%20Garden!5e1!3m2!1sen!2smm!4v1679331839559!5m2!1sen!2smm" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#36363e" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-
-                </main>
-
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="../static/pose.html">
+                            <i class="bi-person me-2"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="../static/face.html">
+                            <i class="bi-gear me-2"></i>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="../static/down.html">
+                            <i class="bi-question-circle me-2"></i>
+                            Help
+                        </a>
+                    </li>
+
+                    <li class="border-top mt-3 pt-2 mx-4">
+                        <a class="dropdown-item ms-0 me-0" href="#">
+                            <i class="bi-box-arrow-left me-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
+</header>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="../static/js/jquery.min.js"></script>
-        <script src="../static/js/bootstrap.bundle.min.js"></script>
-        <script src="../static/js/apexcharts.min.js"></script>
-        <script src="../static/js/custom.js"></script>
-        <script src="../static/js/jquery.backstretch.min.js"></script>
-        <script src="../static/js/my_index.js"></script>
-        <script src="../static/js/echarts.min.js"></script>
+<div class="container-fluid">
+    <div style="width: 250px;">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+            <div class="position-sticky py-4 px-3 sidebar-sticky">
+                <ul class="nav flex-column h-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">
+                            <i class="bi-house-fill me-2"></i>
+                            首页
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/guesture.html">
+                            <i class="bi-wallet me-2"></i>
+                            手势识别
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/pose.html">
+                            <i class="bi-person me-2"></i>
+                            姿态检测
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/face.html">
+                            <i class="bi-gear me-2"></i>
+                            人脸识别
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/down.html">
+                            <i class="bi-question-circle me-2"></i>
+                            跌倒检测
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/voice_assistant.html">
+                            <i class="bi-question-circle me-2"></i>
+                            语音助手
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../static/Virtual_fitting.html">
+                            <i class="bi-question-circle me-2"></i>
+                            虚拟试衣
+                        </a>
+                    </li>
+
+                    <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+                        <img src="../static/images/smarthouse.jpg" style="background-size: 100% 100%" alt="">
+
+                        <a class="btn custom-btn" href="#">Upgrade</a>
+                    </li>
+
+                    <li class="nav-item border-top mt-auto pt-2">
+                        <a class="nav-link" href="#">
+                            <i class="bi-box-arrow-left me-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="my_section1" id="section_1" style="background-color:red;width:100vw;background-size:100% 100%" >
+                <div class="container" id="my_container" style="background-size: 200% 100%;height: 100vh;width:100%">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 text-center mx-auto">
+                            <div class="hero-section-text">
+                                <small class="section-small-title" style="font-size: 20px">欢迎来到蓬莱智居 <i class="hero-icon bi-house"></i></small>
+
+                                <h1 class="hero-title text-white mt-2 mb-4">多视感知智联人“居”实时交互系统</h1>
+
+                                <div class="hero-btn d-flex justify-content-center align-items-center">
+                                    <a class="bi-arrow-down hero-btn-link smoothscroll" href="#section_2"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5 col-12">
+                            <small class="section-small-title">Our Story</small>
+
+                            <h2 class="mt-2 mb-4"><span class="text-muted">Introducing</span> Moso</h2>
+
+                            <h4 class="text-muted mb-3">Since 1986, We crafted interior products for better spaces</h4>
+
+                            <p>Moso Interior is a free Bootstrap 5 HTML CSS template for your website. Tooplate is one of the best websites to download 100% free HTML Templates for web designers and developers around the world. Thank you for visiting.</p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-5 col-5 mx-lg-auto">
+                            <img src="../static/images/sharing-design-ideas-with-family.jpg" class="about-image about-image-small img-fluid" alt="">
+                        </div>
+
+                        <div class="col-lg-4 col-md-7 col-7">
+                            <img src="../static/images/living-room-interior-wall-mockup-warm-tones-with-leather-sofa-which-is-kitchen-3d-rendering.jpg" class="about-image img-fluid" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
 
-    </body>
+            <section class="featured-section section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12">
+                            <div class="custom-block featured-custom-block">
+                                <h2 class="mt-2 mb-4">Opening Hours</h2>
+
+                                <div class="d-flex">
+                                    <i class="featured-icon bi-clock me-3"></i>
+
+                                    <div>
+                                        <p class="mb-2">
+                                            Mon - Friday ~
+                                            <strong class="d-inline">
+                                                8:00 AM - 6:00 PM
+                                            </strong>
+                                        </p>
+
+                                        <p class="mb-2">
+                                            Saturday ~
+                                            <strong class="d-inline">
+                                                10:00 AM - 10:00 PM
+                                            </strong>
+                                        </p>
+
+                                        <p>Sunday ~ Closed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="shop-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <small class="section-small-title">Moso Design Shop</small>
+
+                            <h2 class="mt-2 mb-4"><span class="tooplate-red">Interior</span> Products</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="shop-thumb">
+                                <div class="shop-image-wrap">
+                                    <a href="shop-detail.html">
+                                        <img src="../static/images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg" class="shop-image img-fluid" alt="">
+                                    </a>
+
+                                    <div class="shop-icons-wrap">
+                                        <div class="shop-icons d-flex flex-column align-items-center">
+                                            <a href="#" class="shop-icon bi-heart"></a>
+
+                                            <a href="#" class="shop-icon bi-bookmark"></a>
+                                        </div>
+
+                                        <p class="shop-pricing mb-0 mt-3">
+                                            <span class="badge custom-badge">$3,600</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="shop-btn-wrap">
+                                        <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                    </div>
+                                </div>
+
+                                <div class="shop-body">
+                                    <h4>Bathroom</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="shop-thumb">
+                                <div class="shop-image-wrap">
+                                    <a href="shop-detail.html">
+                                        <img src="../static/images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg" class="shop-image img-fluid" alt="">
+                                    </a>
+
+                                    <div class="shop-icons-wrap">
+                                        <div class="shop-icons d-flex flex-column align-items-center">
+                                            <a href="#" class="shop-icon bi-heart"></a>
+
+                                            <a href="#" class="shop-icon bi-bookmark"></a>
+                                        </div>
+
+                                        <p class="shop-pricing mb-0 mt-3">
+                                            <span class="badge custom-badge">$6,400</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="shop-btn-wrap">
+                                        <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                    </div>
+                                </div>
+
+                                <div class="shop-body">
+                                    <h4>Dining</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="shop-thumb">
+                                <div class="shop-image-wrap">
+                                    <a href="shop-detail.html">
+                                        <img src="../static/images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg" class="shop-image img-fluid" alt="">
+                                    </a>
+
+                                    <div class="shop-icons-wrap">
+                                        <div class="shop-icons d-flex flex-column align-items-center">
+                                            <a href="#" class="shop-icon bi-heart"></a>
+
+                                            <a href="#" class="shop-icon bi-bookmark"></a>
+                                        </div>
+
+                                        <p class="shop-pricing mb-0 mt-3">
+                                            <span class="badge custom-badge">$2,400</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="shop-btn-wrap">
+                                        <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                    </div>
+                                </div>
+
+                                <div class="shop-body">
+                                    <h4>Living Room</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="shop-thumb">
+                                <div class="shop-image-wrap">
+                                    <a href="shop-detail.html">
+                                        <img src="../static/images/shop/concept-home-cooking-with-female-chef.jpg" class="shop-image img-fluid" alt="">
+                                    </a>
+
+                                    <div class="shop-icons-wrap">
+                                        <div class="shop-icons d-flex flex-column align-items-center">
+                                            <a href="#" class="shop-icon bi-heart"></a>
+
+                                            <a href="#" class="shop-icon bi-bookmark"></a>
+                                        </div>
+
+                                        <p class="shop-pricing mb-0 mt-3">
+                                            <span class="badge custom-badge">$3,800</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="shop-btn-wrap">
+                                        <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                    </div>
+                                </div>
+
+                                <div class="shop-body">
+                                    <h4>Chef Kitchen</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="shop-thumb">
+                                <div class="shop-image-wrap">
+                                    <a href="shop-detail.html">
+                                        <img src="../static/images/shop/childrens-bed-nursery-cot-velvet-childrens-room.jpg" class="shop-image img-fluid" alt="">
+                                    </a>
+
+                                    <div class="shop-icons-wrap">
+                                        <div class="shop-icons d-flex flex-column align-items-center">
+                                            <a href="#" class="shop-icon bi-heart"></a>
+
+                                            <a href="#" class="shop-icon bi-bookmark"></a>
+                                        </div>
+
+                                        <p class="shop-pricing mb-0 mt-3">
+                                            <span class="badge custom-badge">$850</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="shop-btn-wrap">
+                                        <a href="shop-detail.html" class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn more</a>
+                                    </div>
+                                </div>
+
+                                <div class="shop-body">
+                                    <h4>Childrens Bedroom</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">4</a>
+                                    </li>
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">5</a>
+                                    </li>
+
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="reviews-section section-padding pb-0" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <small class="section-small-title">Happy customers.</small>
+
+                            <h2 class="mt-2 mb-4">Reviews</h2>
+
+                            <div class="owl-carousel reviews-carousel">
+                                <div class="reviews-thumb">
+                                    <div class="reviews-body">
+                                        <h4>Moso Interior is the most suitable website layout.</h4>
+                                    </div>
+
+                                    <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                        <img src="../static/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="avatar-image img-fluid" alt="">
+
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                            <p class="text-white mb-0">
+                                                <strong>Sandy</strong>, <small>CEO</small>
+                                            </p>
+
+                                            <div class="reviews-icons">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-thumb">
+                                    <div class="reviews-body">
+                                        <h4>Explore more HTML Templates to download for your website.</h4>
+                                    </div>
+
+                                    <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                        <img src="../static/images/avatar/studio-portrait-emotional-happy-funny-smiling-boyfriend-man-with-heavy-beard-stands-with-arms-crossed-dressed-red-t-shirt-isolated-blue.jpg" class="avatar-image img-fluid" alt="">
+
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                            <p class="text-white mb-0">
+                                                <strong>Jack</strong>, <small>Partner</small>
+                                            </p>
+
+                                            <div class="reviews-icons">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star"></i>
+                                                <i class="bi-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-thumb">
+                                    <div class="reviews-body">
+                                        <h4>Please recommend Tooplate website to your friends.</h4>
+                                    </div>
+
+                                    <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                        <img src="../static/images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="avatar-image img-fluid" alt="">
+
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                            <p class="text-white mb-0">
+                                                <strong>Helen</strong>, <small>Client</small>
+                                            </p>
+
+                                            <div class="reviews-icons">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-thumb">
+                                    <div class="reviews-body">
+                                        <h4>This Bootstrap 5 layout is free to use for your website.</h4>
+                                    </div>
+
+                                    <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                        <img src="../static/images/avatar/portrait-young-redhead-bearded-male-wears-white-t-shirt-keeps-his-eyes-closed-smiling-feels-happy-yellow.jpg" class="avatar-image img-fluid" alt="">
+
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                            <p class="text-white mb-0">
+                                                <strong>Bill</strong>, <small>Designer</small>
+                                            </p>
+
+                                            <div class="reviews-icons">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star"></i>
+                                                <i class="bi-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviews-thumb">
+                                    <div class="reviews-body">
+                                        <h4>Thank you for visiting Tooplate to download free templates.</h4>
+                                    </div>
+
+                                    <div class="reviews-bottom reviews-bottom-up d-flex align-items-center">
+                                        <img src="../static/images/avatar/portrait-young-beautiful-woman-gesticulating.jpg" class="avatar-image img-fluid" alt="">
+
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
+                                            <p class="text-white mb-0">
+                                                <strong>Susan</strong>, <small>Boss</small>
+                                            </p>
+
+                                            <div class="reviews-icons">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-12">
+                                <p class="d-flex justify-content-center align-items-center mt-lg-5">Write some reviews on <a href="#" class="custom-btn btn ms-3"><i class="bi-facebook me-2"></i>facebook</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section" id="section_5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <small class="section-small-title">Ask anything.</small>
+
+                            <h2 class="mb-4">Say Hello</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <form class="custom-form contact-form" action="#" method="post" role="form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="input-group align-items-center">
+                                            <label for="first-name">First Name</label>
+
+                                            <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Jack" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="input-group align-items-center">
+                                            <label for="last-name">Last Name</label>
+
+                                            <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group align-items-center">
+                                    <label for="email">Email Address</label>
+
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com" required>
+                                </div>
+
+                                <div class="input-group textarea-group">
+                                    <label for="message">Message</label>
+
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="What can we help you?"></textarea>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <button type="submit" class="form-control">Send</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                            <div class="custom-block">
+
+                                <h3 class="text-white mb-2">Store</h3>
+
+                                <p class="text-white mb-2">
+                                    <i class="contact-icon bi-geo-alt me-1"></i>
+
+                                    102 Utah Road, Berlin, Germany
+                                </p>
+
+                                <h3 class="text-white mt-3 mb-2">Contact Info</h3>
+
+                                <div class="d-flex flex-wrap">
+                                    <p class="text-white mb-2 me-4">
+                                        <i class="contact-icon bi-telephone me-1"></i>
+
+                                        <a href="tel: 090-080-0760" class="text-white">
+                                            090-080-0760
+                                        </a>
+                                    </p>
+
+                                    <p class="text-white">
+                                        <i class="contact-icon bi-envelope me-1"></i>
+
+                                        <a href="mailto:info@company.com" class="text-white">
+                                            info@company.com
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <iframe class="google-map mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4800.184803804974!2d-0.10174304922518053!3d51.5087879746898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605f6fc62fa3d%3A0xc5a39e7cf4e3a9a4!2sTate%20Modern%20Garden!5e1!3m2!1sen!2smm!4v1679331839559!5m2!1sen!2smm" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#36363e" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
+        </main>
+
+    </div>
+</div>
+
+<!-- JAVASCRIPT FILES -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/apexcharts.min.js"></script>
+<script src="../static/js/custom.js"></script>
+<script src="../static/js/jquery.backstretch.min.js"></script>
+<script src="../static/js/my_index.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+
+
+</body>
 </html>

@@ -1,7 +1,7 @@
 //幻灯片效果
 var slides =  ['../static/images/slideshow/slide1.jpg', '../static/images/slideshow/slide3.jpg','../static/images/slideshow/slide2.jpg'];
 var currentSlide = 0;
-const slideshowElement = document.getElementById('my_container');
+const slideshowElement = document.getElementById('section_1');
 
 function showNextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;

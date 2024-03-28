@@ -1,445 +1,445 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Mini Finance - Settings</title>
+        <title>Mini Finance - Settings</title>
 
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="./css/bootstrap-icons.css" rel="stylesheet">
+        <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
 
-    <link href="./css/tooplate-mini-finance.css" rel="stylesheet">
+        <link href="./css/face.css" rel="stylesheet">
+        <link href="font/iconfont.css" rel="stylesheet" >
+<!--
 
-    <link href="./css/face.css" rel="stylesheet">
-    <link href="font/iconfont.css" rel="stylesheet" >
-    <!--
+Tooplate 2135 Mini Finance
 
-    Tooplate 2135 Mini Finance
+https://www.tooplate.com/view/2135-mini-finance
 
-    https://www.tooplate.com/view/2135-mini-finance
+Bootstrap 5 Dashboard Admin Template
 
-    Bootstrap 5 Dashboard Admin Template
+-->
+    </head>
+    
+    <body style="overflow-x: hidden;">
+        <header class="navbar sticky-top flex-md-nowrap">
+            <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+                <a class="navbar-brand" href="/">
+                    <i class="bi-box"></i>
+                    蓬莱智居
+                </a>
+            </div>
 
-    -->
-</head>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<body style="overflow-x: hidden;">
-<header class="navbar sticky-top flex-md-nowrap">
-    <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="/">
-            <i class="bi-box"></i>
-            蓬莱智居
-        </a>
-    </div>
+            <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+            </form>
 
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
-        <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
-    </form>
-
-    <div class="navbar-nav me-lg-2">
-        <div class="nav-item text-nowrap d-flex align-items-center">
-            <div class="dropdown ps-3">
-                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi-bell"></i>
-                    <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <div class="navbar-nav me-lg-2">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <div class="dropdown ps-3">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-bell"></i>
+                            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">New alerts</span>
                             </span>
-                </a>
-
-                <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
-                    <small>Notifications</small>
-
-                    <li class="notifications-block border-bottom pb-2 mb-2">
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="notifications-icon-wrap bg-success">
-                                <i class="notifications-icon bi-check-circle-fill"></i>
-                            </div>
-
-                            <div>
-                                <span>Your account has been created successfuly.</span>
-
-                                <p>12 days ago</p>
-                            </div>
                         </a>
-                    </li>
 
-                    <li class="notifications-block border-bottom pb-2 mb-2">
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="notifications-icon-wrap bg-info">
-                                <i class="notifications-icon bi-folder"></i>
-                            </div>
+                        <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
+                            <small>Notifications</small>
 
-                            <div>
-                                <span>Please check. We have sent a Daily report.</span>
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-success">
+                                        <i class="notifications-icon bi-check-circle-fill"></i>
+                                    </div>
 
-                                <p>10 days ago</p>
-                            </div>
+                                    <div>
+                                        <span>Your account has been created successfuly.</span>
+
+                                        <p>12 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-info">
+                                        <i class="notifications-icon bi-folder"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Please check. We have sent a Daily report.</span>
+
+                                        <p>10 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-danger">
+                                        <i class="notifications-icon bi-question-circle"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Account verification failed.</span>
+
+                                        <p>1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown ps-1">
+                        <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-three-dots-vertical"></i>
                         </a>
-                    </li>
 
-                    <li class="notifications-block">
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <div class="notifications-icon-wrap bg-danger">
-                                <i class="notifications-icon bi-question-circle"></i>
-                            </div>
+                        <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/search.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Google</span>
+                                        </a>
+                                    </div>
 
-                            <div>
-                                <span>Account verification failed.</span>
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/spotify.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Spotify</span>
+                                        </a>
+                                    </div>
 
-                                <p>1 hour ago</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/telegram.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Telegram</span>
+                                        </a>
+                                    </div>
 
-            <div class="dropdown ps-1">
-                <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi-three-dots-vertical"></i>
-                </a>
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/snapchat.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Snapchat</span>
+                                        </a>
+                                    </div>
 
-                <div class="dropdown-menu dropdown-menu-social bg-white shadow">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/search.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Google</span>
-                                </a>
-                            </div>
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/tiktok.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Tiktok</span>
+                                        </a>
+                                    </div>
 
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/spotify.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Spotify</span>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/telegram.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Telegram</span>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/snapchat.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Snapchat</span>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/tiktok.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Tiktok</span>
-                                </a>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a class="dropdown-item text-center" href="#">
-                                    <img src="images/social/youtube.png" class="profile-image img-fluid" alt="">
-                                    <span class="d-block">Youtube</span>
-                                </a>
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/youtube.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Youtube</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
+                        </a>
+                        <ul class="dropdown-menu bg-white shadow">
+                            <li>
+                                <div class="dropdown-menu-profile-thumb d-flex">
+                                    <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
+
+                                    <div class="d-flex flex-column">
+                                        <small>Thomas</small>
+                                        <a href="#">thomas@site.com</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="pose.html">
+                                    <i class="bi-person me-2"></i>
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="fece.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="down.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help
+                                </a>
+                            </li>
+
+                            <li class="border-top mt-3 pt-2 mx-4">
+                                <a class="dropdown-item ms-0 me-0" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </header>
 
-            <div class="dropdown px-3">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid" alt="">
-                </a>
-                <ul class="dropdown-menu bg-white shadow">
-                    <li>
-                        <div class="dropdown-menu-profile-thumb d-flex">
-                            <img src="images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+                    <div class="position-sticky py-4 px-3 sidebar-sticky">
+                        <ul class="nav flex-column h-100">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">
+                                    <i class="bi-house-fill me-2"></i>
+                                    首页
+                                </a>
+                            </li>
 
-                            <div class="d-flex flex-column">
-                                <small>Thomas</small>
-                                <a href="#">thomas@site.com</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="guesture.html">
+                                    <i class="bi-wallet me-2"></i>
+                                    手势识别
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="pose.html">
+                                    <i class="bi-person me-2"></i>
+                                    姿态检测
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="fece.html">
+                                    <i class="bi-gear me-2"></i>
+                                    人脸识别
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="down.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    跌倒检测
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Virtual_fitting.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    虚拟试衣
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="voice_assistant.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    语音助手
+                                </a>
+                            </li>
+
+                            <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
+                                <img src="images/credit-card.png" class="img-fluid" alt="">
+
+                                <a class="btn custom-btn" href="#">Upgrade</a>
+                            </li>
+
+                            <li class="nav-item border-top mt-auto pt-2">
+                                <a class="nav-link" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="main-wrapper" style="min-width: calc(100vw - 200px);height:150vh">
+                    <div class="face_container">
+                        <div class="face_header">
+                            <img src="images/title_header.png" style="width: 110%;height: 100%">
+                        </div>
+                        <h3 class="face_title">人脸分析页面</h3>
+                        <div class="face_box">
+                            <span class="text_1" style="margin-top: 2%；font-size:17px">人脸识别视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%">
+                            <div class="face_video">
+                                <img src="http://127.0.0.1:8080/face_video_feed" style="width: 100%;height: 100%">
                             </div>
                         </div>
-                    </li>
+                        <div class="emotion_box">
+                            <span class="text_1" style="margin-top: 2%；font-size:17px">情绪检测视频</span>
+                            <img src="images/pose/info_line.png" style="width: 100%">
+                            <div class="emotion_video">
+                                <img src="http://127.0.0.1:8080/emotion_video_feed" style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                    <table class="record_list" id="record">
+                        <tr>
+                            <th>序号</th>
+                            <th>标识符</th>
+                            <th>名字</th>
+                            <th>时间</th>
+                            <th>距离</th>
+                        </tr>
+                    </table>
+                        <div class="emotion_bar">
+                            <p style="color: black;font-size: 15px;margin: 2%">情绪占比：</p>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">angry </p>
+                                <div class="rightbar" id="angrybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="angry_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">disgust </p>
+                                <div class="rightbar" id="disgustbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="disgust_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">fear </p>
+                                <div class="rightbar" id="fearbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="fear_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">happy </p>
+                                <div class="rightbar" id="happybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="happy_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">sad </p>
+                                <div class="rightbar" id="sadbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="sad_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">surprise </p>
+                                <div class="rightbar" id="surprisebar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="surprise_num"></p>
+                            </div>
+                            <div class="emotion_info">
+                                <p style="color: black;font-size: 12px;margin-top: 2px;margin-left: 5px">neutral </p>
+                                <div class="rightbar" id="neutralbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
+                                <p style="color: black;font-size: 10px;margin-top: 5px" id="neutral_num"></p>
+                            </div>
+                        </div>
+                        <div class="line_box">
+                            <div class="line_graph" id="emotion_line"></div>
+                        </div>
 
-                    <li>
-                        <a class="dropdown-item" href="pose.html">
-                            <i class="bi-person me-2"></i>
-                            Profile
-                        </a>
-                    </li>
+                        <div class="face_result">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <h6 style="color: #c6e5e7">人脸识别结果</h6>
+                            <img src="images/pose/info_line.png" style="width: 100%;position: absolute;left: -0.4%">
+                            <div class="face_info">
+                                <p id="fpsDisplay" style="margin-top: 10%;margin-left:4px;font-size: 17px;color: #ffffff">帧率:</p>
+                            </div>
+                            <div class="face_info">
+                                <p id="nameDisplay" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">人脸：</p>
+                            </div>
+                            <div class="recognize_res">
+                                <img id="verify_img"  src="../static/images/face/scanning.gif" style="width: 90%;height: 90%;object-fit: cover">
+                                <p id="verify_status" style="margin-top: 15px;font-size: 14px;color: #ffffff">未检测到人脸</p>
+                            </div>
+                            <div style="margin-top: 30px;margin-left: 27%">
+                                <h8 style="color: white">人脸库比对结果</h8>
+                            </div>
+                            <div class="face_info">
+                                <p id="numdisplay" style="margin-top: 10%;margin-left: 4px;font-size: 17px;color: #ffffff">个数：</p>
+                            </div>
+                            <div class="face_info">
+                                <p id="distdisplay" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">距离：</p>
+                            </div>
+                            <div class="face_info">
+                                <p id="show_time" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">时间：</p>
+                            </div>
+                            <div class="music_player">
+                                <div id="player">
+                                    <!-- 歌曲信息模块 -->
+                                    <div id="player-content1">
+                                        <!-- 歌曲名 -->
+                                        <div class="music-name"></div>
 
-                    <li>
-                        <a class="dropdown-item" href="fece.html">
-                            <i class="bi-gear me-2"></i>
-                            Settings
-                        </a>
-                    </li>
+                                        <!-- 歌曲时间 -->
+                                        <div class="time">
+                                            <!-- 当前播放的时间 -->
+                                            <div class="current-time"></div>
+                                            <!-- 歌曲总时长 -->
+                                            <div class="total-time"></div>
+                                        </div>
+                                        <!-- 进度条 -->
+                                        <div id="s-area">
+                                            <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+                                            <div id="seek-bar" style="color:red;width:100%"></div>
+                                        </div>
+                                    </div>
 
-                    <li>
-                        <a class="dropdown-item" href="down.html">
-                            <i class="bi-question-circle me-2"></i>
-                            Help
-                        </a>
-                    </li>
+                                    <!-- 控制模块 -->
+                                    <div id="player-content2">
+                                        <!-- 左侧歌曲封面旋转模块 -->
+                                        <div class="music-imgs">
+                                            <!-- 封面图 -->
+                                            <div class="img" ></div>
+                                            <!-- 歌曲缓冲时的提示文字 -->
+                                            <div id="buffer-box">缓冲…</div>
+                                        </div>
+                                        <!-- 右侧歌曲操作模块 -->
+                                        <div class="player-controls">
+                                            <!-- 上一首按钮 -->
+                                            <div class="btn prev iconfont">&#xe603;</div>
+                                            <!-- 暂停/播放 按钮 -->
+                                            <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+                                            <!-- 下一首按钮 -->
+                                            <div class="btn next iconfont">&#xe602;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <li class="border-top mt-3 pt-2 mx-4">
-                        <a class="dropdown-item ms-0 me-0" href="#">
-                            <i class="bi-box-arrow-left me-2"></i>
-                            Logout
-                        </a>
-                    </li>
-                </ul>
+                        </div>
+                    </div>
+                </main>
+
             </div>
         </div>
-    </div>
-</header>
 
-<div class="container-fluid">
-    <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
-            <div class="position-sticky py-4 px-3 sidebar-sticky">
-                <ul class="nav flex-column h-100">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/">
-                            <i class="bi-house-fill me-2"></i>
-                            首页
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="guesture.html">
-                            <i class="bi-wallet me-2"></i>
-                            手势识别
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="pose.html">
-                            <i class="bi-person me-2"></i>
-                            姿态检测
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="fece.html">
-                            <i class="bi-gear me-2"></i>
-                            人脸识别
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="down.html">
-                            <i class="bi-question-circle me-2"></i>
-                            跌倒检测
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="Virtual_fitting.html">
-                            <i class="bi-question-circle me-2"></i>
-                            虚拟试衣
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="voice_assistant.html">
-                            <i class="bi-question-circle me-2"></i>
-                            语音助手
-                        </a>
-                    </li>
-
-                    <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
-                        <img src="images/credit-card.png" class="img-fluid" alt="">
-
-                        <a class="btn custom-btn" href="#">Upgrade</a>
-                    </li>
-
-                    <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="#">
-                            <i class="bi-box-arrow-left me-2"></i>
-                            Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class="main-wrapper" style="min-width: calc(100vw - 200px);height:150vh">
-            <div class="face_container">
-                <div class="face_header">
-                    <img src="images/title_header.png" style="width: 110%;height: 100%">
-                </div>
-                <h3 class="face_title">人脸分析页面</h3>
-                <div class="face_box">
-                    <span class="text_1" style="margin-top: 2%">人脸识别视频</span>
-                    <img src="images/pose/info_line.png" style="width: 100%">
-                    <div class="face_video">
-                        <img src="http://127.0.0.1:8080/face_video_feed" style="width: 100%;height: 100%">
-                    </div>
-                </div>
-                <div class="emotion_box">
-                    <span class="text_1" style="margin-top: 2%">情绪检测视频</span>
-                    <img src="images/pose/info_line.png" style="width: 100%">
-                    <div class="emotion_video">
-                        <img src="http://127.0.0.1:8080/emotion_video_feed" style="width: 100%;height: 100%;">
-                    </div>
-                </div>
-                <table class="record_list" id="record">
-                    <tr>
-                        <th>序号</th>
-                        <th>标识符</th>
-                        <th>名字</th>
-                        <th>时间</th>
-                        <th>距离</th>
-                    </tr>
-                </table>
-                <div class="emotion_bar">
-                    <p style="color: black;font-size: 15px;margin: 2%">情绪占比：</p>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">angry </p>
-                        <div class="rightbar" id="angrybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="angry_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">disgust </p>
-                        <div class="rightbar" id="disgustbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="disgust_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">fear </p>
-                        <div class="rightbar" id="fearbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="fear_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">happy </p>
-                        <div class="rightbar" id="happybar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="happy_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">sad </p>
-                        <div class="rightbar" id="sadbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="sad_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 5px;margin-left: 3px">surprise </p>
-                        <div class="rightbar" id="surprisebar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="surprise_num"></p>
-                    </div>
-                    <div class="emotion_info">
-                        <p style="color: black;font-size: 12px;margin-top: 2px;margin-left: 5px">neutral </p>
-                        <div class="rightbar" id="neutralbar" style="background-image: linear-gradient(103.3deg, rgb(252, 225, 208) 30%, rgb(255, 173, 214) 55.7%, rgb(162, 186, 245) 81.8%)"></div>
-                        <p style="color: black;font-size: 10px;margin-top: 5px" id="neutral_num"></p>
-                    </div>
-                </div>
-                <div class="line_box">
-                    <div class="line_graph" id="emotion_line"></div>
-                </div>
-
-                <div class="face_result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <h6 style="color: #c6e5e7">人脸识别结果</h6>
-                    <img src="images/pose/info_line.png" style="width: 100%;position: absolute;left: -0.4%">
-                    <div class="face_info">
-                        <p id="fpsDisplay" style="margin-top: 10%;margin-left:4px;font-size: 17px;color: #ffffff">帧率:</p>
-                    </div>
-                    <div class="face_info">
-                        <p id="nameDisplay" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">人脸：</p>
-                    </div>
-                    <div class="recognize_res">
-                        <img id="verify_img"  src="../static/images/face/scanning.gif" style="width: 90%;height: 90%;object-fit: cover">
-                        <p id="verify_status" style="margin-top: 15px;font-size: 14px;color: #ffffff">未检测到人脸</p>
-                    </div>
-                    <div style="margin-top: 30px;margin-left: 27%">
-                        <h8 style="color: white">人脸库比对结果</h8>
-                    </div>
-                    <div class="face_info">
-                        <p id="numdisplay" style="margin-top: 10%;margin-left: 4px;font-size: 17px;color: #ffffff">个数：</p>
-                    </div>
-                    <div class="face_info">
-                        <p id="distdisplay" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">距离：</p>
-                    </div>
-                    <div class="face_info">
-                        <p id="show_time" style="margin-top: 2px;margin-left: 4px;font-size: 17px;color: #ffffff">时间：</p>
-                    </div>
-                    <div class="music_player">
-                        <div id="player">
-                            <!-- 歌曲信息模块 -->
-                            <div id="player-content1">
-                                <!-- 歌曲名 -->
-                                <div class="music-name"></div>
-
-                                <!-- 歌曲时间 -->
-                                <div class="time">
-                                    <!-- 当前播放的时间 -->
-                                    <div class="current-time"></div>
-                                    <!-- 歌曲总时长 -->
-                                    <div class="total-time"></div>
-                                </div>
-                                <!-- 进度条 -->
-                                <div id="s-area">
-                                    <!-- 表示当前歌曲播放进度的蓝色进度条 -->
-                                    <div id="seek-bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- 控制模块 -->
-                            <div id="player-content2">
-                                <!-- 左侧歌曲封面旋转模块 -->
-                                <div class="music-imgs">
-                                    <!-- 封面图 -->
-                                    <div class="img" ></div>
-                                    <!-- 歌曲缓冲时的提示文字 -->
-                                    <div id="buffer-box">缓冲…</div>
-                                </div>
-                                <!-- 右侧歌曲操作模块 -->
-                                <div class="player-controls">
-                                    <!-- 上一首按钮 -->
-                                    <div class="btn prev iconfont">&#xe603;</div>
-                                    <!-- 暂停/播放 按钮 -->
-                                    <div class="btn play-pause icon-jiediankaishi iconfont"></div>
-                                    <!-- 下一首按钮 -->
-                                    <div class="btn next iconfont">&#xe602;</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </main>
-
-    </div>
-</div>
-
-<!-- JAVASCRIPT FILES -->
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/custom.js"></script>
-<script src="./js/face.js"></script>
-<script src="./js/echarts.min.js"></script>
+        <!-- JAVASCRIPT FILES -->
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/custom.js"></script>
+        <script src="./js/face.js"></script>
+        <script src="./js/echarts.min.js"></script>
 
 
 
-</body>
+    </body>
 </html>

@@ -33,7 +33,7 @@
 .text_1{
     margin: 2%;
     color: white;
-    font-size: 1.13rem;
+    font-size: 1.23rem;
     letter-spacing: 5px;
     line-height: 2.91rem;
 }
@@ -93,7 +93,7 @@
 .text{
     position: absolute;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1.03rem;
     letter-spacing: 2px;
     line-height: 1.91rem;
 }

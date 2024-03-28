@@ -11,6 +11,13 @@
     /*background-color: #8ce196;*/
 }
 
+.guesture_title{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+}
+
 .guesture_video1{
     position: absolute;
     display: flex;
@@ -336,200 +343,51 @@ input.cmn-toggle-round:checked + label:after {
 }
 
 
+.clock_box {
+  height: 20%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom :3%;
+}
+
+.clock_box {
+  background: #0f3854;
+  background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+  background-size: 100vh;
+}
+
+.clock_p {
+  margin: 0;
+  padding: 0;
+}
+
 #clock {
-    background: #fff;
-    border: 15px solid #222;
-    border-radius: 50%;
-    position: relative;
-    width: 320px;
-    height: 320px;
-    margin: auto;
+  font-family: "Share Tech Mono", monospace;
+  color: #ffffff;
+  text-align: center;
+  position:relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
 
-
-
-.clock_li {
-    position: absolute;
-    transform-origin: 50% 100%;
-    height: 160px;
+#clock .time {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
 }
 
-.hours {
-    font-size: 23.3333333333px;
-    letter-spacing: -1.6px;
-    line-height: 45px;
-    list-style: none;
-    top: -16px;
-    margin: 0;
-    padding: 0;
-    left:37%;
-    position: absolute;
-    text-align: center;
-}
-.hours li {
-    width: 75px;
-}
-.hours span {
-    display: block;
-}
-/* 以下代码有助于设计数字 1*/
-.hours li:nth-of-type(1) {
-    transform: rotate(30deg);
-}
-.hours li:nth-of-type(1) span {
-    transform: rotate(-30deg);
-}
-.hours li:nth-of-type(2) {
-    transform: rotate(60deg);
-}
-.hours li:nth-of-type(2) span {
-    transform: rotate(-60deg);
-}
-/* 以下代码有助于设计数字 3*/
-.hours li:nth-of-type(3) {
-    transform: rotate(90deg);
-}
-.hours li:nth-of-type(3) span {
-    transform: rotate(-90deg);
-}
-.hours li:nth-of-type(4) {
-    transform: rotate(120deg);
-}
-.hours li:nth-of-type(4) span {
-    transform: rotate(-120deg);
-}
-/* 以下代码有助于设计数字 5*/
-.hours li:nth-of-type(5) {
-    transform: rotate(150deg);
-}
-.hours li:nth-of-type(5) span {
-    transform: rotate(-150deg);
-}
-.hours li:nth-of-type(6) {
-    transform: rotate(180deg);
-}
-.hours li:nth-of-type(6) span {
-    transform: rotate(-180deg);
-}
-/* 以下代码有助于设计数字 7*/
-.hours li:nth-of-type(7) {
-    transform: rotate(210deg);
-}
-.hours li:nth-of-type(7) span {
-    transform: rotate(-210deg);
-}
-.hours li:nth-of-type(8) {
-    transform: rotate(240deg);
-}
-.hours li:nth-of-type(8) span {
-    transform: rotate(-240deg);
-}
-/* 以下代码有助于设计数字 9 */
-.hours li:nth-of-type(9) {
-    transform: rotate(270deg);
-}
-.hours li:nth-of-type(9) span {
-    transform: rotate(-270deg);
-}
-.hours li:nth-of-type(10) {
-    transform: rotate(300deg);
-}
-.hours li:nth-of-type(10) span {
-    transform: rotate(-300deg);
-}
-/* 以下代码有助于设计数字 11*/
-.hours li:nth-of-type(11) {
-    transform: rotate(330deg);
-}
-.hours li:nth-of-type(11) span {
-    transform: rotate(-330deg);
-}
-.hours li:nth-of-type(12) {
-    transform: rotate(360deg);
-}
-.hours li:nth-of-type(12) span {
-    transform: rotate(-360deg);
+#clock .date {
+  letter-spacing: 0.1em;
+  font-size: 24px;
 }
 
-
-.hr-wrapper, .min-wrapper, .sec-wrapper {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-}
-
-.hand {
-    position: absolute;
-    bottom: 50%;
-    transform-origin: 50% 100%;
-}
-
-.hr {
-    background: #222;
-    left: 152px;
-    width: 13px;
-    height: 105px;
-    border-radius: 10px;
-    animation: rotateHand 43200s linear infinite;
-}
-.hr:after {
-    background: #222;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -8px;
-    width: 13px;
-    height: 16px;
-}
-
-.min {
-    background: #222;
-    left: 155px;
-    width: 9px;
-    height: 125px;
-    border-radius: 8px;
-    animation: rotateHand 3600s linear infinite;
-}
-.min:after {
-    background: #222;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -8px;
-    width: 9px;
-    height: 16px;
-}
-
-.sec {
-    background: #d00;
-    left: 156.5px;
-    width: 5px;
-    height: 132px;
-    border-radius: 8px;
-    animation: rotateHand 60s linear infinite;
-}
-.sec:after {
-    background: #d00;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -3.5px;
-    width: 5px;
-    height: 7px;
-}
-
-@keyframes rotateHand {
-    to {
-        transform: rotate(1turn);
-    }
-}
-
-.guesture_title{
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 8%;
+#clock .text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
 }
