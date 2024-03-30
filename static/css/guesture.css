@@ -20,22 +20,17 @@
 
 .guesture_video1{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    left: 23%;
-    top: 18%;
-    width: 38vw;
-    height: 54vh;
-    margin-left: 10%;
-    text-align: center;
-    align-items: center;
-    background-color: rgba(21, 20, 35, 0.68);
-    border-radius: 1.75rem;
-    box-shadow: 0rem 0rem 0.19rem #202124 inset, -0.31rem -0.31rem 0.75rem #232239, 0.38rem 0.38rem 0.75rem #121120;
-    border-left: solid 0.063rem #26243f;
-    border-right: solid 0.063rem #26243f;
-    border-top: solid 0.063rem #26243f;
-    border-bottom: solid 0.063rem #26243f;
+    align-item:center;
+    left: 32%;
+    top: 15%;
+    width: 40%;
+    height: 60%;
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #14233b;
+    background-repeat: no-repeat;
+    background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
+    background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
 }
 
 .lamp_container{
@@ -390,4 +385,12 @@ input.cmn-toggle-round:checked + label:after {
   letter-spacing: 0.1em;
   font-size: 12px;
   padding: 20px 0 0;
+}
+
+.text_1{
+    margin: 2%;
+    color: white;
+    font-size: 1.23rem;
+    letter-spacing: 5px;
+    line-height: 2.91rem;
 }

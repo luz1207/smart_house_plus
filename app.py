@@ -20,8 +20,7 @@ recognizer = vision.GestureRecognizer.create_from_options(options)
 app = Flask(__name__)
 
 
-camera1 = cv2.VideoCapture(0)
-# camera1 = cv2.VideoCapture(0)
+
 x = gesTure(recognizer)
 face_model = Face_recognize()
 cap = cv2.VideoCapture(0)
